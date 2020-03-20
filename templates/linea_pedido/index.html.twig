@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}LineaPedido index{% endblock %}
+
+{% block body %}
+    <h1>LineaPedido index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Unidades</th>
+                <th>Precio_linea</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for linea_pedido in linea_pedidos %}
+            <tr>
+                <td>{{ linea_pedido.id }}</td>
+                <td>{{ linea_pedido.unidades }}</td>
+                <td>{{ linea_pedido.precioLinea }}</td>
+                <td>
+                    <a href="{{ path('linea_pedido_show', {'id': linea_pedido.id}) }}">show</a>
+                    <a href="{{ path('linea_pedido_edit', {'id': linea_pedido.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('linea_pedido_new') }}">Create new</a>
+{% endblock %}
