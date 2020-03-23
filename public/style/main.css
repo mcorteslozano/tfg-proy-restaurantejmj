@@ -1,0 +1,13 @@
+body {
+    background-image: url('/img/fondo.png') !important;
+    margin: 0px 10px;
+}
+
+.logo_tamaño{
+    width: 40px;
+}
+
+.btn{
+    color: white;
+    background-color:black;
+}

@@ -1,37 +1,37 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Pedido index{% endblock %}
+{% block title %}Gestiona JMJ{% endblock %}
 
 {% block body %}
-    <h1>Pedido index</h1>
+    <h3>Listado de Pedidos</h3>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Fecha_pedido</th>
-                <th>Fecha_entrega</th>
-                <th>actions</th>
+                <th>Número de Pedido</th>
+                <th>Fecha de pedido</th>
+                <th>Fecha de entrega</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
         {% for pedido in pedidos %}
             <tr>
                 <td>{{ pedido.id }}</td>
-                <td>{{ pedido.fechaPedido ? pedido.fechaPedido|date('Y-m-d') : '' }}</td>
-                <td>{{ pedido.fechaEntrega ? pedido.fechaEntrega|date('Y-m-d') : '' }}</td>
+                <td>{{ pedido.fechaPedido ? pedido.fechaPedido|date('d-m-Y') : '' }}</td>
+                <td>{{ pedido.fechaEntrega ? pedido.fechaEntrega|date('d-m-Y') : '' }}</td>
                 <td>
-                    <a href="{{ path('pedido_show', {'id': pedido.id}) }}">show</a>
-                    <a href="{{ path('pedido_edit', {'id': pedido.id}) }}">edit</a>
+                    <a href="{{ path('pedido_show', {'id': pedido.id}) }}">Mostrar</a>
+                    <a href="{{ path('pedido_edit', {'id': pedido.id}) }}">Editar</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="4">no records found</td>
+                <td colspan="4">No hay pedidos registrados</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('pedido_new') }}">Create new</a>
+    <a href="{{ path('pedido_new') }}">Añadir pedido</a>
 {% endblock %}

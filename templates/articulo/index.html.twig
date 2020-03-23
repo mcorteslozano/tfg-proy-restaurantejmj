@@ -1,41 +1,38 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Articulo index{% endblock %}
+{% block title %}Gestiona JMJ{% endblock %}
 
 {% block body %}
-    <h1>Articulo index</h1>
+    <h3>Listado de Artículos</h3>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Nombre</th>
                 <th>Descripcion</th>
                 <th>Precio</th>
                 <th>Existencias</th>
-                <th>actions</th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
         {% for articulo in articulos %}
             <tr>
-                <td>{{ articulo.id }}</td>
                 <td>{{ articulo.nombre }}</td>
                 <td>{{ articulo.descripcion }}</td>
                 <td>{{ articulo.precio }}</td>
                 <td>{{ articulo.existencias }}</td>
-                <td>
-                    <a href="{{ path('articulo_show', {'id': articulo.id}) }}">show</a>
-                    <a href="{{ path('articulo_edit', {'id': articulo.id}) }}">edit</a>
-                </td>
+                <td><button class="btn" onclick="window.location.href='{{ path('articulo_edit', {'id': articulo.id}) }}'">Editar</button></td>
+                <td>{{ include('articulo/_delete_form.html.twig') }}</td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="6">no records found</td>
+                <td colspan="6">No hay artículos registrados</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('articulo_new') }}">Create new</a>
+    <a href="{{ path('articulo_new') }}">Añadir artículo</a>
 {% endblock %}

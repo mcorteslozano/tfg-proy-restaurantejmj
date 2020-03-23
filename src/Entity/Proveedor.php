@@ -48,6 +48,10 @@ class Proveedor
      */
     private $id_pedido;
 
+    public function __toString(){
+        return $this->nombre;
+    }
+
     public function __construct()
     {
         $this->id_pedido = new ArrayCollection();
