@@ -9,6 +9,7 @@
         <thead>
             <tr>
                 <th>Número de Pedido</th>
+                <th>Proveedor</th>
                 <th>Fecha de pedido</th>
                 <th>Fecha de entrega</th>
                 <th></th>
@@ -16,13 +17,14 @@
         </thead>
         <tbody>
         {% for pedido in pedidos %}
+        
             <tr>
                 <td>{{ pedido.id }}</td>
+                <td>{{ pedido.getIdProveedor }}</td>
                 <td>{{ pedido.fechaPedido ? pedido.fechaPedido|date('d-m-Y') : '' }}</td>
                 <td>{{ pedido.fechaEntrega ? pedido.fechaEntrega|date('d-m-Y') : '' }}</td>
-                <td>
-                    <a href="{{ path('pedido_show', {'id': pedido.id}) }}">Mostrar</a>
-                    <a href="{{ path('pedido_edit', {'id': pedido.id}) }}">Editar</a>
+                <td><button class="btn" onclick="window.location.href='{{ path('pedido_edit', {'id': pedido.id}) }}'">Editar</button>
+                {{ include('pedido/_delete_form.html.twig') }}
                 </td>
             </tr>
         {% else %}
@@ -33,5 +35,45 @@
         </tbody>
     </table>
 
-    <a href="{{ path('pedido_new') }}">Añadir pedido</a>
+    <!-- Linea de Pedido -->
+    <br>
+    <br>
+    <br>
+    <h3>Crear Nuevo Pedido</h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Número de línea</th>
+                <th>Artículo</th>
+                <th>Unidades</th>
+                <th>Precio</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for linea_pedido in linea_pedidos %}
+            <tr>
+                <td>{{ linea_pedido.id }}</td>
+                <td>{{ linea_pedido.getIdArticulo() }}</td>
+                <td>{{ linea_pedido.unidades }}</td>
+                <td>{{ linea_pedido.precioLinea }}</td>
+                <td colspan="2"><button class="btn" onclick="window.location.href='{{ path('linea_pedido_edit', {'id': linea_pedido.id}) }}'">Editar</button>
+                {{ include('linea_pedido/_delete_form.html.twig') }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">No hay líneas de pedido registradas</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="form_linea">
+    <h5>Crear Nueva Linea</h5>
+    {{ include('linea_pedido/_form.html.twig') }}
+    </div>
+    <div class="form_pedido">
+    <h5>Crear Pedido</h5>
+    {{ include('pedido/_form.html.twig') }}
+    </div>
 {% endblock %}

@@ -20,7 +20,7 @@ class LineaPedidoController extends AbstractController
      */
     public function index(LineaPedidoRepository $lineaPedidoRepository): Response
     {
-        return $this->render('linea_pedido/index.html.twig', [
+        return $this->render('pedido/index.html.twig', [
             'linea_pedidos' => $lineaPedidoRepository->findAll(),
         ]);
     }
@@ -35,17 +35,24 @@ class LineaPedidoController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+          /*  $em = $this->getDoctrine()->getManager();
+            $connection = $em->getConnection();
+            $idArticulo = $lineaPedido->getIdArticulo();
+            //var_dump($idArticulo);
+            $statement = $connection->prepare("SELECT precio FROM articulo WHERE id = :id");
+            $statement->bindValue('id', $idArticulo);
+            $statement->execute();
+            //var_dump($statement);
+            $results = $statement->fetchAll();
+            $lineaPedido->setPrecioLinea(intval($lineaPedido->getUnidades()*$statement));
+            */
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($lineaPedido);
             $entityManager->flush();
 
-            return $this->redirectToRoute('linea_pedido_index');
+            return $this->redirectToRoute('pedido_index');
         }
-
-        return $this->render('linea_pedido/new.html.twig', [
-            'linea_pedido' => $lineaPedido,
-            'form' => $form->createView(),
-        ]);
     }
 
     /**
@@ -69,12 +76,12 @@ class LineaPedidoController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('linea_pedido_index');
+            return $this->redirectToRoute('pedido_index');
         }
 
         return $this->render('linea_pedido/edit.html.twig', [
             'linea_pedido' => $lineaPedido,
-            'form' => $form->createView(),
+            'form_linea' => $form->createView(),
         ]);
     }
 
@@ -89,6 +96,6 @@ class LineaPedidoController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('linea_pedido_index');
+        return $this->redirectToRoute('pedido_index');
     }
 }

@@ -40,11 +40,11 @@ class __TwigTemplate_9d4ebfc891ccb59572a977be0bbad884055d2d767a13e735c7117063f2f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "pedido/_form.html.twig"));
 
         // line 1
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 1, $this->source); })()), 'form_start');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form_pedido"]) || array_key_exists("form_pedido", $context) ? $context["form_pedido"] : (function () { throw new RuntimeError('Variable "form_pedido" does not exist.', 1, $this->source); })()), 'form_start');
         echo "
     ";
         // line 2
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 2, $this->source); })()), 'widget');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form_pedido"]) || array_key_exists("form_pedido", $context) ? $context["form_pedido"] : (function () { throw new RuntimeError('Variable "form_pedido" does not exist.', 2, $this->source); })()), 'widget');
         echo "
     <button class=\"btn\">";
         // line 3
@@ -52,7 +52,7 @@ class __TwigTemplate_9d4ebfc891ccb59572a977be0bbad884055d2d767a13e735c7117063f2f
         echo "</button>
 ";
         // line 4
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 4, $this->source); })()), 'form_end');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form_pedido"]) || array_key_exists("form_pedido", $context) ? $context["form_pedido"] : (function () { throw new RuntimeError('Variable "form_pedido" does not exist.', 4, $this->source); })()), 'form_end');
         echo "
 ";
         
@@ -80,10 +80,10 @@ class __TwigTemplate_9d4ebfc891ccb59572a977be0bbad884055d2d767a13e735c7117063f2f
 
     public function getSourceContext()
     {
-        return new Source("{{ form_start(form) }}
-    {{ form_widget(form) }}
+        return new Source("{{ form_start(form_pedido) }}
+    {{ form_widget(form_pedido) }}
     <button class=\"btn\">{{ button_label|default('Enviar') }}</button>
-{{ form_end(form) }}
+{{ form_end(form_pedido) }}
 ", "pedido/_form.html.twig", "C:\\xampp\\htdocs\\restaurante\\templates\\pedido\\_form.html.twig");
     }
 }

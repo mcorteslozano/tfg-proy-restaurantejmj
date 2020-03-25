@@ -13,9 +13,9 @@ class LineaPedidoType extends AbstractType
     {
         $builder
             ->add('unidades')
-            ->add('precio_linea')
+            //->add('precio_linea')
             ->add('id_articulo')
-            ->add('id_pedido')
+            //->add('id_pedido')
         ;
     }
 

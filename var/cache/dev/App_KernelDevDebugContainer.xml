@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
-    <parameter key="kernel.project_dir">C:\xampp\htdocs\restaurante</parameter>
+    <parameter key="kernel.project_dir">C:\xampp\htdocs\restaurante2</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
-    <parameter key="kernel.cache_dir">C:\xampp\htdocs\restaurante\var\cache\dev</parameter>
-    <parameter key="kernel.logs_dir">C:\xampp\htdocs\restaurante\var\log</parameter>
+    <parameter key="kernel.cache_dir">C:\xampp\htdocs\restaurante2\var\cache\dev</parameter>
+    <parameter key="kernel.logs_dir">C:\xampp\htdocs\restaurante2\var\log</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="TwigBundle">Symfony\Bundle\TwigBundle\TwigBundle</parameter>
@@ -18,51 +18,56 @@
       <parameter key="DoctrineMigrationsBundle">Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle</parameter>
       <parameter key="SecurityBundle">Symfony\Bundle\SecurityBundle\SecurityBundle</parameter>
       <parameter key="MakerBundle">Symfony\Bundle\MakerBundle\MakerBundle</parameter>
+      <parameter key="SwiftmailerBundle">Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle</parameter>
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\restaurante\vendor\symfony\framework-bundle</parameter>
+        <parameter key="path">C:\xampp\htdocs\restaurante2\vendor\symfony\framework-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\FrameworkBundle</parameter>
       </parameter>
       <parameter key="TwigBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\restaurante\vendor\symfony\twig-bundle</parameter>
+        <parameter key="path">C:\xampp\htdocs\restaurante2\vendor\symfony\twig-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\TwigBundle</parameter>
       </parameter>
       <parameter key="TwigExtraBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\restaurante\vendor\twig\extra-bundle\src</parameter>
+        <parameter key="path">C:\xampp\htdocs\restaurante2\vendor\twig\extra-bundle\src</parameter>
         <parameter key="namespace">Twig\Extra\TwigExtraBundle</parameter>
       </parameter>
       <parameter key="WebProfilerBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\restaurante\vendor\symfony\web-profiler-bundle</parameter>
+        <parameter key="path">C:\xampp\htdocs\restaurante2\vendor\symfony\web-profiler-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\WebProfilerBundle</parameter>
       </parameter>
       <parameter key="MonologBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\restaurante\vendor\symfony\monolog-bundle</parameter>
+        <parameter key="path">C:\xampp\htdocs\restaurante2\vendor\symfony\monolog-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\MonologBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\restaurante\vendor\symfony\debug-bundle</parameter>
+        <parameter key="path">C:\xampp\htdocs\restaurante2\vendor\symfony\debug-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\DebugBundle</parameter>
       </parameter>
       <parameter key="SensioFrameworkExtraBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\restaurante\vendor\sensio\framework-extra-bundle\src</parameter>
+        <parameter key="path">C:\xampp\htdocs\restaurante2\vendor\sensio\framework-extra-bundle\src</parameter>
         <parameter key="namespace">Sensio\Bundle\FrameworkExtraBundle</parameter>
       </parameter>
       <parameter key="DoctrineBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\restaurante\vendor\doctrine\doctrine-bundle</parameter>
+        <parameter key="path">C:\xampp\htdocs\restaurante2\vendor\doctrine\doctrine-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineBundle</parameter>
       </parameter>
       <parameter key="DoctrineMigrationsBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\restaurante\vendor\doctrine\doctrine-migrations-bundle</parameter>
+        <parameter key="path">C:\xampp\htdocs\restaurante2\vendor\doctrine\doctrine-migrations-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\MigrationsBundle</parameter>
       </parameter>
       <parameter key="SecurityBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\restaurante\vendor\symfony\security-bundle</parameter>
+        <parameter key="path">C:\xampp\htdocs\restaurante2\vendor\symfony\security-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\SecurityBundle</parameter>
       </parameter>
       <parameter key="MakerBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\restaurante\vendor\symfony\maker-bundle\src</parameter>
+        <parameter key="path">C:\xampp\htdocs\restaurante2\vendor\symfony\maker-bundle\src</parameter>
         <parameter key="namespace">Symfony\Bundle\MakerBundle</parameter>
+      </parameter>
+      <parameter key="SwiftmailerBundle" type="collection">
+        <parameter key="path">C:\xampp\htdocs\restaurante2\vendor\symfony\swiftmailer-bundle</parameter>
+        <parameter key="namespace">Symfony\Bundle\SwiftmailerBundle</parameter>
       </parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
@@ -85,35 +90,35 @@
       <parameter key="cookie_samesite">lax</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">C:\xampp\htdocs\restaurante\var\cache\dev/sessions</parameter>
+    <parameter key="session.save_path">C:\xampp\htdocs\restaurante2\var\cache\dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="form.type_extension.csrf.enabled">true</parameter>
     <parameter key="form.type_extension.csrf.field_name">_token</parameter>
     <parameter key="asset.request_context.base_path"></parameter>
     <parameter key="asset.request_context.secure">false</parameter>
     <parameter key="validator.mapping.cache.prefix"></parameter>
-    <parameter key="validator.mapping.cache.file">C:\xampp\htdocs\restaurante\var\cache\dev/validation.php</parameter>
+    <parameter key="validator.mapping.cache.file">C:\xampp\htdocs\restaurante2\var\cache\dev/validation.php</parameter>
     <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="translator.logging">false</parameter>
-    <parameter key="translator.default_path">C:\xampp\htdocs\restaurante/translations</parameter>
+    <parameter key="translator.default_path">C:\xampp\htdocs\restaurante2/translations</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_master_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:C:\xampp\htdocs\restaurante\var\cache\dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:C:\xampp\htdocs\restaurante2\var\cache\dev/profiler</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">C:\xampp\htdocs\restaurante\var\cache\dev/App_KernelDevDebugContainer.xml</parameter>
+    <parameter key="debug.container.dump">C:\xampp\htdocs\restaurante2\var\cache\dev/App_KernelDevDebugContainer.xml</parameter>
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
     <parameter key="router.resource">kernel::loadRoutes</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
-    <parameter key="serializer.mapping.cache.file">C:\xampp\htdocs\restaurante\var\cache\dev/serialization.php</parameter>
+    <parameter key="serializer.mapping.cache.file">C:\xampp\htdocs\restaurante2\var\cache\dev/serialization.php</parameter>
     <parameter key="serializer.mapping.cache.prefix"></parameter>
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
     </parameter>
-    <parameter key="twig.default_path">C:\xampp\htdocs\restaurante/templates</parameter>
-    <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
+    <parameter key="twig.default_path">C:\xampp\htdocs\restaurante2/templates</parameter>
+    <parameter key="web_profiler.debug_toolbar.intercept_redirects">true</parameter>
     <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
     <parameter key="monolog.use_microseconds">true</parameter>
     <parameter key="monolog.swift_mailer.handlers" type="collection"/>
@@ -199,9 +204,9 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">C:\xampp\htdocs\restaurante\var\cache\dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">C:\xampp\htdocs\restaurante2\var\cache\dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
-    <parameter key="doctrine_migrations.dir_name">C:\xampp\htdocs\restaurante/src/Migrations</parameter>
+    <parameter key="doctrine_migrations.dir_name">C:\xampp\htdocs\restaurante2/src/Migrations</parameter>
     <parameter key="doctrine_migrations.namespace">DoctrineMigrations</parameter>
     <parameter key="doctrine_migrations.table_name">migration_versions</parameter>
     <parameter key="doctrine_migrations.column_name">version</parameter>
@@ -217,6 +222,19 @@
     <parameter key="security.authentication.session_strategy.strategy">migrate</parameter>
     <parameter key="security.access.always_authenticate_before_granting">false</parameter>
     <parameter key="security.authentication.hide_user_not_found">true</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.name">dynamic</parameter>
+    <parameter key="swiftmailer.spool.default.memory.path">C:\xampp\htdocs\restaurante2\var\cache\dev/swiftmailer/spool/default</parameter>
+    <parameter key="swiftmailer.mailer.default.spool.enabled">true</parameter>
+    <parameter key="swiftmailer.mailer.default.plugin.impersonate">null</parameter>
+    <parameter key="swiftmailer.mailer.default.single_address">null</parameter>
+    <parameter key="swiftmailer.mailer.default.delivery.enabled">true</parameter>
+    <parameter key="swiftmailer.spool.enabled">true</parameter>
+    <parameter key="swiftmailer.delivery.enabled">true</parameter>
+    <parameter key="swiftmailer.single_address">null</parameter>
+    <parameter key="swiftmailer.mailers" type="collection">
+      <parameter key="default">swiftmailer.mailer.default</parameter>
+    </parameter>
+    <parameter key="swiftmailer.default_mailer">default</parameter>
     <parameter key="data_collector.templates" type="collection">
       <parameter key="data_collector.request" type="collection">
         <parameter>request</parameter>
@@ -282,6 +300,10 @@
         <parameter>db</parameter>
         <parameter>@Doctrine/Collector/db.html.twig</parameter>
       </parameter>
+      <parameter key="swiftmailer.data_collector" type="collection">
+        <parameter>swiftmailer</parameter>
+        <parameter>@Swiftmailer/Collector/swiftmailer.html.twig</parameter>
+      </parameter>
       <parameter key="data_collector.dump" type="collection">
         <parameter>dump</parameter>
         <parameter>@Debug/Profiler/dump.html.twig</parameter>
@@ -303,13 +325,20 @@
       <tag name="routing.route_loader"/>
     </service>
     <service id="EasyCorp\EasyLog\EasyLogHandler" class="EasyCorp\EasyLog\EasyLogHandler" public="false">
-      <argument>C:\xampp\htdocs\restaurante\var\log/dev.log</argument>
+      <argument>C:\xampp\htdocs\restaurante2\var\log/dev.log</argument>
     </service>
     <service id="App\Controller\ArticuloController" class="App\Controller\ArticuloController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.pNNo5z3.App\Controller\ArticuloController"/>
+      </call>
+    </service>
+    <service id="App\Controller\ContactoController" class="App\Controller\ContactoController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.pNNo5z3.App\Controller\ContactoController"/>
       </call>
     </service>
     <service id="App\Controller\LineaPedidoController" class="App\Controller\LineaPedidoController" public="true" autowire="true" autoconfigure="true">
@@ -334,6 +363,9 @@
       </call>
     </service>
     <service id="App\Form\ArticuloType" class="App\Form\ArticuloType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\ContactoType" class="App\Form\ContactoType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Form\LineaPedidoType" class="App\Form\LineaPedidoType" autowire="true" autoconfigure="true">
@@ -419,7 +451,7 @@
     <service id="cache_warmer" class="Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate" public="true">
       <argument type="tagged_iterator" tag="kernel.cache_warmer"/>
       <argument>true</argument>
-      <argument>C:\xampp\htdocs\restaurante\var\cache\dev/App_KernelDevDebugContainerDeprecations.log</argument>
+      <argument>C:\xampp\htdocs\restaurante2\var\cache\dev/App_KernelDevDebugContainerDeprecations.log</argument>
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer" public="true">
       <argument type="tagged_iterator" tag="kernel.cache_clearer"/>
@@ -460,6 +492,7 @@
         <argument key="form.type.entity" type="service" id="form.type.entity" on-invalid="ignore_uninitialized"/>
         <argument key="security.token_storage" type="service" id="security.token_storage" on-invalid="ignore_uninitialized"/>
         <argument key="cache.security_expression_language" type="service" id="cache.security_expression_language" on-invalid="ignore_uninitialized"/>
+        <argument key="swiftmailer.email_sender.listener" type="service" id="swiftmailer.email_sender.listener" on-invalid="ignore_uninitialized"/>
       </argument>
       <argument type="collection">
         <argument key="cache.app" type="collection">
@@ -514,6 +547,9 @@
         <argument key="cache.security_expression_language" type="collection">
           <argument>reset</argument>
         </argument>
+        <argument key="swiftmailer.email_sender.listener" type="collection">
+          <argument>reset</argument>
+        </argument>
       </argument>
     </service>
     <service id="reverse_container" class="Symfony\Component\DependencyInjection\ReverseContainer" public="false">
@@ -552,21 +588,21 @@
         <argument>/_fragment</argument>
       </call>
     </service>
-    <service id=".2_~NS3jZmn" public="false">
+    <service id=".2_~7q2Crsv" public="false">
       <argument type="service" id="request_stack"/>
       <factory class="Symfony\Component\ErrorHandler\ErrorRenderer\HtmlErrorRenderer" method="getAndCleanOutputBuffer"/>
     </service>
-    <service id=".1_~NS3jZmn" public="false">
+    <service id=".1_~7q2Crsv" public="false">
       <argument type="service" id="request_stack"/>
       <argument>true</argument>
       <factory class="Symfony\Component\ErrorHandler\ErrorRenderer\HtmlErrorRenderer" method="isDebug"/>
     </service>
     <service id="error_handler.error_renderer.html" class="Symfony\Component\ErrorHandler\ErrorRenderer\HtmlErrorRenderer">
-      <argument type="service" id=".1_~NS3jZmn"/>
+      <argument type="service" id=".1_~7q2Crsv"/>
       <argument>UTF-8</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
-      <argument>C:\xampp\htdocs\restaurante</argument>
-      <argument type="service" id=".2_~NS3jZmn"/>
+      <argument>C:\xampp\htdocs\restaurante2</argument>
+      <argument type="service" id=".2_~7q2Crsv"/>
       <argument type="service" id="monolog.logger" on-invalid="null"/>
     </service>
     <service id="console.error_listener" class="Symfony\Component\Console\EventListener\ErrorListener" public="false">
@@ -586,7 +622,7 @@
     <service id="console.command.assets_install" class="Symfony\Bundle\FrameworkBundle\Command\AssetsInstallCommand" public="false">
       <tag name="console.command" command="assets:install"/>
       <argument type="service" id="filesystem"/>
-      <argument>C:\xampp\htdocs\restaurante</argument>
+      <argument>C:\xampp\htdocs\restaurante2</argument>
       <call method="setName">
         <argument>assets:install</argument>
       </call>
@@ -704,16 +740,16 @@
       <argument type="service" id="translator.data_collector"/>
       <argument type="service" id="translation.reader"/>
       <argument type="service" id="translation.extractor"/>
-      <argument>C:\xampp\htdocs\restaurante/translations</argument>
-      <argument>C:\xampp\htdocs\restaurante/templates</argument>
+      <argument>C:\xampp\htdocs\restaurante2/translations</argument>
+      <argument>C:\xampp\htdocs\restaurante2/templates</argument>
       <argument type="collection">
-        <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations</argument>
-        <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations</argument>
-        <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations</argument>
       </argument>
       <argument type="collection">
-        <argument>C:\xampp\htdocs\restaurante\vendor\symfony\twig-bridge/Resources/views/Email</argument>
-        <argument>C:\xampp\htdocs\restaurante\vendor\symfony\twig-bridge/Resources/views/Form</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\twig-bridge/Resources/views/Email</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\twig-bridge/Resources/views/Form</argument>
       </argument>
       <call method="setName">
         <argument>debug:translation</argument>
@@ -725,16 +761,16 @@
       <argument type="service" id="translation.reader"/>
       <argument type="service" id="translation.extractor"/>
       <argument>en</argument>
-      <argument>C:\xampp\htdocs\restaurante/translations</argument>
-      <argument>C:\xampp\htdocs\restaurante/templates</argument>
+      <argument>C:\xampp\htdocs\restaurante2/translations</argument>
+      <argument>C:\xampp\htdocs\restaurante2/templates</argument>
       <argument type="collection">
-        <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations</argument>
-        <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations</argument>
-        <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations</argument>
       </argument>
       <argument type="collection">
-        <argument>C:\xampp\htdocs\restaurante\vendor\symfony\twig-bridge/Resources/views/Email</argument>
-        <argument>C:\xampp\htdocs\restaurante\vendor\symfony\twig-bridge/Resources/views/Form</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\twig-bridge/Resources/views/Email</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\twig-bridge/Resources/views/Form</argument>
       </argument>
       <call method="setName">
         <argument>translation:update</argument>
@@ -762,6 +798,7 @@
       </argument>
       <argument type="collection">
         <argument>App\Form\ArticuloType</argument>
+        <argument>App\Form\ContactoType</argument>
         <argument>App\Form\LineaPedidoType</argument>
         <argument>App\Form\PedidoType</argument>
         <argument>App\Form\ProveedorType</argument>
@@ -876,7 +913,7 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\xampp\htdocs\restaurante\var\cache\dev/pools</argument>
+      <argument>C:\xampp\htdocs\restaurante2\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -905,7 +942,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>C:\xampp\htdocs\restaurante\var\cache\dev/pools</argument>
+      <argument>C:\xampp\htdocs\restaurante2\var\cache\dev/pools</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
@@ -1014,8 +1051,8 @@
       <argument>0</argument>
       <argument>false</argument>
     </service>
-    <service id=".1_NativeFileSessionHandler~s9mCcDR" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
-      <argument>C:\xampp\htdocs\restaurante\var\cache\dev/sessions</argument>
+    <service id=".1_NativeFileSessionHandler~_2exwfk" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
+      <argument>C:\xampp\htdocs\restaurante2\var\cache\dev/sessions</argument>
     </service>
     <service id="session" class="Symfony\Component\HttpFoundation\Session\Session" public="true">
       <argument type="service" id="session.storage.native"/>
@@ -1038,12 +1075,12 @@
     <service id="session.flash_bag" class="Symfony\Component\HttpFoundation\Session\Flash\FlashBag" public="false"/>
     <service id="session.attribute_bag" class="Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag" public="false"/>
     <service id="session.storage.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage" public="false">
-      <argument>C:\xampp\htdocs\restaurante\var\cache\dev/sessions</argument>
+      <argument>C:\xampp\htdocs\restaurante2\var\cache\dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
     <service id="session.handler.native_file" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\StrictSessionHandler" public="false">
-      <argument type="service" id=".1_NativeFileSessionHandler~s9mCcDR"/>
+      <argument type="service" id=".1_NativeFileSessionHandler~_2exwfk"/>
     </service>
     <service id="session.abstract_handler" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\AbstractSessionHandler" public="false">
       <argument></argument>
@@ -1073,7 +1110,7 @@
       <tag name="twig.extension"/>
     </service>
     <service id="form.resolved_type_factory" class="Symfony\Component\Form\Extension\DataCollector\Proxy\ResolvedTypeFactoryDataCollectorProxy" public="false">
-      <argument type="service" id=".1_ResolvedFormTypeFactory~jf7ejxF"/>
+      <argument type="service" id=".1_ResolvedFormTypeFactory~ta0z0V2"/>
       <argument type="service" id="data_collector.form"/>
     </service>
     <service id="form.registry" class="Symfony\Component\Form\FormRegistry" public="false">
@@ -1086,7 +1123,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.7qom3FL"/>
+      <argument type="service" id=".service_locator.UzZg1uN"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -1356,7 +1393,7 @@
       </call>
       <call method="addXmlMappings">
         <argument type="collection">
-          <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/config/validation.xml</argument>
+          <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/config/validation.xml</argument>
         </argument>
       </call>
       <call method="enableAnnotationMapping">
@@ -1381,10 +1418,10 @@
     <service id="validator.mapping.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="validator.builder"/>
-      <argument>C:\xampp\htdocs\restaurante\var\cache\dev/validation.php</argument>
+      <argument>C:\xampp\htdocs\restaurante2\var\cache\dev/validation.php</argument>
     </service>
     <service id="validator.mapping.cache.adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
-      <argument>C:\xampp\htdocs\restaurante\var\cache\dev/validation.php</argument>
+      <argument>C:\xampp\htdocs\restaurante2\var\cache\dev/validation.php</argument>
       <argument type="service" id="cache.validator"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -1455,293 +1492,295 @@
         </argument>
       </argument>
       <argument type="collection">
-        <argument key="cache_dir">C:\xampp\htdocs\restaurante\var\cache\dev/translations</argument>
+        <argument key="cache_dir">C:\xampp\htdocs\restaurante2\var\cache\dev/translations</argument>
         <argument key="debug">true</argument>
         <argument key="resource_files" type="collection">
           <argument key="af" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.af.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.af.xlf</argument>
           </argument>
           <argument key="ar" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.ar.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.ar.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.ar.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.ar.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.ar.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.ar.xlf</argument>
           </argument>
           <argument key="az" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.az.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.az.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.az.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.az.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.az.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.az.xlf</argument>
           </argument>
           <argument key="be" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.be.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.be.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.be.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.be.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.be.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.be.xlf</argument>
           </argument>
           <argument key="bg" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.bg.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.bg.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.bg.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.bg.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.bg.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.bg.xlf</argument>
           </argument>
           <argument key="ca" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.ca.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.ca.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.ca.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.ca.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.ca.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.ca.xlf</argument>
           </argument>
           <argument key="cs" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.cs.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.cs.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.cs.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.cs.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.cs.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.cs.xlf</argument>
           </argument>
           <argument key="cy" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.cy.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.cy.xlf</argument>
           </argument>
           <argument key="da" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.da.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.da.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.da.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.da.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.da.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.da.xlf</argument>
           </argument>
           <argument key="de" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.de.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.de.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.de.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.de.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.de.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.de.xlf</argument>
           </argument>
           <argument key="el" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.el.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.el.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.el.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.el.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.el.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.el.xlf</argument>
           </argument>
           <argument key="en" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.en.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.en.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.en.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.en.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.en.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.en.xlf</argument>
           </argument>
           <argument key="es" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.es.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.es.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.es.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.es.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.es.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.es.xlf</argument>
           </argument>
           <argument key="et" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.et.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.et.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.et.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.et.xlf</argument>
           </argument>
           <argument key="eu" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.eu.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.eu.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.eu.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.eu.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.eu.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.eu.xlf</argument>
           </argument>
           <argument key="fa" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.fa.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.fa.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.fa.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.fa.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.fa.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.fa.xlf</argument>
           </argument>
           <argument key="fi" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.fi.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.fi.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.fi.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.fi.xlf</argument>
           </argument>
           <argument key="fr" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.fr.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.fr.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.fr.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.fr.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.fr.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.fr.xlf</argument>
           </argument>
           <argument key="gl" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.gl.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.gl.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.gl.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.gl.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.gl.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.gl.xlf</argument>
           </argument>
           <argument key="he" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.he.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.he.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.he.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.he.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.he.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.he.xlf</argument>
           </argument>
           <argument key="hr" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.hr.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.hr.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.hr.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.hr.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.hr.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.hr.xlf</argument>
           </argument>
           <argument key="hu" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.hu.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.hu.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.hu.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.hu.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.hu.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.hu.xlf</argument>
           </argument>
           <argument key="hy" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.hy.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.hy.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.hy.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.hy.xlf</argument>
           </argument>
           <argument key="id" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.id.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.id.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.id.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.id.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.id.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.id.xlf</argument>
           </argument>
           <argument key="it" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.it.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.it.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.it.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.it.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.it.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.it.xlf</argument>
           </argument>
           <argument key="ja" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.ja.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.ja.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.ja.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.ja.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.ja.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.ja.xlf</argument>
           </argument>
           <argument key="lb" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.lb.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.lb.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.lb.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.lb.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.lb.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.lb.xlf</argument>
           </argument>
           <argument key="lt" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.lt.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.lt.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.lt.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.lt.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.lt.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.lt.xlf</argument>
           </argument>
           <argument key="lv" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.lv.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.lv.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.lv.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.lv.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.lv.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.lv.xlf</argument>
           </argument>
           <argument key="mn" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.mn.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.mn.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.mn.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.mn.xlf</argument>
           </argument>
           <argument key="nb" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.nb.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.nb.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.nb.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.nb.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.nb.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.nb.xlf</argument>
           </argument>
           <argument key="nl" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.nl.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.nl.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.nl.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.nl.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.nl.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.nl.xlf</argument>
           </argument>
           <argument key="nn" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.nn.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.nn.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.nn.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.nn.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.nn.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.nn.xlf</argument>
           </argument>
           <argument key="no" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.no.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.no.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.no.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.no.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.no.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.no.xlf</argument>
           </argument>
           <argument key="pl" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.pl.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.pl.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.pl.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.pl.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.pl.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.pl.xlf</argument>
           </argument>
           <argument key="pt" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.pt.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.pt.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.pt.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.pt.xlf</argument>
           </argument>
           <argument key="pt_BR" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.pt_BR.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.pt_BR.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.pt_BR.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.pt_BR.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.pt_BR.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.pt_BR.xlf</argument>
           </argument>
           <argument key="ro" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.ro.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.ro.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.ro.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.ro.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.ro.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.ro.xlf</argument>
           </argument>
           <argument key="ru" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.ru.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.ru.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.ru.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.ru.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.ru.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.ru.xlf</argument>
           </argument>
           <argument key="sk" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.sk.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.sk.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.sk.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.sk.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.sk.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.sk.xlf</argument>
           </argument>
           <argument key="sl" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.sl.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.sl.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.sl.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.sl.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.sl.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.sl.xlf</argument>
           </argument>
           <argument key="sq" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.sq.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.sq.xlf</argument>
           </argument>
           <argument key="sr_Cyrl" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.sr_Cyrl.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.sr_Cyrl.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.sr_Cyrl.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.sr_Cyrl.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.sr_Cyrl.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.sr_Cyrl.xlf</argument>
           </argument>
           <argument key="sr_Latn" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.sr_Latn.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.sr_Latn.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.sr_Latn.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.sr_Latn.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.sr_Latn.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.sr_Latn.xlf</argument>
           </argument>
           <argument key="sv" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.sv.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.sv.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.sv.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.sv.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.sv.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.sv.xlf</argument>
           </argument>
           <argument key="th" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.th.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.th.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.th.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.th.xlf</argument>
           </argument>
           <argument key="tl" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.tl.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.tl.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.tl.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.tl.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.tl.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.tl.xlf</argument>
           </argument>
           <argument key="tr" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.tr.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.tr.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.tr.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.tr.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.tr.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.tr.xlf</argument>
           </argument>
           <argument key="uk" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.uk.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.uk.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.uk.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.uk.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.uk.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.uk.xlf</argument>
           </argument>
           <argument key="vi" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.vi.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.vi.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.vi.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.vi.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.vi.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.vi.xlf</argument>
           </argument>
           <argument key="zh_CN" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.zh_CN.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations\validators.zh_CN.xlf</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.zh_CN.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.zh_CN.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations\validators.zh_CN.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.zh_CN.xlf</argument>
           </argument>
           <argument key="zh_TW" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations\validators.zh_TW.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations\validators.zh_TW.xlf</argument>
           </argument>
           <argument key="pt_PT" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations\security.pt_PT.xlf</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations\security.pt_PT.xlf</argument>
           </argument>
         </argument>
         <argument key="scanned_directories" type="collection">
-          <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations</argument>
-          <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations</argument>
-          <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations</argument>
-          <argument>C:\xampp\htdocs\restaurante/translations</argument>
-          <argument>C:\xampp\htdocs\restaurante\vendor\symfony\framework-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\restaurante\vendor\symfony\twig-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\restaurante\vendor\twig\extra-bundle\src/translations</argument>
-          <argument>C:\xampp\htdocs\restaurante\vendor\symfony\web-profiler-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\restaurante\vendor\symfony\monolog-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\restaurante\vendor\symfony\debug-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\restaurante\vendor\sensio\framework-extra-bundle\src/translations</argument>
-          <argument>C:\xampp\htdocs\restaurante\vendor\doctrine\doctrine-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\restaurante\vendor\doctrine\doctrine-migrations-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\restaurante\vendor\symfony\maker-bundle\src/translations</argument>
+          <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations</argument>
+          <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations</argument>
+          <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations</argument>
+          <argument>C:\xampp\htdocs\restaurante2/translations</argument>
+          <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\framework-bundle/translations</argument>
+          <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\twig-bundle/translations</argument>
+          <argument>C:\xampp\htdocs\restaurante2\vendor\twig\extra-bundle\src/translations</argument>
+          <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\web-profiler-bundle/translations</argument>
+          <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\monolog-bundle/translations</argument>
+          <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\debug-bundle/translations</argument>
+          <argument>C:\xampp\htdocs\restaurante2\vendor\sensio\framework-extra-bundle\src/translations</argument>
+          <argument>C:\xampp\htdocs\restaurante2\vendor\doctrine\doctrine-bundle/translations</argument>
+          <argument>C:\xampp\htdocs\restaurante2\vendor\doctrine\doctrine-migrations-bundle/translations</argument>
+          <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-bundle/translations</argument>
+          <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\maker-bundle\src/translations</argument>
+          <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\swiftmailer-bundle/translations</argument>
         </argument>
         <argument key="cache_vary" type="collection">
           <argument key="scanned_directories" type="collection">
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\validator/Resources/translations</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\form/Resources/translations</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-core/Resources/translations</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\validator/Resources/translations</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\form/Resources/translations</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-core/Resources/translations</argument>
             <argument>translations</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\framework-bundle/translations</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\twig-bundle/translations</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\twig\extra-bundle\src/translations</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\web-profiler-bundle/translations</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\monolog-bundle/translations</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\debug-bundle/translations</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\sensio\framework-extra-bundle\src/translations</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\doctrine\doctrine-bundle/translations</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\doctrine\doctrine-migrations-bundle/translations</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-bundle/translations</argument>
-            <argument>C:\xampp\htdocs\restaurante\vendor\symfony\maker-bundle\src/translations</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\framework-bundle/translations</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\twig-bundle/translations</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\twig\extra-bundle\src/translations</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\web-profiler-bundle/translations</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\monolog-bundle/translations</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\debug-bundle/translations</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\sensio\framework-extra-bundle\src/translations</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\doctrine\doctrine-bundle/translations</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\doctrine\doctrine-migrations-bundle/translations</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-bundle/translations</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\maker-bundle\src/translations</argument>
+            <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\swiftmailer-bundle/translations</argument>
           </argument>
         </argument>
       </argument>
@@ -2002,6 +2041,9 @@
         <argument type="service" id="data_collector.doctrine"/>
       </call>
       <call method="add">
+        <argument type="service" id="swiftmailer.data_collector"/>
+      </call>
+      <call method="add">
         <argument type="service" id="data_collector.dump"/>
       </call>
       <call method="add">
@@ -2012,7 +2054,7 @@
       </call>
     </service>
     <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage" public="false">
-      <argument>file:C:\xampp\htdocs\restaurante\var\cache\dev/profiler</argument>
+      <argument>file:C:\xampp\htdocs\restaurante2\var\cache\dev/profiler</argument>
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener" public="false">
       <tag name="kernel.event_subscriber"/>
@@ -2050,7 +2092,7 @@
       <tag name="data_collector" template="@WebProfiler/Collector/logger.html.twig" id="logger" priority="300"/>
       <tag name="monolog.logger" channel="profiler"/>
       <argument type="service" id="monolog.logger.profiler" on-invalid="ignore"/>
-      <argument>C:\xampp\htdocs\restaurante\var\cache\dev/App_KernelDevDebugContainer</argument>
+      <argument>C:\xampp\htdocs\restaurante2\var\cache\dev/App_KernelDevDebugContainer</argument>
       <argument type="service" id="request_stack" on-invalid="ignore"/>
     </service>
     <service id="data_collector.time" class="Symfony\Component\HttpKernel\DataCollector\TimeDataCollector" public="false">
@@ -2109,7 +2151,7 @@
         <argument type="service" id="cache.security_expression_language"/>
       </call>
     </service>
-    <service id=".1_ResolvedFormTypeFactory~jf7ejxF" class="Symfony\Component\Form\ResolvedFormTypeFactory" public="false"/>
+    <service id=".1_ResolvedFormTypeFactory~ta0z0V2" class="Symfony\Component\Form\ResolvedFormTypeFactory" public="false"/>
     <service id="form.type_extension.form.data_collector" class="Symfony\Component\Form\Extension\DataCollector\Type\DataCollectorTypeExtension" public="false">
       <tag name="form.type_extension"/>
       <argument type="service" id="data_collector.form"/>
@@ -2160,7 +2202,7 @@
     <service id="debug.file_link_formatter" class="Symfony\Component\HttpKernel\Debug\FileLinkFormatter" public="false">
       <argument>null</argument>
       <argument type="service" id="request_stack" on-invalid="ignore"/>
-      <argument>C:\xampp\htdocs\restaurante</argument>
+      <argument>C:\xampp\htdocs\restaurante2</argument>
       <argument type="service" id="debug.file_link_formatter.url_format"/>
     </service>
     <service id="debug.stopwatch" class="Symfony\Component\Stopwatch\Stopwatch">
@@ -2591,6 +2633,38 @@
         </argument>
         <argument>0</argument>
       </call>
+      <call method="addListener">
+        <argument>kernel.exception</argument>
+        <argument type="collection">
+          <argument type="service" id="swiftmailer.email_sender.listener"/>
+          <argument>onException</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>kernel.terminate</argument>
+        <argument type="collection">
+          <argument type="service" id="swiftmailer.email_sender.listener"/>
+          <argument>onTerminate</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>console.error</argument>
+        <argument type="collection">
+          <argument type="service" id="swiftmailer.email_sender.listener"/>
+          <argument>onException</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>console.terminate</argument>
+        <argument type="collection">
+          <argument type="service" id="swiftmailer.email_sender.listener"/>
+          <argument>onTerminate</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
     </service>
     <service id="debug.controller_resolver" class="Symfony\Component\HttpKernel\Controller\TraceableControllerResolver" public="false">
       <tag name="monolog.logger" channel="request"/>
@@ -2669,7 +2743,7 @@
       <argument type="service" id=".service_locator.LoApRHL.router.default"/>
       <argument>kernel::loadRoutes</argument>
       <argument type="collection">
-        <argument key="cache_dir">C:\xampp\htdocs\restaurante\var\cache\dev</argument>
+        <argument key="cache_dir">C:\xampp\htdocs\restaurante2\var\cache\dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\CompiledUrlGenerator</argument>
         <argument key="generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\CompiledUrlGeneratorDumper</argument>
@@ -2708,7 +2782,7 @@
       <argument type="service" id="request_stack"/>
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="monolog.logger.request" on-invalid="ignore"/>
-      <argument>C:\xampp\htdocs\restaurante</argument>
+      <argument>C:\xampp\htdocs\restaurante2</argument>
       <argument>true</argument>
     </service>
     <service id="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" class="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" public="true">
@@ -2733,12 +2807,12 @@
       <argument type="service" id="file_locator"/>
       <argument type="service" id="routing.loader.annotation"/>
     </service>
-    <service id=".2_PhpArrayAdapter~y95Zrkn" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
-      <argument>C:\xampp\htdocs\restaurante\var\cache\dev/annotations.php</argument>
+    <service id=".2_PhpArrayAdapter~f9uyKsa" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
+      <argument>C:\xampp\htdocs\restaurante2\var\cache\dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
-    <service id=".1_ArrayCache~y95Zrkn" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
+    <service id=".1_ArrayCache~f9uyKsa" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
     <service id="annotations.reader" class="Doctrine\Common\Annotations\AnnotationReader" public="false">
       <call method="addGlobalIgnoredName">
         <argument>required</argument>
@@ -2753,7 +2827,7 @@
     <service id="annotations.cached_reader" class="Doctrine\Common\Annotations\CachedReader" public="false">
       <tag name="annotations.cached_reader"/>
       <argument type="service" id="annotations.reader"/>
-      <argument type="service" id=".1_ArrayCache~y95Zrkn"/>
+      <argument type="service" id=".1_ArrayCache~f9uyKsa"/>
       <argument>true</argument>
       <property name="cacheProviderBackup" type="service" id="annotations.cache"/>
     </service>
@@ -2763,12 +2837,12 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
-      <argument>C:\xampp\htdocs\restaurante\var\cache\dev/annotations.php</argument>
+      <argument>C:\xampp\htdocs\restaurante2\var\cache\dev/annotations.php</argument>
       <argument>#^Symfony\\(?:Component\\HttpKernel\\|Bundle\\FrameworkBundle\\Controller\\(?!.*Controller$))#</argument>
       <argument>true</argument>
     </service>
     <service id="annotations.cache" class="Symfony\Component\Cache\DoctrineProvider" public="false">
-      <argument type="service" id=".2_PhpArrayAdapter~y95Zrkn"/>
+      <argument type="service" id=".2_PhpArrayAdapter~f9uyKsa"/>
     </service>
     <service id="property_accessor" class="Symfony\Component\PropertyAccess\PropertyAccessor" public="false">
       <argument>false</argument>
@@ -2778,18 +2852,18 @@
     </service>
     <service id="secrets.vault" class="Symfony\Bundle\FrameworkBundle\Secrets\SodiumVault">
       <tag name="container.env_var_loader"/>
-      <argument>C:\xampp\htdocs\restaurante/config/secrets/dev</argument>
+      <argument>C:\xampp\htdocs\restaurante2/config/secrets/dev</argument>
       <argument>%env(base64:default::SYMFONY_DECRYPTION_SECRET)%</argument>
     </service>
     <service id="secrets.local_vault" class="Symfony\Bundle\FrameworkBundle\Secrets\DotenvVault">
-      <argument>C:\xampp\htdocs\restaurante/.env.dev.local</argument>
+      <argument>C:\xampp\htdocs\restaurante2/.env.dev.local</argument>
     </service>
-    <service id=".2_~XCbgPQr" public="false">
+    <service id=".2_~Mi4WoS6" public="false">
       <argument type="service" id="request_stack"/>
       <argument>true</argument>
       <factory class="Symfony\Component\ErrorHandler\ErrorRenderer\HtmlErrorRenderer" method="isDebug"/>
     </service>
-    <service id=".1_~XCbgPQr" public="false">
+    <service id=".1_~Mi4WoS6" public="false">
       <argument type="service" id="request_stack"/>
       <factory class="Symfony\Component\ErrorHandler\ErrorRenderer\SerializerErrorRenderer" method="getPreferredFormat"/>
     </service>
@@ -2875,10 +2949,10 @@
           </service>
         </argument>
       </argument>
-      <argument>C:\xampp\htdocs\restaurante\var\cache\dev/serialization.php</argument>
+      <argument>C:\xampp\htdocs\restaurante2\var\cache\dev/serialization.php</argument>
     </service>
     <service id="serializer.mapping.cache.symfony" class="Psr\Cache\CacheItemPoolInterface" public="false">
-      <argument>C:\xampp\htdocs\restaurante\var\cache\dev/serialization.php</argument>
+      <argument>C:\xampp\htdocs\restaurante2\var\cache\dev/serialization.php</argument>
       <argument type="service" id="cache.serializer"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -2904,9 +2978,9 @@
     </service>
     <service id="error_handler.error_renderer.serializer" class="Symfony\Component\ErrorHandler\ErrorRenderer\SerializerErrorRenderer" public="false">
       <argument type="service" id="serializer"/>
-      <argument type="service" id=".1_~XCbgPQr"/>
+      <argument type="service" id=".1_~Mi4WoS6"/>
       <argument type="service" id="twig.error_renderer.html"/>
-      <argument type="service" id=".2_~XCbgPQr"/>
+      <argument type="service" id=".2_~Mi4WoS6"/>
     </service>
     <service id="property_info" class="Symfony\Component\PropertyInfo\PropertyInfoExtractor" public="false">
       <argument type="iterator">
@@ -2949,7 +3023,7 @@
         <argument type="service" id="mime_types"/>
       </call>
     </service>
-    <service id=".1_~oI_uzEO" public="false">
+    <service id=".1_~xh5_OfJ" public="false">
       <argument type="service" id="request_stack"/>
       <argument>true</argument>
       <factory class="Symfony\Bridge\Twig\ErrorRenderer\TwigErrorRenderer" method="isDebug"/>
@@ -2958,7 +3032,7 @@
       <argument type="service" id="twig.loader.native_filesystem"/>
       <argument type="collection">
         <argument key="autoescape">name</argument>
-        <argument key="cache">C:\xampp\htdocs\restaurante\var\cache\dev/twig</argument>
+        <argument key="cache">C:\xampp\htdocs\restaurante2\var\cache\dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
@@ -3055,10 +3129,10 @@
     <service id="twig.template_iterator" class="Symfony\Bundle\TwigBundle\TemplateIterator" public="false">
       <argument type="service" id="kernel"/>
       <argument type="collection">
-        <argument key="C:\xampp\htdocs\restaurante\vendor\symfony\twig-bridge/Resources/views/Email">email</argument>
-        <argument key="C:\xampp\htdocs\restaurante\vendor\symfony\twig-bridge/Resources/views/Form">null</argument>
+        <argument key="C:\xampp\htdocs\restaurante2\vendor\symfony\twig-bridge/Resources/views/Email">email</argument>
+        <argument key="C:\xampp\htdocs\restaurante2\vendor\symfony\twig-bridge/Resources/views/Form">null</argument>
       </argument>
-      <argument>C:\xampp\htdocs\restaurante/templates</argument>
+      <argument>C:\xampp\htdocs\restaurante2/templates</argument>
     </service>
     <service id="twig.template_cache_warmer" class="Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
@@ -3069,60 +3143,68 @@
     <service id="twig.loader.native_filesystem" class="Twig\Loader\FilesystemLoader" public="false">
       <tag name="twig.loader"/>
       <argument type="collection"/>
-      <argument>C:\xampp\htdocs\restaurante</argument>
+      <argument>C:\xampp\htdocs\restaurante2</argument>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\restaurante\vendor\symfony\framework-bundle/Resources/views</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\framework-bundle/Resources/views</argument>
         <argument>Framework</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\restaurante\vendor\symfony\framework-bundle/Resources/views</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\framework-bundle/Resources/views</argument>
         <argument>!Framework</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\restaurante\vendor\symfony\web-profiler-bundle/Resources/views</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\web-profiler-bundle/Resources/views</argument>
         <argument>WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\restaurante\vendor\symfony\web-profiler-bundle/Resources/views</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\web-profiler-bundle/Resources/views</argument>
         <argument>!WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\restaurante\vendor\symfony\debug-bundle/Resources/views</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\debug-bundle/Resources/views</argument>
         <argument>Debug</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\restaurante\vendor\symfony\debug-bundle/Resources/views</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\debug-bundle/Resources/views</argument>
         <argument>!Debug</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\restaurante\vendor\doctrine\doctrine-bundle/Resources/views</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\doctrine\doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\restaurante\vendor\doctrine\doctrine-bundle/Resources/views</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\doctrine\doctrine-bundle/Resources/views</argument>
         <argument>!Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-bundle/Resources/views</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-bundle/Resources/views</argument>
         <argument>Security</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\restaurante\vendor\symfony\security-bundle/Resources/views</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\security-bundle/Resources/views</argument>
         <argument>!Security</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\restaurante/templates</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\swiftmailer-bundle/Resources/views</argument>
+        <argument>Swiftmailer</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\restaurante\vendor\symfony\twig-bridge/Resources/views/Email</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\swiftmailer-bundle/Resources/views</argument>
+        <argument>!Swiftmailer</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\xampp\htdocs\restaurante2/templates</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\twig-bridge/Resources/views/Email</argument>
         <argument>email</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\restaurante\vendor\symfony\twig-bridge/Resources/views/Email</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\twig-bridge/Resources/views/Email</argument>
         <argument>!email</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\restaurante\vendor\symfony\twig-bridge/Resources/views/Form</argument>
+        <argument>C:\xampp\htdocs\restaurante2\vendor\symfony\twig-bridge/Resources/views/Form</argument>
       </call>
     </service>
     <service id="twig.loader.chain" class="Twig\Loader\ChainLoader" public="false"/>
@@ -3148,7 +3230,7 @@
     <service id="twig.extension.code" class="Symfony\Bridge\Twig\Extension\CodeExtension" public="false">
       <tag name="twig.extension"/>
       <argument type="service" id="debug.file_link_formatter" on-invalid="ignore"/>
-      <argument>C:\xampp\htdocs\restaurante</argument>
+      <argument>C:\xampp\htdocs\restaurante2</argument>
       <argument>UTF-8</argument>
     </service>
     <service id="twig.extension.routing" class="Symfony\Bridge\Twig\Extension\RoutingExtension" public="false">
@@ -3200,7 +3282,7 @@
     <service id="twig.error_renderer.html" class="Symfony\Bridge\Twig\ErrorRenderer\TwigErrorRenderer" public="false">
       <argument type="service" id="twig"/>
       <argument type="service" id="error_handler.error_renderer.html"/>
-      <argument type="service" id=".1_~oI_uzEO"/>
+      <argument type="service" id=".1_~xh5_OfJ"/>
     </service>
     <service id="twig.extension.form" class="Symfony\Bridge\Twig\Extension\FormExtension" public="false">
       <tag name="twig.extension"/>
@@ -3221,9 +3303,9 @@
     <service id="twig.command.debug" class="Symfony\Bridge\Twig\Command\DebugCommand" public="false">
       <tag name="console.command" command="debug:twig"/>
       <argument type="service" id="twig"/>
-      <argument>C:\xampp\htdocs\restaurante</argument>
+      <argument>C:\xampp\htdocs\restaurante2</argument>
       <argument>%kernel.bundles_metadata%</argument>
-      <argument>C:\xampp\htdocs\restaurante/templates</argument>
+      <argument>C:\xampp\htdocs\restaurante2/templates</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
       <call method="setName">
         <argument>debug:twig</argument>
@@ -3245,7 +3327,7 @@
       <argument type="service" id="twig"/>
     </service>
     <service id="twig.missing_extension_suggestor" class="Twig\Extra\TwigExtraBundle\MissingExtensionSuggestor" public="false"/>
-    <service id=".2_HtmlDumper~_Ri9G9o" class="Symfony\Component\VarDumper\Dumper\HtmlDumper" public="false">
+    <service id=".2_HtmlDumper~3pOWQp0" class="Symfony\Component\VarDumper\Dumper\HtmlDumper" public="false">
       <argument>null</argument>
       <argument>UTF-8</argument>
       <argument>1</argument>
@@ -3256,14 +3338,14 @@
         </argument>
       </call>
     </service>
-    <service id=".1_NonceGenerator~_Ri9G9o" class="Symfony\Bundle\WebProfilerBundle\Csp\NonceGenerator" public="false"/>
+    <service id=".1_NonceGenerator~3pOWQp0" class="Symfony\Bundle\WebProfilerBundle\Csp\NonceGenerator" public="false"/>
     <service id="web_profiler.controller.profiler" class="Symfony\Bundle\WebProfilerBundle\Controller\ProfilerController" public="true">
       <argument type="service" id="router.default" on-invalid="null"/>
       <argument type="service" id="profiler" on-invalid="null"/>
       <argument type="service" id="twig"/>
       <argument>%data_collector.templates%</argument>
       <argument type="service" id="web_profiler.csp.handler"/>
-      <argument>C:\xampp\htdocs\restaurante</argument>
+      <argument>C:\xampp\htdocs\restaurante2</argument>
     </service>
     <service id="web_profiler.controller.router" class="Symfony\Bundle\WebProfilerBundle\Controller\RouterController" public="true">
       <argument type="service" id="profiler" on-invalid="null"/>
@@ -3275,11 +3357,11 @@
       <argument type="service" id="profiler" on-invalid="null"/>
     </service>
     <service id="web_profiler.csp.handler" class="Symfony\Bundle\WebProfilerBundle\Csp\ContentSecurityPolicyHandler" public="false">
-      <argument type="service" id=".1_NonceGenerator~_Ri9G9o"/>
+      <argument type="service" id=".1_NonceGenerator~3pOWQp0"/>
     </service>
     <service id="twig.extension.webprofiler" class="Symfony\Bundle\WebProfilerBundle\Twig\WebProfilerExtension" public="false">
       <tag name="twig.extension"/>
-      <argument type="service" id=".2_HtmlDumper~_Ri9G9o"/>
+      <argument type="service" id=".2_HtmlDumper~3pOWQp0"/>
     </service>
     <service id="debug.file_link_formatter.url_format" class="string" public="false">
       <argument type="service" id="router.default"/>
@@ -3291,7 +3373,7 @@
       <tag name="kernel.event_subscriber"/>
       <tag name="container.hot_path"/>
       <argument type="service" id="twig"/>
-      <argument>false</argument>
+      <argument>true</argument>
       <argument>2</argument>
       <argument type="service" id="router.default" on-invalid="ignore"/>
       <argument>^/((index|app(_[\w]+)?)\.php/)?_wdt</argument>
@@ -3337,7 +3419,7 @@
     <service id="monolog.processor.psr_log_message" class="Monolog\Processor\PsrLogMessageProcessor" public="false"/>
     <service id="monolog.handler.main" class="Monolog\Handler\StreamHandler">
       <tag name="kernel.reset" method="reset"/>
-      <argument>C:\xampp\htdocs\restaurante\var\log/dev.log</argument>
+      <argument>C:\xampp\htdocs\restaurante2\var\log/dev.log</argument>
       <argument>100</argument>
       <argument>true</argument>
       <argument>null</argument>
@@ -3354,24 +3436,24 @@
       <argument type="collection"/>
       <argument type="collection"/>
     </service>
-    <service id=".6_HtmlDescriptor~N3EJH4J" class="Symfony\Component\VarDumper\Command\Descriptor\HtmlDescriptor" public="false">
+    <service id=".6_HtmlDescriptor~4x0MfaW" class="Symfony\Component\VarDumper\Command\Descriptor\HtmlDescriptor" public="false">
       <argument type="service" id="var_dumper.html_dumper"/>
     </service>
-    <service id=".5_CliDescriptor~N3EJH4J" class="Symfony\Component\VarDumper\Command\Descriptor\CliDescriptor" public="false">
+    <service id=".5_CliDescriptor~4x0MfaW" class="Symfony\Component\VarDumper\Command\Descriptor\CliDescriptor" public="false">
       <argument type="service" id="var_dumper.contextualized_cli_dumper.inner"/>
     </service>
-    <service id=".4_CliContextProvider~N3EJH4J" class="Symfony\Component\VarDumper\Dumper\ContextProvider\CliContextProvider" public="false"/>
-    <service id=".3_RequestContextProvider~N3EJH4J" class="Symfony\Component\VarDumper\Dumper\ContextProvider\RequestContextProvider" public="false">
+    <service id=".4_CliContextProvider~4x0MfaW" class="Symfony\Component\VarDumper\Dumper\ContextProvider\CliContextProvider" public="false"/>
+    <service id=".3_RequestContextProvider~4x0MfaW" class="Symfony\Component\VarDumper\Dumper\ContextProvider\RequestContextProvider" public="false">
       <argument type="service" id="request_stack"/>
     </service>
-    <service id=".2_SourceContextProvider~N3EJH4J" class="Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider" public="false">
+    <service id=".2_SourceContextProvider~4x0MfaW" class="Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider" public="false">
       <argument>UTF-8</argument>
-      <argument>C:\xampp\htdocs\restaurante</argument>
+      <argument>C:\xampp\htdocs\restaurante2</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
     </service>
-    <service id=".1_SourceContextProvider~N3EJH4J" class="Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider" public="false">
+    <service id=".1_SourceContextProvider~4x0MfaW" class="Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider" public="false">
       <argument>UTF-8</argument>
-      <argument>C:\xampp\htdocs\restaurante</argument>
+      <argument>C:\xampp\htdocs\restaurante2</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
     </service>
     <service id="twig.extension.dump" class="Symfony\Bridge\Twig\Extension\DumpExtension" public="false">
@@ -3412,7 +3494,7 @@
     <service id="var_dumper.contextualized_cli_dumper" class="Symfony\Component\VarDumper\Dumper\ContextualizedDumper" public="false">
       <argument type="service" id="var_dumper.contextualized_cli_dumper.inner"/>
       <argument type="collection">
-        <argument key="source" type="service" id=".1_SourceContextProvider~N3EJH4J"/>
+        <argument key="source" type="service" id=".1_SourceContextProvider~4x0MfaW"/>
       </argument>
     </service>
     <service id="var_dumper.html_dumper" class="Symfony\Component\VarDumper\Dumper\HtmlDumper" public="false">
@@ -3428,9 +3510,9 @@
     <service id="var_dumper.server_connection" class="Symfony\Component\VarDumper\Server\Connection" public="false">
       <argument>tcp://%env(VAR_DUMPER_SERVER)%</argument>
       <argument type="collection">
-        <argument key="source" type="service" id=".2_SourceContextProvider~N3EJH4J"/>
-        <argument key="request" type="service" id=".3_RequestContextProvider~N3EJH4J"/>
-        <argument key="cli" type="service" id=".4_CliContextProvider~N3EJH4J"/>
+        <argument key="source" type="service" id=".2_SourceContextProvider~4x0MfaW"/>
+        <argument key="request" type="service" id=".3_RequestContextProvider~4x0MfaW"/>
+        <argument key="cli" type="service" id=".4_CliContextProvider~4x0MfaW"/>
       </argument>
     </service>
     <service id="var_dumper.dump_server" class="Symfony\Component\VarDumper\Server\DumpServer" public="false">
@@ -3442,8 +3524,8 @@
       <tag name="console.command" command="server:dump"/>
       <argument type="service" id="var_dumper.dump_server"/>
       <argument type="collection">
-        <argument key="cli" type="service" id=".5_CliDescriptor~N3EJH4J"/>
-        <argument key="html" type="service" id=".6_HtmlDescriptor~N3EJH4J"/>
+        <argument key="cli" type="service" id=".5_CliDescriptor~4x0MfaW"/>
+        <argument key="html" type="service" id=".6_HtmlDescriptor~4x0MfaW"/>
       </argument>
       <call method="setName">
         <argument>server:dump</argument>
@@ -3632,7 +3714,7 @@
       <argument type="collection"/>
       <factory service="doctrine.dbal.connection_factory" method="createConnection"/>
     </service>
-    <service id=".1_ServiceLocator~rQVMSTh" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".1_ServiceLocator~1m_8IE8" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <argument type="collection"/>
     </service>
     <service id="doctrine.orm.proxy_cache_warmer" class="Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer" public="false">
@@ -3790,7 +3872,7 @@
         <argument type="service" id="doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
-        <argument>C:\xampp\htdocs\restaurante\var\cache\dev/doctrine/orm/Proxies</argument>
+        <argument>C:\xampp\htdocs\restaurante2\var\cache\dev/doctrine/orm/Proxies</argument>
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -3820,7 +3902,7 @@
     <service id="doctrine.orm.default_annotation_metadata_driver" class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
       <argument type="service" id="annotations.cached_reader"/>
       <argument type="collection">
-        <argument>C:\xampp\htdocs\restaurante\src\Entity</argument>
+        <argument>C:\xampp\htdocs\restaurante2\src\Entity</argument>
       </argument>
     </service>
     <service id="doctrine.orm.default_metadata_driver" class="Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain" public="false">
@@ -4465,8 +4547,8 @@
     <service id="maker.file_manager" class="Symfony\Bundle\MakerBundle\FileManager" public="false">
       <argument type="service" id="filesystem"/>
       <argument type="service" id="maker.autoloader_util"/>
-      <argument>C:\xampp\htdocs\restaurante</argument>
-      <argument>C:\xampp\htdocs\restaurante/templates</argument>
+      <argument>C:\xampp\htdocs\restaurante2</argument>
+      <argument>C:\xampp\htdocs\restaurante2/templates</argument>
     </service>
     <service id="maker.autoloader_finder" class="Symfony\Bundle\MakerBundle\Util\ComposerAutoloaderFinder" public="false">
       <argument>App</argument>
@@ -4524,7 +4606,7 @@
       <tag name="maker.command"/>
       <argument type="service" id="maker.file_manager"/>
       <argument type="service" id="maker.doctrine_helper"/>
-      <argument>C:\xampp\htdocs\restaurante</argument>
+      <argument>C:\xampp\htdocs\restaurante2</argument>
       <argument type="service" id="maker.generator"/>
     </service>
     <service id="maker.maker.make_fixtures" class="Symfony\Bundle\MakerBundle\Maker\MakeFixtures" public="false">
@@ -4574,11 +4656,110 @@
     </service>
     <service id="maker.maker.make_migration" class="Symfony\Bundle\MakerBundle\Maker\MakeMigration" public="false">
       <tag name="maker.command"/>
-      <argument>C:\xampp\htdocs\restaurante</argument>
+      <argument>C:\xampp\htdocs\restaurante2</argument>
+    </service>
+    <service id=".4_Swift_Transport_Esmtp_Auth_NTLMAuthenticator~X_QAdI5" class="Swift_Transport_Esmtp_Auth_NTLMAuthenticator" public="false"/>
+    <service id=".3_Swift_Transport_Esmtp_Auth_PlainAuthenticator~X_QAdI5" class="Swift_Transport_Esmtp_Auth_PlainAuthenticator" public="false"/>
+    <service id=".2_Swift_Transport_Esmtp_Auth_LoginAuthenticator~X_QAdI5" class="Swift_Transport_Esmtp_Auth_LoginAuthenticator" public="false"/>
+    <service id=".1_Swift_Transport_Esmtp_Auth_CramMd5Authenticator~X_QAdI5" class="Swift_Transport_Esmtp_Auth_CramMd5Authenticator" public="false"/>
+    <service id="swiftmailer.mailer.abstract" class="Swift_Mailer" public="true" abstract="true">
+      <argument type="service" id="swiftmailer.mailer.default.transport.spool"/>
+    </service>
+    <service id="swiftmailer.transport.smtp.configurator.abstract" class="Symfony\Bundle\SwiftmailerBundle\DependencyInjection\SmtpTransportConfigurator" public="false" abstract="true"/>
+    <service id="swiftmailer.transport.sendmail.abstract" class="Swift_Transport_SendmailTransport" public="false" abstract="true"/>
+    <service id="swiftmailer.transport.null.abstract" class="Swift_Transport_NullTransport" public="false" abstract="true"/>
+    <service id="swiftmailer.transport.failover" class="Swift_Transport_FailoverTransport" public="false"/>
+    <service id="swiftmailer.transport.buffer.abstract" class="Swift_Transport_StreamBuffer" public="false" abstract="true">
+      <argument type="service" id="swiftmailer.transport.replacementfactory"/>
+    </service>
+    <service id="swiftmailer.transport.authhandler.abstract" class="Swift_Transport_Esmtp_AuthHandler" public="false" abstract="true">
+      <argument type="collection">
+        <argument type="service" id=".1_Swift_Transport_Esmtp_Auth_CramMd5Authenticator~X_QAdI5"/>
+        <argument type="service" id=".2_Swift_Transport_Esmtp_Auth_LoginAuthenticator~X_QAdI5"/>
+        <argument type="service" id=".3_Swift_Transport_Esmtp_Auth_PlainAuthenticator~X_QAdI5"/>
+        <argument type="service" id=".4_Swift_Transport_Esmtp_Auth_NTLMAuthenticator~X_QAdI5"/>
+      </argument>
+    </service>
+    <service id="swiftmailer.transport.eventdispatcher.abstract" class="Swift_Events_SimpleEventDispatcher" public="false" abstract="true"/>
+    <service id="swiftmailer.transport.replacementfactory" class="Swift_StreamFilters_StringReplacementFilterFactory" public="false"/>
+    <service id="swiftmailer.plugin.redirecting.abstract" class="Swift_Plugins_RedirectingPlugin" public="false" abstract="true"/>
+    <service id="swiftmailer.plugin.antiflood.abstract" class="Swift_Plugins_AntiFloodPlugin" public="false" abstract="true"/>
+    <service id="swiftmailer.plugin.impersonate.abstract" class="Swift_Plugins_ImpersonatePlugin" public="false" abstract="true"/>
+    <service id="swiftmailer.plugin.messagelogger.abstract" class="Swift_Plugins_MessageLogger" abstract="true"/>
+    <service id="swiftmailer.transport.smtp.abstract" class="Swift_Transport_EsmtpTransport" public="false" abstract="true"/>
+    <service id="swiftmailer.transport.spool.abstract" class="Swift_Transport_SpoolTransport" public="false" abstract="true"/>
+    <service id="swiftmailer.spool.file.abstract" class="Swift_FileSpool" public="false" abstract="true">
+      <argument></argument>
+    </service>
+    <service id="swiftmailer.spool.memory.abstract" class="Swift_MemorySpool" public="false" abstract="true"/>
+    <service id="swiftmailer.email_sender.listener" class="Symfony\Bundle\SwiftmailerBundle\EventListener\EmailSenderListener">
+      <tag name="kernel.event_subscriber"/>
+      <tag name="kernel.reset" method="reset"/>
+      <argument type="service" id="service_container"/>
+      <argument type="service" id="monolog.logger" on-invalid="null"/>
+    </service>
+    <service id="swiftmailer.data_collector" class="Symfony\Bundle\SwiftmailerBundle\DataCollector\MessageDataCollector" public="false">
+      <tag name="data_collector" template="@Swiftmailer/Collector/swiftmailer.html.twig" id="swiftmailer" priority="245"/>
+      <argument type="service" id="service_container"/>
+    </service>
+    <service id="swiftmailer.command.debug" class="Symfony\Bundle\SwiftmailerBundle\Command\DebugCommand">
+      <tag name="console.command" command="debug:swiftmailer"/>
+      <call method="setName">
+        <argument>debug:swiftmailer</argument>
+      </call>
+    </service>
+    <service id="swiftmailer.command.new_email" class="Symfony\Bundle\SwiftmailerBundle\Command\NewEmailCommand">
+      <tag name="console.command" command="swiftmailer:email:send"/>
+      <call method="setName">
+        <argument>swiftmailer:email:send</argument>
+      </call>
+    </service>
+    <service id="swiftmailer.command.send_email" class="Symfony\Bundle\SwiftmailerBundle\Command\SendEmailCommand">
+      <tag name="console.command" command="swiftmailer:spool:send"/>
+      <call method="setName">
+        <argument>swiftmailer:spool:send</argument>
+      </call>
+    </service>
+    <service id="swiftmailer.mailer.default.transport.eventdispatcher" class="Swift_Events_SimpleEventDispatcher" public="false"/>
+    <service id="swiftmailer.mailer.default.transport.dynamic" class="Swift_Transport">
+      <argument type="collection">
+        <argument key="transport">smtp</argument>
+        <argument key="url">%env(MAILER_URL)%</argument>
+        <argument key="username">null</argument>
+        <argument key="password">null</argument>
+        <argument key="host">localhost</argument>
+        <argument key="port">null</argument>
+        <argument key="timeout">30</argument>
+        <argument key="source_ip">null</argument>
+        <argument key="local_domain">null</argument>
+        <argument key="encryption">null</argument>
+        <argument key="auth_mode">null</argument>
+        <argument key="command">/usr/sbin/sendmail -bs</argument>
+      </argument>
+      <argument type="service" id="router.request_context" on-invalid="null"/>
+      <argument type="service" id="swiftmailer.mailer.default.transport.eventdispatcher"/>
+      <factory class="Symfony\Bundle\SwiftmailerBundle\DependencyInjection\SwiftmailerTransportFactory" method="createTransport"/>
+    </service>
+    <service id="swiftmailer.mailer.default" class="Swift_Mailer" public="true">
+      <argument type="service" id="swiftmailer.mailer.default.transport.spool"/>
+    </service>
+    <service id="swiftmailer.mailer.default.spool.memory" class="Swift_MemorySpool" public="false"/>
+    <service id="swiftmailer.mailer.default.transport.spool" class="Swift_Transport_SpoolTransport" public="false">
+      <argument type="service" id="swiftmailer.mailer.default.transport.eventdispatcher"/>
+      <argument type="service" id="swiftmailer.mailer.default.spool.memory"/>
+      <call method="registerPlugin">
+        <argument type="service" id="swiftmailer.mailer.default.plugin.messagelogger"/>
+      </call>
+    </service>
+    <service id="swiftmailer.mailer.default.plugin.messagelogger" class="Swift_Plugins_MessageLogger" public="true">
+      <tag name="swiftmailer.default.plugin"/>
     </service>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ArticuloController" class="App\Controller\ArticuloController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ArticuloController" class="App\Controller\ArticuloController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ArticuloController" class="App\Controller\ArticuloController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ContactoController" class="App\Controller\ContactoController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ContactoController" class="App\Controller\ContactoController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ContactoController" class="App\Controller\ContactoController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\LineaPedidoController" class="App\Controller\LineaPedidoController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\LineaPedidoController" class="App\Controller\LineaPedidoController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\LineaPedidoController" class="App\Controller\LineaPedidoController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -4590,6 +4771,8 @@
     <service id=".abstract.instanceof.App\Controller\ProveedorController" class="App\Controller\ProveedorController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ArticuloType" class="App\Form\ArticuloType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ArticuloType" class="App\Form\ArticuloType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ContactoType" class="App\Form\ContactoType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\ContactoType" class="App\Form\ContactoType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\LineaPedidoType" class="App\Form\LineaPedidoType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\LineaPedidoType" class="App\Form\LineaPedidoType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\PedidoType" class="App\Form\PedidoType" autowire="true" abstract="true"/>
@@ -4799,6 +4982,12 @@
         <argument key="articulo" type="service" id=".errored..service_locator.qlXgPWB.App\Entity\Articulo"/>
       </argument>
     </service>
+    <service id=".service_locator.5sWVEo_" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="mailer" type="service" id="swiftmailer.mailer.default"/>
+      </argument>
+    </service>
     <service id=".service_locator.wJReo6N" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -4811,9 +5000,10 @@
         <argument key="lineaPedido" type="service" id=".errored..service_locator.hPBZMGd.App\Entity\LineaPedido"/>
       </argument>
     </service>
-    <service id=".service_locator.7oA6UNo" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.pjymJQO" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="lineaPedidoRepository" type="service" id="App\Repository\LineaPedidoRepository"/>
         <argument key="pedidoRepository" type="service" id="App\Repository\PedidoRepository"/>
       </argument>
     </service>
@@ -4835,20 +5025,22 @@
         <argument key="proveedor" type="service" id=".errored..service_locator.7wiT78o.App\Entity\Proveedor"/>
       </argument>
     </service>
-    <service id=".service_locator.h4eccbA" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.dmQY12A" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\ArticuloController::delete" type="service" id=".service_locator.qlXgPWB"/>
         <argument key="App\Controller\ArticuloController::edit" type="service" id=".service_locator.qlXgPWB"/>
         <argument key="App\Controller\ArticuloController::index" type="service" id=".service_locator.YnkDa56"/>
         <argument key="App\Controller\ArticuloController::show" type="service" id=".service_locator.qlXgPWB"/>
+        <argument key="App\Controller\ContactoController::index" type="service" id=".service_locator.5sWVEo_"/>
         <argument key="App\Controller\LineaPedidoController::delete" type="service" id=".service_locator.hPBZMGd"/>
         <argument key="App\Controller\LineaPedidoController::edit" type="service" id=".service_locator.hPBZMGd"/>
         <argument key="App\Controller\LineaPedidoController::index" type="service" id=".service_locator.wJReo6N"/>
         <argument key="App\Controller\LineaPedidoController::show" type="service" id=".service_locator.hPBZMGd"/>
         <argument key="App\Controller\PedidoController::delete" type="service" id=".service_locator.SZzy9V."/>
         <argument key="App\Controller\PedidoController::edit" type="service" id=".service_locator.SZzy9V."/>
-        <argument key="App\Controller\PedidoController::index" type="service" id=".service_locator.7oA6UNo"/>
+        <argument key="App\Controller\PedidoController::index" type="service" id=".service_locator.pjymJQO"/>
+        <argument key="App\Controller\PedidoController::new" type="service" id=".service_locator.5sWVEo_"/>
         <argument key="App\Controller\PedidoController::show" type="service" id=".service_locator.SZzy9V."/>
         <argument key="App\Controller\ProveedorController::delete" type="service" id=".service_locator.7wiT78o"/>
         <argument key="App\Controller\ProveedorController::edit" type="service" id=".service_locator.7wiT78o"/>
@@ -4915,10 +5107,11 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.7qom3FL" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.UzZg1uN" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\ArticuloType" type="service" id="App\Form\ArticuloType"/>
+        <argument key="App\Form\ContactoType" type="service" id="App\Form\ContactoType"/>
         <argument key="App\Form\LineaPedidoType" type="service" id="App\Form\LineaPedidoType"/>
         <argument key="App\Form\PedidoType" type="service" id="App\Form\PedidoType"/>
         <argument key="App\Form\ProveedorType" type="service" id="App\Form\ProveedorType"/>
@@ -5150,6 +5343,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.pNNo5z3" method="withContext"/>
     </service>
+    <service id=".service_locator.pNNo5z3.App\Controller\ContactoController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\ContactoController"/>
+      <argument>App\Controller\ContactoController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.pNNo5z3" method="withContext"/>
+    </service>
     <service id=".service_locator.pNNo5z3.App\Controller\LineaPedidoController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\LineaPedidoController"/>
       <argument>App\Controller\LineaPedidoController</argument>
@@ -5307,12 +5506,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.h4eccbA"/>
+      <argument type="service" id=".service_locator.dmQY12A"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.h4eccbA"/>
+      <argument type="service" id=".service_locator.dmQY12A"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -5327,7 +5526,7 @@
     <service id=".errored..service_locator.SZzy9V..App\Entity\Pedido" class="App\Entity\Pedido"/>
     <service id=".errored..service_locator.7wiT78o.App\Entity\Proveedor" class="App\Entity\Proveedor"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
-      <argument type="service" id=".service_locator.ozNWYfC"/>
+      <argument type="service" id=".service_locator.3t4ia0Q"/>
       <argument type="collection">
         <argument key="about">console.command.about</argument>
         <argument key="assets:install">console.command.assets_install</argument>
@@ -5390,6 +5589,9 @@
         <argument key="doctrine:migrations:up-to-date">doctrine_migrations.up_to_date_command</argument>
         <argument key="doctrine:migrations:version">doctrine_migrations.version_command</argument>
         <argument key="security:encode-password">security.command.user_password_encoder</argument>
+        <argument key="debug:swiftmailer">swiftmailer.command.debug</argument>
+        <argument key="swiftmailer:email:send">swiftmailer.command.new_email</argument>
+        <argument key="swiftmailer:spool:send">swiftmailer.command.send_email</argument>
         <argument key="make:auth">maker.auto_command.make_auth</argument>
         <argument key="make:command">maker.auto_command.make_command</argument>
         <argument key="make:controller">maker.auto_command.make_controller</argument>
@@ -5410,7 +5612,7 @@
         <argument key="make:migration">maker.auto_command.make_migration</argument>
       </argument>
     </service>
-    <service id=".service_locator.ozNWYfC" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.3t4ia0Q" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="console.command.about" type="service" id="console.command.about"/>
@@ -5489,57 +5691,60 @@
         <argument key="maker.auto_command.make_voter" type="service" id="maker.auto_command.make_voter"/>
         <argument key="monolog.command.server_log" type="service" id="monolog.command.server_log"/>
         <argument key="security.command.user_password_encoder" type="service" id="security.command.user_password_encoder"/>
+        <argument key="swiftmailer.command.debug" type="service" id="swiftmailer.command.debug"/>
+        <argument key="swiftmailer.command.new_email" type="service" id="swiftmailer.command.new_email"/>
+        <argument key="swiftmailer.command.send_email" type="service" id="swiftmailer.command.send_email"/>
         <argument key="twig.command.debug" type="service" id="twig.command.debug"/>
         <argument key="twig.command.lint" type="service" id="twig.command.lint"/>
         <argument key="var_dumper.command.server_dump" type="service" id="var_dumper.command.server_dump"/>
       </argument>
     </service>
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter" public="false">
-      <argument>YGvJlgrrHk</argument>
+      <argument>XAuBKkv7-6</argument>
       <argument>0</argument>
-      <argument>C:\xampp\htdocs\restaurante\var\cache\dev/pools</argument>
+      <argument>C:\xampp\htdocs\restaurante2\var\cache\dev/pools</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
     </service>
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>vgB+7gV+we</argument>
+      <argument>pVeI8ZcPXz</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\xampp\htdocs\restaurante\var\cache\dev/pools</argument>
+      <argument>C:\xampp\htdocs\restaurante2\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>Fz76NZmtJn</argument>
+      <argument>n3D7vQ8RXI</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\xampp\htdocs\restaurante\var\cache\dev/pools</argument>
+      <argument>C:\xampp\htdocs\restaurante2\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>ncGVuJ55Xq</argument>
+      <argument>bs8Dgy5b+b</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\xampp\htdocs\restaurante\var\cache\dev/pools</argument>
+      <argument>C:\xampp\htdocs\restaurante2\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>OAPUQ6irZY</argument>
+      <argument>j2M4le5+W4</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\xampp\htdocs\restaurante\var\cache\dev/pools</argument>
+      <argument>C:\xampp\htdocs\restaurante2\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.property_info.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>GCqknhdOhO</argument>
+      <argument>wvBV1dxG7t</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\xampp\htdocs\restaurante\var\cache\dev/pools</argument>
+      <argument>C:\xampp\htdocs\restaurante2\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -5547,10 +5752,10 @@
     <service id="cache.doctrine.orm.default.result.recorder_inner" class="Symfony\Component\Cache\Adapter\ArrayAdapter" public="false"/>
     <service id="cache.doctrine.orm.default.query.recorder_inner" class="Symfony\Component\Cache\Adapter\ArrayAdapter" public="false"/>
     <service id="cache.security_expression_language.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>8tyCfEM0kZ</argument>
+      <argument>6B6EAk2d8g</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\xampp\htdocs\restaurante\var\cache\dev/pools</argument>
+      <argument>C:\xampp\htdocs\restaurante2\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -5605,7 +5810,7 @@
     <service id="form.choice_list_factory" alias="form.choice_list_factory.cached" public="false"/>
     <service id="Symfony\Component\Asset\Packages" alias="assets.packages" public="false"/>
     <service id="Symfony\Contracts\HttpClient\HttpClientInterface" alias=".debug.http_client"/>
-    <service id="mailer" alias="mailer.mailer"/>
+    <service id="mailer" alias="swiftmailer.mailer.default" public="true"/>
     <service id="Symfony\Component\Mailer\MailerInterface" alias="mailer.mailer"/>
     <service id="Symfony\Component\Mailer\Transport\TransportInterface" alias="mailer.default_transport"/>
     <service id="Symfony\Component\Notifier\NotifierInterface" alias="notifier"/>
@@ -5684,9 +5889,20 @@
     <service id="security.authentication.session_strategy.main" alias="security.authentication.session_strategy"/>
     <service id="security.user_checker.main" alias="security.user_checker" public="false"/>
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker" public="false"/>
+    <service id="swiftmailer.mailer.default.transport" alias="swiftmailer.mailer.default.transport.spool"/>
+    <service id="swiftmailer.mailer.default.spool" alias="swiftmailer.mailer.default.spool.memory"/>
+    <service id="swiftmailer.mailer.default.transport.real" alias="swiftmailer.mailer.default.transport.dynamic" public="true"/>
+    <service id="swiftmailer.spool" alias="swiftmailer.mailer.default.spool.memory"/>
+    <service id="swiftmailer.transport.real" alias="swiftmailer.mailer.default.transport.dynamic"/>
+    <service id="Swift_Spool" alias="swiftmailer.mailer.default.spool.memory" public="false"/>
+    <service id="swiftmailer.plugin.messagelogger" alias="swiftmailer.mailer.default.plugin.messagelogger"/>
+    <service id="swiftmailer.mailer" alias="swiftmailer.mailer.default"/>
+    <service id="swiftmailer.transport" alias="swiftmailer.mailer.default.transport.spool" public="true"/>
+    <service id="Swift_Mailer" alias="swiftmailer.mailer.default" public="false"/>
+    <service id="Swift_Transport" alias="swiftmailer.mailer.default.transport.spool" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.h4eccbA"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.dmQY12A"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

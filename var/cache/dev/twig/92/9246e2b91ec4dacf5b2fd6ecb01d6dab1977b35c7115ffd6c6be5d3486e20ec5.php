@@ -96,6 +96,12 @@ class __TwigTemplate_2cd2a8b3d8f3afca340e4be219f228bef7bc64bb4e93c51d45328c18145
         // line 10
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("pedido_index");
         echo "\">Volver</a>
+
+    ";
+        // line 12
+        echo twig_include($this->env, $context, "linea_pedido/_form.html.twig");
+        echo "
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -117,7 +123,7 @@ class __TwigTemplate_2cd2a8b3d8f3afca340e4be219f228bef7bc64bb4e93c51d45328c18145
 
     public function getDebugInfo()
     {
-        return array (  97 => 10,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  102 => 12,  97 => 10,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -132,6 +138,9 @@ class __TwigTemplate_2cd2a8b3d8f3afca340e4be219f228bef7bc64bb4e93c51d45328c18145
     {{ include('pedido/_form.html.twig') }}
 
     <a href=\"{{ path('pedido_index') }}\">Volver</a>
+
+    {{ include('linea_pedido/_form.html.twig') }}
+
 {% endblock %}
 ", "pedido/new.html.twig", "C:\\xampp\\htdocs\\restaurante\\templates\\pedido\\new.html.twig");
     }

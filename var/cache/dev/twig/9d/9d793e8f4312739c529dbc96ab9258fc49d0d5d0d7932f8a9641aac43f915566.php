@@ -71,22 +71,19 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
   <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
     <ul class=\"navbar-nav mr-auto\">
       <li class=\"nav-item active\">
+        <a class=\"nav-link\" href=\"#\">Registro</a>
+      </li>
+      <li class=\"nav-item\">
         <a class=\"nav-link\" href=\"/articulo\">Artículos<span class=\"sr-only\">(current)</span></a>
       </li>
       <li class=\"nav-item\">
         <a class=\"nav-link\" href=\"/proveedor\">Proveedores</a>
       </li>
-      <li class=\"nav-item dropdown\">
-        <a class=\"nav-link dropdown-toggle\" href=\"\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-          Pedido
-        </a>
-        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
-          <a class=\"dropdown-item\" href=\"/pedido/new\">Nuevo</a>
-          <a class=\"dropdown-item\" href=\"/pedido\">Listado</a>
-        </div>
+      <li class=\"nav-item\">
+        <a class=\"nav-link\" href=\"/pedido\">Pedidos</a>
       </li>
       ";
-        // line 42
+        // line 48
         echo "    </ul>
     <form class=\"form-inline my-2 my-lg-0\">
       <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"\" aria-label=\"Search\">
@@ -95,12 +92,12 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
   </div>
 </nav>
         ";
-        // line 49
+        // line 55
         $this->displayBlock('body', $context, $blocks);
-        // line 50
+        // line 56
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 55
+        // line 61
         echo "    </body>
 </html>
 ";
@@ -160,7 +157,7 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
 
     }
 
-    // line 49
+    // line 55
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -178,7 +175,7 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
 
     }
 
-    // line 50
+    // line 56
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -188,7 +185,7 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 51
+        // line 57
         echo "        <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
         <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
@@ -213,7 +210,7 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
 
     public function getDebugInfo()
     {
-        return array (  192 => 51,  182 => 50,  164 => 49,  152 => 10,  148 => 9,  145 => 8,  135 => 7,  116 => 6,  104 => 55,  101 => 50,  99 => 49,  90 => 42,  65 => 15,  60 => 12,  58 => 7,  54 => 6,  47 => 1,);
+        return array (  189 => 57,  179 => 56,  161 => 55,  149 => 10,  145 => 9,  142 => 8,  132 => 7,  113 => 6,  101 => 61,  98 => 56,  96 => 55,  87 => 48,  65 => 15,  60 => 12,  58 => 7,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -240,21 +237,27 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
   <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
     <ul class=\"navbar-nav mr-auto\">
       <li class=\"nav-item active\">
+        <a class=\"nav-link\" href=\"#\">Registro</a>
+      </li>
+      <li class=\"nav-item\">
         <a class=\"nav-link\" href=\"/articulo\">Artículos<span class=\"sr-only\">(current)</span></a>
       </li>
       <li class=\"nav-item\">
         <a class=\"nav-link\" href=\"/proveedor\">Proveedores</a>
       </li>
+      <li class=\"nav-item\">
+        <a class=\"nav-link\" href=\"/pedido\">Pedidos</a>
+      </li>
+      {#
       <li class=\"nav-item dropdown\">
         <a class=\"nav-link dropdown-toggle\" href=\"\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-          Pedido
+          Pedidos
         </a>
         <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
           <a class=\"dropdown-item\" href=\"/pedido/new\">Nuevo</a>
           <a class=\"dropdown-item\" href=\"/pedido\">Listado</a>
         </div>
       </li>
-      {#
       <li class=\"nav-item\">
         <a class=\"nav-link disabled\" href=\"#\">Disabled</a>
       </li>

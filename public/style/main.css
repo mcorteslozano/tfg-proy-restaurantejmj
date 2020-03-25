@@ -11,3 +11,15 @@ body {
     color: white;
     background-color:black;
 }
+
+.form_linea{
+    position: relative;
+    float:left;
+    left: 25%;
+}
+
+.form_pedido{
+    position: relative;
+    float:right;
+    right: 25%;
+}
