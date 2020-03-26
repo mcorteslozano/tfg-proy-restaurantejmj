@@ -84,6 +84,6 @@ class __TwigTemplate_f2d16cc19782ddb804c36fc2df05a074ecaf119f657e45b0adf46bbe504
     {{ form_widget(form) }}
     <button class=\"btn\">{{ button_label|default('Guardar') }}</button>
 {{ form_end(form) }}
-", "articulo/_form.html.twig", "C:\\xampp\\htdocs\\restaurante\\templates\\articulo\\_form.html.twig");
+", "articulo/_form.html.twig", "C:\\xampp\\htdocs\\restaurante2\\templates\\articulo\\_form.html.twig");
     }
 }

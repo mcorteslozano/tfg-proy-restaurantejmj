@@ -434,6 +434,6 @@ class __TwigTemplate_a031663850f7f83175d085fb2714b50ab7cf1ad28dd4ba8f5a903dcc9bf
         {% endif %}
     </div>
 {% endblock %}
-", "@WebProfiler/Collector/http_client.html.twig", "C:\\xampp\\htdocs\\restaurante\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\http_client.html.twig");
+", "@WebProfiler/Collector/http_client.html.twig", "C:\\xampp\\htdocs\\restaurante2\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\http_client.html.twig");
     }
 }

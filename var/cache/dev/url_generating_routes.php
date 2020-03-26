@@ -20,7 +20,6 @@ return [
     'articulo_show' => [['id'], ['_controller' => 'App\\Controller\\ArticuloController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/articulo']], [], []],
     'articulo_edit' => [['id'], ['_controller' => 'App\\Controller\\ArticuloController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/articulo']], [], []],
     'articulo_delete' => [['id'], ['_controller' => 'App\\Controller\\ArticuloController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/articulo']], [], []],
-    'contacto' => [[], ['_controller' => 'App\\Controller\\ContactoController::index'], [], [['text', '/contacto']], [], []],
     'linea_pedido_index' => [[], ['_controller' => 'App\\Controller\\LineaPedidoController::index'], [], [['text', '/linea/pedido/']], [], []],
     'linea_pedido_new' => [[], ['_controller' => 'App\\Controller\\LineaPedidoController::new'], [], [['text', '/linea/pedido/new']], [], []],
     'linea_pedido_show' => [['id'], ['_controller' => 'App\\Controller\\LineaPedidoController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/linea/pedido']], [], []],

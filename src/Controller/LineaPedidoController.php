@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\LineaPedido;
 use App\Form\LineaPedidoType;
 use App\Repository\LineaPedidoRepository;
+use App\Repository\ArticuloRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -28,25 +29,25 @@ class LineaPedidoController extends AbstractController
     /**
      * @Route("/new", name="linea_pedido_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request, ArticuloRepository $articuloRepository): Response
     {
         $lineaPedido = new LineaPedido();
         $form = $this->createForm(LineaPedidoType::class, $lineaPedido);
         $form->handleRequest($request);
 
+
         if ($form->isSubmitted() && $form->isValid()) {
 
-          /*  $em = $this->getDoctrine()->getManager();
-            $connection = $em->getConnection();
-            $idArticulo = $lineaPedido->getIdArticulo();
-            //var_dump($idArticulo);
-            $statement = $connection->prepare("SELECT precio FROM articulo WHERE id = :id");
-            $statement->bindValue('id', $idArticulo);
-            $statement->execute();
-            //var_dump($statement);
-            $results = $statement->fetchAll();
-            $lineaPedido->setPrecioLinea(intval($lineaPedido->getUnidades()*$statement));
-            */
+            $resultado=$articuloRepository->findAll();
+           
+            for($i=0;$i<count($resultado);$i++){
+               if($lineaPedido->getIdArticulo()==$resultado[$i]->getNombre()){
+                   $precio=$resultado[$i]->getPrecio();
+               }
+            }
+            
+            $lineaPedido->setPrecioLinea($precio*$lineaPedido->getUnidades());
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($lineaPedido);
             $entityManager->flush();

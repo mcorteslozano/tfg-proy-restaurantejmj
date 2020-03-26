@@ -140,6 +140,6 @@ class __TwigTemplate_7405e29a52369bdc4524c68768c3f8a7d3296f10d36db9ec6616cbe4ee2
 
     {{ include('articulo/_delete_form.html.twig') }}
 {% endblock %}
-", "articulo/edit.html.twig", "C:\\xampp\\htdocs\\restaurante\\templates\\articulo\\edit.html.twig");
+", "articulo/edit.html.twig", "C:\\xampp\\htdocs\\restaurante2\\templates\\articulo\\edit.html.twig");
     }
 }

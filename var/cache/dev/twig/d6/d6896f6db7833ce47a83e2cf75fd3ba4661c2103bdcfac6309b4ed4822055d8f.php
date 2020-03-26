@@ -482,6 +482,6 @@ class __TwigTemplate_18e558f6d76b1a7218874d20c85c4f7ef48e13e14db8304694e81397f02
         {% endfor %}
     </table>
 {% endmacro %}
-", "@WebProfiler/Collector/events.html.twig", "C:\\xampp\\htdocs\\restaurante\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\events.html.twig");
+", "@WebProfiler/Collector/events.html.twig", "C:\\xampp\\htdocs\\restaurante2\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\events.html.twig");
     }
 }

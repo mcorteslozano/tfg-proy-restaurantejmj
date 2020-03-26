@@ -3,6 +3,14 @@
 {% block title %}Gestiona JMJ{% endblock %}
 
 {% block body %}
+
+
+{% for flash_message in app.session.flashbag.get('notice') %}
+    <div class="flash-notice">
+        {{ flash_message }}
+    </div>
+{% endfor %}
+
     <h3>Listado de Pedidos</h3>
 
     <table class="table">
@@ -47,7 +55,7 @@
                 <th>Número de línea</th>
                 <th>Artículo</th>
                 <th>Unidades</th>
-                <th>Precio</th>
+                <th>Precio Total</th>
                 <th></th>
             </tr>
         </thead>
@@ -57,7 +65,7 @@
                 <td>{{ linea_pedido.id }}</td>
                 <td>{{ linea_pedido.getIdArticulo() }}</td>
                 <td>{{ linea_pedido.unidades }}</td>
-                <td>{{ linea_pedido.precioLinea }}</td>
+                <td>{{ linea_pedido.precioLinea }}€</td>
                 <td colspan="2"><button class="btn" onclick="window.location.href='{{ path('linea_pedido_edit', {'id': linea_pedido.id}) }}'">Editar</button>
                 {{ include('linea_pedido/_delete_form.html.twig') }}</td>
             </tr>

@@ -10,7 +10,7 @@
             <tr>
                 <th>Nombre</th>
                 <th>Descripcion</th>
-                <th>Precio</th>
+                <th>Precio/Unidad</th>
                 <th>Existencias</th>
                 <th></th>
             </tr>
@@ -20,7 +20,7 @@
             <tr>
                 <td>{{ articulo.nombre }}</td>
                 <td>{{ articulo.descripcion }}</td>
-                <td>{{ articulo.precio }}</td>
+                <td>{{ articulo.precio }}€</td>
                 <td>{{ articulo.existencias }}</td>
                 <td colspan="2"><button class="btn" onclick="window.location.href='{{ path('articulo_edit', {'id': articulo.id}) }}'">Editar</button>
                 {{ include('articulo/_delete_form.html.twig') }}</td>

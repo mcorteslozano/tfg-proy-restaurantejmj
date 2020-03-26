@@ -84,6 +84,6 @@ class __TwigTemplate_d21032159fab3f31de3cae568118865db78e9c984e4a71cac0b787b0c9c
     {{ form_widget(form_linea) }}
     <button class=\"btn\">{{ button_label|default('Guardar') }}</button>
 {{ form_end(form_linea) }}
-", "linea_pedido/_form.html.twig", "C:\\xampp\\htdocs\\restaurante\\templates\\linea_pedido\\_form.html.twig");
+", "linea_pedido/_form.html.twig", "C:\\xampp\\htdocs\\restaurante2\\templates\\linea_pedido\\_form.html.twig");
     }
 }

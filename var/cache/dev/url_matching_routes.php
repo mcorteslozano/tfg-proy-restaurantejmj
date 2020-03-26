@@ -15,7 +15,6 @@ return [
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/articulo' => [[['_route' => 'articulo_index', '_controller' => 'App\\Controller\\ArticuloController::index'], null, ['GET' => 0], null, true, false, null]],
         '/articulo/new' => [[['_route' => 'articulo_new', '_controller' => 'App\\Controller\\ArticuloController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        '/contacto' => [[['_route' => 'contacto', '_controller' => 'App\\Controller\\ContactoController::index'], null, null, null, false, false, null]],
         '/linea/pedido' => [[['_route' => 'linea_pedido_index', '_controller' => 'App\\Controller\\LineaPedidoController::index'], null, ['GET' => 0], null, true, false, null]],
         '/linea/pedido/new' => [[['_route' => 'linea_pedido_new', '_controller' => 'App\\Controller\\LineaPedidoController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/pedido' => [[['_route' => 'pedido_index', '_controller' => 'App\\Controller\\PedidoController::index'], null, ['GET' => 0], null, true, false, null]],

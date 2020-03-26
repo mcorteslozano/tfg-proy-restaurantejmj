@@ -277,6 +277,6 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
         {% endblock %}
     </body>
 </html>
-", "base.html.twig", "C:\\xampp\\htdocs\\restaurante\\templates\\base.html.twig");
+", "base.html.twig", "C:\\xampp\\htdocs\\restaurante2\\templates\\base.html.twig");
     }
 }

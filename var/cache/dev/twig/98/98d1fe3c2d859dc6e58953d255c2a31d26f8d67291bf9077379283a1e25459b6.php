@@ -92,7 +92,7 @@ class __TwigTemplate_97ac93c3aa43f90ddd3ed20487de046e3340bee4b42841af12d959c5b5d
             <tr>
                 <th>Nombre</th>
                 <th>Descripcion</th>
-                <th>Precio</th>
+                <th>Precio/Unidad</th>
                 <th>Existencias</th>
                 <th></th>
             </tr>
@@ -130,7 +130,7 @@ class __TwigTemplate_97ac93c3aa43f90ddd3ed20487de046e3340bee4b42841af12d959c5b5d
                 <td>";
             // line 23
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["articulo"], "precio", [], "any", false, false, false, 23), "html", null, true);
-            echo "</td>
+            echo "€</td>
                 <td>";
             // line 24
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["articulo"], "existencias", [], "any", false, false, false, 24), "html", null, true);
@@ -211,7 +211,7 @@ class __TwigTemplate_97ac93c3aa43f90ddd3ed20487de046e3340bee4b42841af12d959c5b5d
             <tr>
                 <th>Nombre</th>
                 <th>Descripcion</th>
-                <th>Precio</th>
+                <th>Precio/Unidad</th>
                 <th>Existencias</th>
                 <th></th>
             </tr>
@@ -221,7 +221,7 @@ class __TwigTemplate_97ac93c3aa43f90ddd3ed20487de046e3340bee4b42841af12d959c5b5d
             <tr>
                 <td>{{ articulo.nombre }}</td>
                 <td>{{ articulo.descripcion }}</td>
-                <td>{{ articulo.precio }}</td>
+                <td>{{ articulo.precio }}€</td>
                 <td>{{ articulo.existencias }}</td>
                 <td colspan=\"2\"><button class=\"btn\" onclick=\"window.location.href='{{ path('articulo_edit', {'id': articulo.id}) }}'\">Editar</button>
                 {{ include('articulo/_delete_form.html.twig') }}</td>
@@ -236,6 +236,6 @@ class __TwigTemplate_97ac93c3aa43f90ddd3ed20487de046e3340bee4b42841af12d959c5b5d
 
     <a href=\"{{ path('articulo_new') }}\">Añadir artículo</a>
 {% endblock %}
-", "articulo/index.html.twig", "C:\\xampp\\htdocs\\restaurante\\templates\\articulo\\index.html.twig");
+", "articulo/index.html.twig", "C:\\xampp\\htdocs\\restaurante2\\templates\\articulo\\index.html.twig");
     }
 }

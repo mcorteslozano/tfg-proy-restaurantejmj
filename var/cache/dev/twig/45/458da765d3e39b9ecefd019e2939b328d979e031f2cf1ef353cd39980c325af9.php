@@ -81,6 +81,6 @@ class __TwigTemplate_6ec9e93a952ded214ad3d6e74339b0c22c6f306c8d8739c1587df9598ad
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ articulo.id) }}\">
     <button class=\"btn\">Eliminar</button>
 </form>
-", "articulo/_delete_form.html.twig", "C:\\xampp\\htdocs\\restaurante\\templates\\articulo\\_delete_form.html.twig");
+", "articulo/_delete_form.html.twig", "C:\\xampp\\htdocs\\restaurante2\\templates\\articulo\\_delete_form.html.twig");
     }
 }

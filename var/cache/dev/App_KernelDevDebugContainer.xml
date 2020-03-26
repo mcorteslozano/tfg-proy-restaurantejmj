@@ -118,7 +118,7 @@
       <parameter>form_div_layout.html.twig</parameter>
     </parameter>
     <parameter key="twig.default_path">C:\xampp\htdocs\restaurante2/templates</parameter>
-    <parameter key="web_profiler.debug_toolbar.intercept_redirects">true</parameter>
+    <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
     <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
     <parameter key="monolog.use_microseconds">true</parameter>
     <parameter key="monolog.swift_mailer.handlers" type="collection"/>
@@ -332,13 +332,6 @@
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.pNNo5z3.App\Controller\ArticuloController"/>
-      </call>
-    </service>
-    <service id="App\Controller\ContactoController" class="App\Controller\ContactoController" public="true" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.pNNo5z3.App\Controller\ContactoController"/>
       </call>
     </service>
     <service id="App\Controller\LineaPedidoController" class="App\Controller\LineaPedidoController" public="true" autowire="true" autoconfigure="true">
@@ -3373,7 +3366,7 @@
       <tag name="kernel.event_subscriber"/>
       <tag name="container.hot_path"/>
       <argument type="service" id="twig"/>
-      <argument>true</argument>
+      <argument>false</argument>
       <argument>2</argument>
       <argument type="service" id="router.default" on-invalid="ignore"/>
       <argument>^/((index|app(_[\w]+)?)\.php/)?_wdt</argument>
@@ -4757,9 +4750,6 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ArticuloController" class="App\Controller\ArticuloController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ArticuloController" class="App\Controller\ArticuloController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ArticuloController" class="App\Controller\ArticuloController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ContactoController" class="App\Controller\ContactoController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ContactoController" class="App\Controller\ContactoController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\ContactoController" class="App\Controller\ContactoController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\LineaPedidoController" class="App\Controller\LineaPedidoController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\LineaPedidoController" class="App\Controller\LineaPedidoController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\LineaPedidoController" class="App\Controller\LineaPedidoController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -4982,12 +4972,6 @@
         <argument key="articulo" type="service" id=".errored..service_locator.qlXgPWB.App\Entity\Articulo"/>
       </argument>
     </service>
-    <service id=".service_locator.5sWVEo_" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="mailer" type="service" id="swiftmailer.mailer.default"/>
-      </argument>
-    </service>
     <service id=".service_locator.wJReo6N" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5005,6 +4989,14 @@
       <argument type="collection">
         <argument key="lineaPedidoRepository" type="service" id="App\Repository\LineaPedidoRepository"/>
         <argument key="pedidoRepository" type="service" id="App\Repository\PedidoRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.h9DMU48" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="articuloRepository" type="service" id="App\Repository\ArticuloRepository"/>
+        <argument key="lineaPedidoRepository" type="service" id="App\Repository\LineaPedidoRepository"/>
+        <argument key="mailer" type="service" id="swiftmailer.mailer.default"/>
       </argument>
     </service>
     <service id=".service_locator.SZzy9V." class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5025,22 +5017,22 @@
         <argument key="proveedor" type="service" id=".errored..service_locator.7wiT78o.App\Entity\Proveedor"/>
       </argument>
     </service>
-    <service id=".service_locator.dmQY12A" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.LhVkaWj" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\ArticuloController::delete" type="service" id=".service_locator.qlXgPWB"/>
         <argument key="App\Controller\ArticuloController::edit" type="service" id=".service_locator.qlXgPWB"/>
         <argument key="App\Controller\ArticuloController::index" type="service" id=".service_locator.YnkDa56"/>
         <argument key="App\Controller\ArticuloController::show" type="service" id=".service_locator.qlXgPWB"/>
-        <argument key="App\Controller\ContactoController::index" type="service" id=".service_locator.5sWVEo_"/>
         <argument key="App\Controller\LineaPedidoController::delete" type="service" id=".service_locator.hPBZMGd"/>
         <argument key="App\Controller\LineaPedidoController::edit" type="service" id=".service_locator.hPBZMGd"/>
         <argument key="App\Controller\LineaPedidoController::index" type="service" id=".service_locator.wJReo6N"/>
+        <argument key="App\Controller\LineaPedidoController::new" type="service" id=".service_locator.YnkDa56"/>
         <argument key="App\Controller\LineaPedidoController::show" type="service" id=".service_locator.hPBZMGd"/>
         <argument key="App\Controller\PedidoController::delete" type="service" id=".service_locator.SZzy9V."/>
         <argument key="App\Controller\PedidoController::edit" type="service" id=".service_locator.SZzy9V."/>
         <argument key="App\Controller\PedidoController::index" type="service" id=".service_locator.pjymJQO"/>
-        <argument key="App\Controller\PedidoController::new" type="service" id=".service_locator.5sWVEo_"/>
+        <argument key="App\Controller\PedidoController::new" type="service" id=".service_locator.h9DMU48"/>
         <argument key="App\Controller\PedidoController::show" type="service" id=".service_locator.SZzy9V."/>
         <argument key="App\Controller\ProveedorController::delete" type="service" id=".service_locator.7wiT78o"/>
         <argument key="App\Controller\ProveedorController::edit" type="service" id=".service_locator.7wiT78o"/>
@@ -5343,12 +5335,6 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.pNNo5z3" method="withContext"/>
     </service>
-    <service id=".service_locator.pNNo5z3.App\Controller\ContactoController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator_context" id="App\Controller\ContactoController"/>
-      <argument>App\Controller\ContactoController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.pNNo5z3" method="withContext"/>
-    </service>
     <service id=".service_locator.pNNo5z3.App\Controller\LineaPedidoController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\LineaPedidoController"/>
       <argument>App\Controller\LineaPedidoController</argument>
@@ -5506,12 +5492,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.dmQY12A"/>
+      <argument type="service" id=".service_locator.LhVkaWj"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.dmQY12A"/>
+      <argument type="service" id=".service_locator.LhVkaWj"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -5902,7 +5888,7 @@
     <service id="Swift_Transport" alias="swiftmailer.mailer.default.transport.spool" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.dmQY12A"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.LhVkaWj"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

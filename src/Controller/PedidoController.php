@@ -8,10 +8,12 @@ use App\Form\PedidoType;
 use App\Form\LineaPedidoType;
 use App\Repository\PedidoRepository;
 use App\Repository\LineaPedidoRepository;
+use App\Repository\ArticuloRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use \PDO; 
 
 /**
  * @Route("/pedido")
@@ -48,12 +50,12 @@ class PedidoController extends AbstractController
     /**
      * @Route("/new", name="pedido_new", methods={"GET","POST"})
      */
-    public function new(Request $request,\Swift_Mailer $mailer): Response
+    public function new(Request $request,\Swift_Mailer $mailer, LineaPedidoRepository $lineaPedidoRepository, ArticuloRepository $articuloRepository): Response
     {
         $pedido = new Pedido();
         $form = $this->createForm(PedidoType::class, $pedido);
         $form->handleRequest($request);
-
+    
         if ($form->isSubmitted() && $form->isValid()) {    
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($pedido);
@@ -67,27 +69,51 @@ class PedidoController extends AbstractController
             $fecha_entrega = $pedido->getFechaEntrega();
             $id_proveedor = $pedido->getIdProveedor();
 
-            $em = $this->getDoctrine()->getManager();
-            $connection = $em->getConnection();
-            $statement = $connection->prepare("SELECT nombre FROM articulo WHERE id=(SELECT id_articulo_id FROM linea_pedido)");
-            $statement->execute();
-            $results = $statement->fetchAll();
+            $productos="<table border='1' style='text-align:center;'><tr><th>Artículo</th><th>Unidades</th><th>Precio</th></tr>";
+            $style = " width='100' height='50'";
 
+            $resultado=$lineaPedidoRepository->findAll();
+            foreach($resultado as $linea){
+                $productos .= '<tr><td'.$style.'>'.$linea->getIdArticulo().'</td><td'.$style.'>'.$linea->getUnidades().'</td><td'.$style.'>'.$linea->getPrecioLinea().'€</td></tr>';
+            }
+            $productos.='</table>';
+        
             $mensaje = (new \Swift_Message('Nuevo pedido de Restaurante JMJ '))
                 ->setFrom(['restaurantejmj@gmail.com' => 'Restaurante JMJ'])
                 ->setTo('restaurantejmj@gmail.com')
                 ->setBody(
                     'Fecha de pedido: '.date_format($fecha_pedido, 'Y-m-d').
                     '<br>Fecha de entrega: '.date_format($fecha_entrega, 'Y-m-d').
-                    '<br>Proveedor: '.$id_proveedor
+                    '<br>Proveedor: '.$id_proveedor.
+                    '<br><br><h3><u>ALBARÁN:</u></h3> '.$productos
                     , 'text/html')
             ;
+
             $mailer->send($mensaje);
             
-            /* Eliminar línas */
+            $em = $this->getDoctrine()->getManager();
+            $connection = $em->getConnection();
+            /* Aumentar existencias stock */
+            $articulos=$articuloRepository->findAll();
+            $lineas=$lineaPedidoRepository->findAll();
+           
+            for($i=0;$i<count($articulos);$i++){
+                for($j=0;$j<count($lineas);$j++){
+                   if($lineas[$j]->getIdArticulo()==$articulos[$i]->getNombre()){
+                       // $articulos[$i]->setExistencias($articulos[$i]->getExistencias()+$lineas[$j]->getUnidades());
+                        $total =  $articulos[$i]->getExistencias()+$lineas[$j]->getUnidades();
+                        $nombreart = $lineas[$j]->getIdArticulo();
+                        $statement = $connection->prepare("UPDATE articulo SET existencias=:total WHERE nombre=:nombreart");
+                        $statement->bindParam(":nombreart",$nombreart);
+                        $statement->bindParam(":total",$total);
+                        $statement->execute();
+                    }
+                }
+            }
+        
+            /* Eliminar línas */ 
             $statement = $connection->prepare("DELETE FROM linea_pedido");
             $statement->execute();
-            $results = $statement->fetchAll();
 
             return $this->redirectToRoute('pedido_index');
         }

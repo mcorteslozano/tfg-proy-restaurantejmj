@@ -84,6 +84,6 @@ class __TwigTemplate_d9023e1f5c63e6e38d69725011cf0ceabf676bcdc82d6dfdb1fe13f7e52
     {{ form_widget(form_pedido) }}
     <button class=\"btn\">{{ button_label|default('Enviar') }}</button>
 {{ form_end(form_pedido) }}
-", "pedido/_form.html.twig", "C:\\xampp\\htdocs\\restaurante\\templates\\pedido\\_form.html.twig");
+", "pedido/_form.html.twig", "C:\\xampp\\htdocs\\restaurante2\\templates\\pedido\\_form.html.twig");
     }
 }

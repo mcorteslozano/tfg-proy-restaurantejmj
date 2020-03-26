@@ -1843,6 +1843,6 @@ class __TwigTemplate_cf0524f7a6729a2eb0448095df00ccf36c1c37570f7d10c660bf44cabec
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "C:\\xampp\\htdocs\\restaurante\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "C:\\xampp\\htdocs\\restaurante2\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\db.html.twig");
     }
 }

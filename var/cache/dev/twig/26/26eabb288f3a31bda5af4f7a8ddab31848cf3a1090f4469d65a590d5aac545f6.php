@@ -413,6 +413,6 @@ class __TwigTemplate_d67bb932f924a3c4c71e125b95ba7228faece96790339b7777d537b47e1
         </div>
     {% endfor %}
 {% endblock %}
-", "@Debug/Profiler/dump.html.twig", "C:\\xampp\\htdocs\\restaurante\\vendor\\symfony\\debug-bundle\\Resources\\views\\Profiler\\dump.html.twig");
+", "@Debug/Profiler/dump.html.twig", "C:\\xampp\\htdocs\\restaurante2\\vendor\\symfony\\debug-bundle\\Resources\\views\\Profiler\\dump.html.twig");
     }
 }
