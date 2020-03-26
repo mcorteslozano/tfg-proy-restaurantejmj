@@ -56,12 +56,12 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
         ";
         // line 7
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 12
+        // line 14
         echo "    </head>
     <body>
     <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
   <a class=\"navbar-brand\" href=\"#\"><img class=\"logo_tamaño\" src=\"";
-        // line 15
+        // line 17
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/img/logo.png"), "html", null, true);
         echo "\"></a>
   <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
@@ -82,9 +82,7 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
       <li class=\"nav-item\">
         <a class=\"nav-link\" href=\"/pedido\">Pedidos</a>
       </li>
-      ";
-        // line 48
-        echo "    </ul>
+    </ul>
     <form class=\"form-inline my-2 my-lg-0\">
       <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"\" aria-label=\"Search\">
       <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Buscar</button>
@@ -92,13 +90,19 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
   </div>
 </nav>
         ";
-        // line 55
+        // line 43
         $this->displayBlock('body', $context, $blocks);
-        // line 56
+        // line 44
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 61
-        echo "    </body>
+        // line 49
+        echo "
+        <footer>
+          <div class=\"footerPropio\">
+          Aplicación creada con Symfony 4. Realizada por Mario Cortés, Jaime Indart y José Manuel López. Copyright 2020 ©
+          </div>
+        </footer>
+    </body>
 </html>
 ";
         
@@ -139,13 +143,21 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 8
-        echo "        <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
-        <link rel=\"icon\" type=\"image/x-icon\" href=\"";
+        echo "        ";
         // line 9
+        echo "        <link rel=\"icon\" type=\"image/x-icon\" href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/img/favicon.ico"), "html", null, true);
         echo "\" />
         <link rel=\"stylesheet\" href=\"";
         // line 10
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/style/bootstrap4/css/bootstrap.min.css"), "html", null, true);
+        echo "\">
+        <link rel=\"stylesheet\" href=\"";
+        // line 11
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/style/bootstrap4/css/bootstrap-reboot.css"), "html", null, true);
+        echo "\">
+        <link rel=\"stylesheet\" href=\"";
+        // line 12
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/style/main.css"), "html", null, true);
         echo "\">
         ";
@@ -157,7 +169,7 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
 
     }
 
-    // line 55
+    // line 43
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -175,7 +187,7 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
 
     }
 
-    // line 56
+    // line 44
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -185,7 +197,7 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 57
+        // line 45
         echo "        <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
         <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
@@ -210,7 +222,7 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
 
     public function getDebugInfo()
     {
-        return array (  189 => 57,  179 => 56,  161 => 55,  149 => 10,  145 => 9,  142 => 8,  132 => 7,  113 => 6,  101 => 61,  98 => 56,  96 => 55,  87 => 48,  65 => 15,  60 => 12,  58 => 7,  54 => 6,  47 => 1,);
+        return array (  201 => 45,  191 => 44,  173 => 43,  161 => 12,  157 => 11,  153 => 10,  148 => 9,  146 => 8,  136 => 7,  117 => 6,  99 => 49,  96 => 44,  94 => 43,  65 => 17,  60 => 14,  58 => 7,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -222,8 +234,10 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">
         <title>{% block title %}Gestiona JMJ{% endblock %}</title>
         {% block stylesheets %}
-        <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
+        {#<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">#}
         <link rel=\"icon\" type=\"image/x-icon\" href=\"{{ asset('/img/favicon.ico') }}\" />
+        <link rel=\"stylesheet\" href=\"{{ asset('/style/bootstrap4/css/bootstrap.min.css') }}\">
+        <link rel=\"stylesheet\" href=\"{{ asset('/style/bootstrap4/css/bootstrap-reboot.css') }}\">
         <link rel=\"stylesheet\" href=\"{{ asset('/style/main.css') }}\">
         {% endblock %}
     </head>
@@ -248,20 +262,6 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
       <li class=\"nav-item\">
         <a class=\"nav-link\" href=\"/pedido\">Pedidos</a>
       </li>
-      {#
-      <li class=\"nav-item dropdown\">
-        <a class=\"nav-link dropdown-toggle\" href=\"\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-          Pedidos
-        </a>
-        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
-          <a class=\"dropdown-item\" href=\"/pedido/new\">Nuevo</a>
-          <a class=\"dropdown-item\" href=\"/pedido\">Listado</a>
-        </div>
-      </li>
-      <li class=\"nav-item\">
-        <a class=\"nav-link disabled\" href=\"#\">Disabled</a>
-      </li>
-      #}
     </ul>
     <form class=\"form-inline my-2 my-lg-0\">
       <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"\" aria-label=\"Search\">
@@ -275,6 +275,12 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
         <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
         {% endblock %}
+
+        <footer>
+          <div class=\"footerPropio\">
+          Aplicación creada con Symfony 4. Realizada por Mario Cortés, Jaime Indart y José Manuel López. Copyright 2020 ©
+          </div>
+        </footer>
     </body>
 </html>
 ", "base.html.twig", "C:\\xampp\\htdocs\\restaurante2\\templates\\base.html.twig");

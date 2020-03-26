@@ -3,11 +3,11 @@
 {% block title %}Gestiona JMJ{% endblock %}
 
 {% block body %}
-    <h1>Edit Articulo</h1>
+    <h1>Editar Artículo</h1>
 
-    {{ include('articulo/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('articulo/_form.html.twig', {'button_label': 'Actualizar'}) }}
 
-    <a href="{{ path('articulo_index') }}">back to list</a>
+    <a href="{{ path('articulo_index') }}">Volver</a>
 
     {{ include('articulo/_delete_form.html.twig') }}
 {% endblock %}

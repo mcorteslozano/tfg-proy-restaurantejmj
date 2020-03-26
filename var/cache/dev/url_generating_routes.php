@@ -35,5 +35,4 @@ return [
     'proveedor_show' => [['id'], ['_controller' => 'App\\Controller\\ProveedorController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/proveedor']], [], []],
     'proveedor_edit' => [['id'], ['_controller' => 'App\\Controller\\ProveedorController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/proveedor']], [], []],
     'proveedor_delete' => [['id'], ['_controller' => 'App\\Controller\\ProveedorController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/proveedor']], [], []],
-    'index' => [[], ['_controller' => 'App\\Controller\\ArticuloController::index'], [], [['text', '/']], [], []],
 ];

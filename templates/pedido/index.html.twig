@@ -4,14 +4,7 @@
 
 {% block body %}
 
-
-{% for flash_message in app.session.flashbag.get('notice') %}
-    <div class="flash-notice">
-        {{ flash_message }}
-    </div>
-{% endfor %}
-
-    <h3>Listado de Pedidos</h3>
+    <h3>Registro</h3>
 
     <table class="table">
         <thead>
@@ -31,9 +24,8 @@
                 <td>{{ pedido.getIdProveedor }}</td>
                 <td>{{ pedido.fechaPedido ? pedido.fechaPedido|date('d-m-Y') : '' }}</td>
                 <td>{{ pedido.fechaEntrega ? pedido.fechaEntrega|date('d-m-Y') : '' }}</td>
-                <td><button class="btn" onclick="window.location.href='{{ path('pedido_edit', {'id': pedido.id}) }}'">Editar</button>
-                {{ include('pedido/_delete_form.html.twig') }}
-                </td>
+                <td colspan="2"><button class="btn" onclick="window.location.href='{{ path('pedido_edit', {'id': pedido.id}) }}'">Editar</button></td>
+                <td>{{ include('pedido/_delete_form.html.twig') }}</td>
             </tr>
         {% else %}
             <tr>
@@ -47,7 +39,7 @@
     <br>
     <br>
     <br>
-    <h3>Crear Nuevo Pedido</h3>
+    <h3>Nuevo pedido</h3>
 
     <table class="table">
         <thead>
@@ -56,6 +48,7 @@
                 <th>Artículo</th>
                 <th>Unidades</th>
                 <th>Precio Total</th>
+                <th></th>
                 <th></th>
             </tr>
         </thead>
@@ -66,8 +59,8 @@
                 <td>{{ linea_pedido.getIdArticulo() }}</td>
                 <td>{{ linea_pedido.unidades }}</td>
                 <td>{{ linea_pedido.precioLinea }}€</td>
-                <td colspan="2"><button class="btn" onclick="window.location.href='{{ path('linea_pedido_edit', {'id': linea_pedido.id}) }}'">Editar</button>
-                {{ include('linea_pedido/_delete_form.html.twig') }}</td>
+                <td colspan="2"><button class="btn" onclick="window.location.href='{{ path('linea_pedido_edit', {'id': linea_pedido.id}) }}'">Editar</button></td>
+                <td>{{ include('linea_pedido/_delete_form.html.twig') }}</td>
             </tr>
         {% else %}
             <tr>
@@ -77,11 +70,12 @@
         </tbody>
     </table>
     <div class="form_linea">
-    <h5>Crear Nueva Linea</h5>
+    <h6><b>Nueva línea</b></h6>
     {{ include('linea_pedido/_form.html.twig') }}
     </div>
+
     <div class="form_pedido">
-    <h5>Crear Pedido</h5>
+    <h6><b>Nuevo pedido</b></h6>
     {{ include('pedido/_form.html.twig') }}
     </div>
 {% endblock %}

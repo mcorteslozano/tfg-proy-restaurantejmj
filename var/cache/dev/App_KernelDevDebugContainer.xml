@@ -358,9 +358,6 @@
     <service id="App\Form\ArticuloType" class="App\Form\ArticuloType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
-    <service id="App\Form\ContactoType" class="App\Form\ContactoType" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
-    </service>
     <service id="App\Form\LineaPedidoType" class="App\Form\LineaPedidoType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -791,7 +788,6 @@
       </argument>
       <argument type="collection">
         <argument>App\Form\ArticuloType</argument>
-        <argument>App\Form\ContactoType</argument>
         <argument>App\Form\LineaPedidoType</argument>
         <argument>App\Form\PedidoType</argument>
         <argument>App\Form\ProveedorType</argument>
@@ -1116,7 +1112,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.UzZg1uN"/>
+      <argument type="service" id=".service_locator.7qom3FL"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4761,8 +4757,6 @@
     <service id=".abstract.instanceof.App\Controller\ProveedorController" class="App\Controller\ProveedorController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ArticuloType" class="App\Form\ArticuloType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ArticuloType" class="App\Form\ArticuloType" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ContactoType" class="App\Form\ContactoType" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Form\ContactoType" class="App\Form\ContactoType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\LineaPedidoType" class="App\Form\LineaPedidoType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\LineaPedidoType" class="App\Form\LineaPedidoType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\PedidoType" class="App\Form\PedidoType" autowire="true" abstract="true"/>
@@ -5099,11 +5093,10 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.UzZg1uN" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.7qom3FL" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\ArticuloType" type="service" id="App\Form\ArticuloType"/>
-        <argument key="App\Form\ContactoType" type="service" id="App\Form\ContactoType"/>
         <argument key="App\Form\LineaPedidoType" type="service" id="App\Form\LineaPedidoType"/>
         <argument key="App\Form\PedidoType" type="service" id="App\Form\PedidoType"/>
         <argument key="App\Form\ProveedorType" type="service" id="App\Form\ProveedorType"/>

@@ -85,13 +85,13 @@ class __TwigTemplate_97ac93c3aa43f90ddd3ed20487de046e3340bee4b42841af12d959c5b5d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h3>Listado de Artículos</h3>
+        echo "    <h3>Almacén</h3>
 
     <table class=\"table\">
         <thead>
             <tr>
                 <th>Nombre</th>
-                <th>Descripcion</th>
+                <th>Descripción</th>
                 <th>Precio/Unidad</th>
                 <th>Existencias</th>
                 <th></th>
@@ -138,8 +138,8 @@ class __TwigTemplate_97ac93c3aa43f90ddd3ed20487de046e3340bee4b42841af12d959c5b5d
                 <td colspan=\"2\"><button class=\"btn\" onclick=\"window.location.href='";
             // line 25
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("articulo_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["articulo"], "id", [], "any", false, false, false, 25)]), "html", null, true);
-            echo "'\">Editar</button>
-                ";
+            echo "'\">Editar</button></td>
+                <td>";
             // line 26
             echo twig_include($this->env, $context, "articulo/_delete_form.html.twig");
             echo "</td>
@@ -204,13 +204,13 @@ class __TwigTemplate_97ac93c3aa43f90ddd3ed20487de046e3340bee4b42841af12d959c5b5d
 {% block title %}Gestiona JMJ{% endblock %}
 
 {% block body %}
-    <h3>Listado de Artículos</h3>
+    <h3>Almacén</h3>
 
     <table class=\"table\">
         <thead>
             <tr>
                 <th>Nombre</th>
-                <th>Descripcion</th>
+                <th>Descripción</th>
                 <th>Precio/Unidad</th>
                 <th>Existencias</th>
                 <th></th>
@@ -223,8 +223,8 @@ class __TwigTemplate_97ac93c3aa43f90ddd3ed20487de046e3340bee4b42841af12d959c5b5d
                 <td>{{ articulo.descripcion }}</td>
                 <td>{{ articulo.precio }}€</td>
                 <td>{{ articulo.existencias }}</td>
-                <td colspan=\"2\"><button class=\"btn\" onclick=\"window.location.href='{{ path('articulo_edit', {'id': articulo.id}) }}'\">Editar</button>
-                {{ include('articulo/_delete_form.html.twig') }}</td>
+                <td colspan=\"2\"><button class=\"btn\" onclick=\"window.location.href='{{ path('articulo_edit', {'id': articulo.id}) }}'\">Editar</button></td>
+                <td>{{ include('articulo/_delete_form.html.twig') }}</td>
             </tr>
         {% else %}
             <tr>

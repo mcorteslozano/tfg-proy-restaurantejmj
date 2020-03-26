@@ -1,0 +1,64 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100vh;
+	/*background: url('restaurante1.png') no-repeat center center fixed; */
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+body {
+	height: 100%;
+}
+
+/*** HEADER ***/
+
+header{
+	height: 13vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(109, 107, 88, 0.7);
+	
+}
+header #logo{
+	width:75px;
+	height:75px;
+}
+header div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+header div a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 2rem;
+	margin:15px;
+	color: rgba(0,0,0);
+}
+header div a:hover{
+	color:#fff28f;
+}
+header .social{
+		
+}
+header div a img{
+	width: 35px;
+	height: 35px;
+}
+/*** MAIN ***/
+
+.img_main {
+	display: none
+}
+
+/*** FOOTER ***/

@@ -9,6 +9,7 @@ use App\Form\LineaPedidoType;
 use App\Repository\PedidoRepository;
 use App\Repository\LineaPedidoRepository;
 use App\Repository\ArticuloRepository;
+use DateTime;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -55,8 +56,16 @@ class PedidoController extends AbstractController
         $pedido = new Pedido();
         $form = $this->createForm(PedidoType::class, $pedido);
         $form->handleRequest($request);
-    
-        if ($form->isSubmitted() && $form->isValid()) {    
+        
+        $fechaActual = getDate();
+        $dia = $fechaActual['mday'];
+        $mes = $fechaActual['mon'];
+        $year = $fechaActual['year'];
+        $fechaFormat = $dia.'-'.$mes.'-'.$year;
+        $fecha = DateTime::createFromFormat('d-m-Y', $fechaFormat);
+        $pedido->setFechaPedido($fecha);
+
+        if ($form->isSubmitted() && $form->isValid()) { 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($pedido);
             $entityManager->flush();
@@ -82,8 +91,8 @@ class PedidoController extends AbstractController
                 ->setFrom(['restaurantejmj@gmail.com' => 'Restaurante JMJ'])
                 ->setTo('restaurantejmj@gmail.com')
                 ->setBody(
-                    'Fecha de pedido: '.date_format($fecha_pedido, 'Y-m-d').
-                    '<br>Fecha de entrega: '.date_format($fecha_entrega, 'Y-m-d').
+                    'Fecha de pedido: '.date_format($fecha_pedido, 'd-m-Y').
+                    '<br>Fecha de entrega: '.date_format($fecha_entrega, 'd-m-Y').
                     '<br>Proveedor: '.$id_proveedor.
                     '<br><br><h3><u>ALBARÁN:</u></h3> '.$productos
                     , 'text/html')
@@ -93,6 +102,7 @@ class PedidoController extends AbstractController
             
             $em = $this->getDoctrine()->getManager();
             $connection = $em->getConnection();
+            
             /* Aumentar existencias stock */
             $articulos=$articuloRepository->findAll();
             $lineas=$lineaPedidoRepository->findAll();
@@ -100,7 +110,6 @@ class PedidoController extends AbstractController
             for($i=0;$i<count($articulos);$i++){
                 for($j=0;$j<count($lineas);$j++){
                    if($lineas[$j]->getIdArticulo()==$articulos[$i]->getNombre()){
-                       // $articulos[$i]->setExistencias($articulos[$i]->getExistencias()+$lineas[$j]->getUnidades());
                         $total =  $articulos[$i]->getExistencias()+$lineas[$j]->getUnidades();
                         $nombreart = $lineas[$j]->getIdArticulo();
                         $statement = $connection->prepare("UPDATE articulo SET existencias=:total WHERE nombre=:nombreart");

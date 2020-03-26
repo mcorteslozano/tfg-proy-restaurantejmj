@@ -42,7 +42,9 @@ class __TwigTemplate_6ec9e93a952ded214ad3d6e74339b0c22c6f306c8d8739c1587df9598ad
         // line 1
         echo "<form method=\"post\" action=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("articulo_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["articulo"]) || array_key_exists("articulo", $context) ? $context["articulo"] : (function () { throw new RuntimeError('Variable "articulo" does not exist.', 1, $this->source); })()), "id", [], "any", false, false, false, 1)]), "html", null, true);
-        echo "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+        echo "\" onsubmit=\"return confirm('¿Está seguro que quiere eliminar el artículo ";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["articulo"]) || array_key_exists("articulo", $context) ? $context["articulo"] : (function () { throw new RuntimeError('Variable "articulo" does not exist.', 1, $this->source); })()), "id", [], "any", false, false, false, 1), "html", null, true);
+        echo "?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"";
         // line 3
@@ -71,12 +73,12 @@ class __TwigTemplate_6ec9e93a952ded214ad3d6e74339b0c22c6f306c8d8739c1587df9598ad
 
     public function getDebugInfo()
     {
-        return array (  49 => 3,  43 => 1,);
+        return array (  51 => 3,  43 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<form method=\"post\" action=\"{{ path('articulo_delete', {'id': articulo.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+        return new Source("<form method=\"post\" action=\"{{ path('articulo_delete', {'id': articulo.id}) }}\" onsubmit=\"return confirm('¿Está seguro que quiere eliminar el artículo {{ articulo.id }}?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ articulo.id) }}\">
     <button class=\"btn\">Eliminar</button>

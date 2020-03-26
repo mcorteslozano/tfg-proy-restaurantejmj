@@ -106,7 +106,7 @@ class __TwigTemplate_af586824f54533543c46e79b670f38c548f6155ee95a0ed59180a5d97e3
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 13
         echo "
-    <h3>Listado de Pedidos</h3>
+    <h3>Registro</h3>
 
     <table class=\"table\">
         <thead>
@@ -157,15 +157,14 @@ class __TwigTemplate_af586824f54533543c46e79b670f38c548f6155ee95a0ed59180a5d97e3
             // line 33
             ((twig_get_attribute($this->env, $this->source, $context["pedido"], "fechaEntrega", [], "any", false, false, false, 33)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["pedido"], "fechaEntrega", [], "any", false, false, false, 33), "d-m-Y"), "html", null, true))) : (print ("")));
             echo "</td>
-                <td><button class=\"btn\" onclick=\"window.location.href='";
+                <td colspan=\"2\"><button class=\"btn\" onclick=\"window.location.href='";
             // line 34
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("pedido_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["pedido"], "id", [], "any", false, false, false, 34)]), "html", null, true);
-            echo "'\">Editar</button>
-                ";
+            echo "'\">Editar</button></td>
+                <td>";
             // line 35
             echo twig_include($this->env, $context, "pedido/_delete_form.html.twig");
-            echo "
-                </td>
+            echo "</td>
             </tr>
         ";
             $context['_iterated'] = true;
@@ -179,7 +178,7 @@ class __TwigTemplate_af586824f54533543c46e79b670f38c548f6155ee95a0ed59180a5d97e3
             }
         }
         if (!$context['_iterated']) {
-            // line 39
+            // line 38
             echo "            <tr>
                 <td colspan=\"4\">No hay pedidos registrados</td>
             </tr>
@@ -188,7 +187,7 @@ class __TwigTemplate_af586824f54533543c46e79b670f38c548f6155ee95a0ed59180a5d97e3
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['pedido'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 43
+        // line 42
         echo "        </tbody>
     </table>
 
@@ -196,7 +195,7 @@ class __TwigTemplate_af586824f54533543c46e79b670f38c548f6155ee95a0ed59180a5d97e3
     <br>
     <br>
     <br>
-    <h3>Crear Nuevo Pedido</h3>
+    <h3>Nuevo pedido</h3>
 
     <table class=\"table\">
         <thead>
@@ -205,6 +204,7 @@ class __TwigTemplate_af586824f54533543c46e79b670f38c548f6155ee95a0ed59180a5d97e3
                 <th>Artículo</th>
                 <th>Unidades</th>
                 <th>Precio Total</th>
+                <th></th>
                 <th></th>
             </tr>
         </thead>
@@ -249,8 +249,8 @@ class __TwigTemplate_af586824f54533543c46e79b670f38c548f6155ee95a0ed59180a5d97e3
                 <td colspan=\"2\"><button class=\"btn\" onclick=\"window.location.href='";
             // line 69
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("linea_pedido_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["linea_pedido"], "id", [], "any", false, false, false, 69)]), "html", null, true);
-            echo "'\">Editar</button>
-                ";
+            echo "'\">Editar</button></td>
+                <td>";
             // line 70
             echo twig_include($this->env, $context, "linea_pedido/_delete_form.html.twig");
             echo "</td>
@@ -280,16 +280,17 @@ class __TwigTemplate_af586824f54533543c46e79b670f38c548f6155ee95a0ed59180a5d97e3
         echo "        </tbody>
     </table>
     <div class=\"form_linea\">
-    <h5>Crear Nueva Linea</h5>
+    <h6><b>Nueva línea</b></h6>
     ";
         // line 81
         echo twig_include($this->env, $context, "linea_pedido/_form.html.twig");
         echo "
     </div>
+
     <div class=\"form_pedido\">
-    <h5>Crear Pedido</h5>
+    <h6><b>Nuevo pedido</b></h6>
     ";
-        // line 85
+        // line 86
         echo twig_include($this->env, $context, "pedido/_form.html.twig");
         echo "
     </div>
@@ -314,7 +315,7 @@ class __TwigTemplate_af586824f54533543c46e79b670f38c548f6155ee95a0ed59180a5d97e3
 
     public function getDebugInfo()
     {
-        return array (  293 => 85,  286 => 81,  280 => 77,  271 => 73,  255 => 70,  251 => 69,  247 => 68,  243 => 67,  239 => 66,  235 => 65,  232 => 64,  214 => 63,  192 => 43,  183 => 39,  166 => 35,  162 => 34,  158 => 33,  154 => 32,  150 => 31,  146 => 30,  142 => 28,  124 => 27,  108 => 13,  99 => 10,  96 => 9,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  294 => 86,  286 => 81,  280 => 77,  271 => 73,  255 => 70,  251 => 69,  247 => 68,  243 => 67,  239 => 66,  235 => 65,  232 => 64,  214 => 63,  191 => 42,  182 => 38,  166 => 35,  162 => 34,  158 => 33,  154 => 32,  150 => 31,  146 => 30,  142 => 28,  124 => 27,  108 => 13,  99 => 10,  96 => 9,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -332,7 +333,7 @@ class __TwigTemplate_af586824f54533543c46e79b670f38c548f6155ee95a0ed59180a5d97e3
     </div>
 {% endfor %}
 
-    <h3>Listado de Pedidos</h3>
+    <h3>Registro</h3>
 
     <table class=\"table\">
         <thead>
@@ -352,9 +353,8 @@ class __TwigTemplate_af586824f54533543c46e79b670f38c548f6155ee95a0ed59180a5d97e3
                 <td>{{ pedido.getIdProveedor }}</td>
                 <td>{{ pedido.fechaPedido ? pedido.fechaPedido|date('d-m-Y') : '' }}</td>
                 <td>{{ pedido.fechaEntrega ? pedido.fechaEntrega|date('d-m-Y') : '' }}</td>
-                <td><button class=\"btn\" onclick=\"window.location.href='{{ path('pedido_edit', {'id': pedido.id}) }}'\">Editar</button>
-                {{ include('pedido/_delete_form.html.twig') }}
-                </td>
+                <td colspan=\"2\"><button class=\"btn\" onclick=\"window.location.href='{{ path('pedido_edit', {'id': pedido.id}) }}'\">Editar</button></td>
+                <td>{{ include('pedido/_delete_form.html.twig') }}</td>
             </tr>
         {% else %}
             <tr>
@@ -368,7 +368,7 @@ class __TwigTemplate_af586824f54533543c46e79b670f38c548f6155ee95a0ed59180a5d97e3
     <br>
     <br>
     <br>
-    <h3>Crear Nuevo Pedido</h3>
+    <h3>Nuevo pedido</h3>
 
     <table class=\"table\">
         <thead>
@@ -377,6 +377,7 @@ class __TwigTemplate_af586824f54533543c46e79b670f38c548f6155ee95a0ed59180a5d97e3
                 <th>Artículo</th>
                 <th>Unidades</th>
                 <th>Precio Total</th>
+                <th></th>
                 <th></th>
             </tr>
         </thead>
@@ -387,8 +388,8 @@ class __TwigTemplate_af586824f54533543c46e79b670f38c548f6155ee95a0ed59180a5d97e3
                 <td>{{ linea_pedido.getIdArticulo() }}</td>
                 <td>{{ linea_pedido.unidades }}</td>
                 <td>{{ linea_pedido.precioLinea }}€</td>
-                <td colspan=\"2\"><button class=\"btn\" onclick=\"window.location.href='{{ path('linea_pedido_edit', {'id': linea_pedido.id}) }}'\">Editar</button>
-                {{ include('linea_pedido/_delete_form.html.twig') }}</td>
+                <td colspan=\"2\"><button class=\"btn\" onclick=\"window.location.href='{{ path('linea_pedido_edit', {'id': linea_pedido.id}) }}'\">Editar</button></td>
+                <td>{{ include('linea_pedido/_delete_form.html.twig') }}</td>
             </tr>
         {% else %}
             <tr>
@@ -398,11 +399,12 @@ class __TwigTemplate_af586824f54533543c46e79b670f38c548f6155ee95a0ed59180a5d97e3
         </tbody>
     </table>
     <div class=\"form_linea\">
-    <h5>Crear Nueva Linea</h5>
+    <h6><b>Nueva línea</b></h6>
     {{ include('linea_pedido/_form.html.twig') }}
     </div>
+
     <div class=\"form_pedido\">
-    <h5>Crear Pedido</h5>
+    <h6><b>Nuevo pedido</b></h6>
     {{ include('pedido/_form.html.twig') }}
     </div>
 {% endblock %}

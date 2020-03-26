@@ -21,7 +21,6 @@ return [
         '/pedido/new' => [[['_route' => 'pedido_new', '_controller' => 'App\\Controller\\PedidoController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/proveedor' => [[['_route' => 'proveedor_index', '_controller' => 'App\\Controller\\ProveedorController::index'], null, ['GET' => 0], null, true, false, null]],
         '/proveedor/new' => [[['_route' => 'proveedor_new', '_controller' => 'App\\Controller\\ProveedorController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\ArticuloController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

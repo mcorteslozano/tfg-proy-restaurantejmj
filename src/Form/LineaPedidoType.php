@@ -12,10 +12,15 @@ class LineaPedidoType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('id_articulo',null,[
+                'label' => 'Artículo',
+                'multiple' => false,
+                'expanded' => false,
+                'required' => true,
+                'label_attr' =>['class' => 'articulo'],
+                'placeholder' => 'Seleccione un Artículo'
+            ])
             ->add('unidades')
-            //->add('precio_linea')
-            ->add('id_articulo')
-            //->add('id_pedido')
         ;
     }
 
