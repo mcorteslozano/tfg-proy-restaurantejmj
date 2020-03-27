@@ -1,3 +1,6 @@
-#index:
-#    path: /
-#    controller: App\Controller\ArticuloController::index
+index:
+    path: /
+    controller: App\Controller\BienvenidaController::index
+
+logout:
+    path: /logout

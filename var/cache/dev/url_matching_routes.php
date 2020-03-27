@@ -15,12 +15,20 @@ return [
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/articulo' => [[['_route' => 'articulo_index', '_controller' => 'App\\Controller\\ArticuloController::index'], null, ['GET' => 0], null, true, false, null]],
         '/articulo/new' => [[['_route' => 'articulo_new', '_controller' => 'App\\Controller\\ArticuloController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/bienvenida' => [[['_route' => 'bienvenida', '_controller' => 'App\\Controller\\BienvenidaController::index'], null, null, null, false, false, null]],
         '/linea/pedido' => [[['_route' => 'linea_pedido_index', '_controller' => 'App\\Controller\\LineaPedidoController::index'], null, ['GET' => 0], null, true, false, null]],
         '/linea/pedido/new' => [[['_route' => 'linea_pedido_new', '_controller' => 'App\\Controller\\LineaPedidoController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\LoginController::login'], null, null, null, false, false, null]],
+        '/logout' => [
+            [['_route' => 'app_logout', '_controller' => 'App\\Controller\\LoginController::logout'], null, null, null, false, false, null],
+            [['_route' => 'logout'], null, null, null, false, false, null],
+        ],
         '/pedido' => [[['_route' => 'pedido_index', '_controller' => 'App\\Controller\\PedidoController::index'], null, ['GET' => 0], null, true, false, null]],
         '/pedido/new' => [[['_route' => 'pedido_new', '_controller' => 'App\\Controller\\PedidoController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/proveedor' => [[['_route' => 'proveedor_index', '_controller' => 'App\\Controller\\ProveedorController::index'], null, ['GET' => 0], null, true, false, null]],
         '/proveedor/new' => [[['_route' => 'proveedor_new', '_controller' => 'App\\Controller\\ProveedorController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/register' => [[['_route' => 'register', '_controller' => 'App\\Controller\\RegisterController::register'], null, null, null, false, false, null]],
+        '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\BienvenidaController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

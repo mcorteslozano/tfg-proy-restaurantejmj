@@ -48,17 +48,42 @@ header div a{
 header div a:hover{
 	color:#fff28f;
 }
-header .social{
-		
-}
+
 header div a img{
 	width: 35px;
 	height: 35px;
 }
+
+#margenNav {
+	margin-right:0;
+}
+
 /*** MAIN ***/
+
+.caja_main{
+    background-color: rgba(109, 107, 88, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 350px;
+    margin:auto;
+    margin-top: 2rem;
+}
 
 .img_main {
 	display: none
+}
+
+main .caja_main div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main .caja_main div input[type=submit]{
+    margin-top:1rem;
 }
 
 /*** FOOTER ***/
