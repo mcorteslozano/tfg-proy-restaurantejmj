@@ -60,40 +60,45 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
         echo "    </head>
     <body>
     <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
-  <a class=\"navbar-brand\" href=\"#\"><img class=\"logo_tamaño\" src=\"";
+    <a class=\"navbar-brand\" href=\"#\"><img class=\"logo_tamaño\" src=\"";
         // line 17
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/img/logo.png"), "html", null, true);
         echo "\"></a>
-  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
     <span class=\"navbar-toggler-icon\"></span>
-  </button>
+    </button>
 
-  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
+    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
     <ul class=\"navbar-nav mr-auto\">
-      <li class=\"nav-item active\">
+    ";
+        // line 24
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_GERENTE")) {
+            // line 25
+            echo "    <li class=\"nav-item active\">
         <a class=\"nav-link\" href=\"/register\">Registro</a>
-      </li>
-          ";
-        // line 27
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ENCARGADO")) {
-            // line 28
-            echo "
+    </li>
     ";
         }
-        // line 30
-        echo "      <li class=\"nav-item active\">
+        // line 29
+        echo "    ";
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 29, $this->source); })()), "user", [], "any", false, false, false, 29)) {
+            // line 30
+            echo "      <li class=\"nav-item active\">
         <a class=\"nav-link\" href=\"/login\">Acceder</a>
       </li>
       ";
-        // line 33
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ENCARGADO")) {
-            // line 34
+        }
+        // line 34
+        echo "      ";
+        if (($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ENCARGADO") || $this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_GERENTE"))) {
+            // line 35
             echo "      <li class=\"nav-item\">
         <a class=\"nav-link\" href=\"/articulo\">Artículos</a>
       </li>
       <li class=\"nav-item\">
         <a class=\"nav-link\" href=\"/proveedor\">Proveedores</a>
       </li>
+
       <li class=\"nav-item\">
         <a class=\"nav-link\" href=\"/pedido\">Pedidos</a>
       </li> 
@@ -103,31 +108,31 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
       </form>
       ";
         }
-        // line 48
+        // line 50
         echo "    </ul>
     ";
-        // line 49
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 49, $this->source); })()), "user", [], "any", false, false, false, 49)) {
-            // line 50
+        // line 51
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 51, $this->source); })()), "user", [], "any", false, false, false, 51)) {
+            // line 52
             echo "      <span style=\"padding-right:10px;color:black;\"><img src=\"/img/icono.png\" width=\"30px\" height=\"20px\" /> ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 50, $this->source); })()), "user", [], "any", false, false, false, 50), "username", [], "any", false, false, false, 50), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 52, $this->source); })()), "user", [], "any", false, false, false, 52), "username", [], "any", false, false, false, 52), "html", null, true);
             echo " <a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\"><img src=\"/img/logout.png\" style=\"margin-left:5px;\"width=\"15px\" height=\"20px\"></a></span>
     ";
         }
-        // line 52
-        echo "    
-    
+        // line 54
+        echo "
+
   </div>
 </nav>
         ";
-        // line 56
+        // line 58
         $this->displayBlock('body', $context, $blocks);
-        // line 57
+        // line 59
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 62
+        // line 64
         echo "
         <footer>
           <div class=\"footerPropio\">
@@ -135,6 +140,7 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
           </div>
         </footer>
     </body>
+
 </html>
 ";
         
@@ -201,7 +207,7 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
 
     }
 
-    // line 56
+    // line 58
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -219,7 +225,7 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
 
     }
 
-    // line 57
+    // line 59
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -229,7 +235,7 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 58
+        // line 60
         echo "        <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
         <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
@@ -254,7 +260,7 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
 
     public function getDebugInfo()
     {
-        return array (  233 => 58,  223 => 57,  205 => 56,  193 => 12,  189 => 11,  185 => 10,  180 => 9,  178 => 8,  168 => 7,  149 => 6,  131 => 62,  128 => 57,  126 => 56,  120 => 52,  112 => 50,  110 => 49,  107 => 48,  91 => 34,  89 => 33,  84 => 30,  80 => 28,  78 => 27,  65 => 17,  60 => 14,  58 => 7,  54 => 6,  47 => 1,);
+        return array (  239 => 60,  229 => 59,  211 => 58,  199 => 12,  195 => 11,  191 => 10,  186 => 9,  184 => 8,  174 => 7,  155 => 6,  136 => 64,  133 => 59,  131 => 58,  125 => 54,  117 => 52,  115 => 51,  112 => 50,  95 => 35,  92 => 34,  86 => 30,  83 => 29,  77 => 25,  75 => 24,  65 => 17,  60 => 14,  58 => 7,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -275,29 +281,31 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
     </head>
     <body>
     <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
-  <a class=\"navbar-brand\" href=\"#\"><img class=\"logo_tamaño\" src=\"{{ asset('/img/logo.png') }}\"></a>
-  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+    <a class=\"navbar-brand\" href=\"#\"><img class=\"logo_tamaño\" src=\"{{ asset('/img/logo.png') }}\"></a>
+    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
     <span class=\"navbar-toggler-icon\"></span>
-  </button>
+    </button>
 
-  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
+    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
     <ul class=\"navbar-nav mr-auto\">
-      <li class=\"nav-item active\">
+    {% if is_granted('ROLE_GERENTE') %}
+    <li class=\"nav-item active\">
         <a class=\"nav-link\" href=\"/register\">Registro</a>
-      </li>
-          {% if is_granted('ROLE_ENCARGADO') %}
-
+    </li>
     {% endif %}
+    {% if not app.user %}
       <li class=\"nav-item active\">
         <a class=\"nav-link\" href=\"/login\">Acceder</a>
       </li>
-      {% if is_granted('ROLE_ENCARGADO') %}
+      {% endif %}
+      {% if is_granted('ROLE_ENCARGADO') or is_granted('ROLE_GERENTE') %}
       <li class=\"nav-item\">
         <a class=\"nav-link\" href=\"/articulo\">Artículos</a>
       </li>
       <li class=\"nav-item\">
         <a class=\"nav-link\" href=\"/proveedor\">Proveedores</a>
       </li>
+
       <li class=\"nav-item\">
         <a class=\"nav-link\" href=\"/pedido\">Pedidos</a>
       </li> 
@@ -310,8 +318,8 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
     {% if app.user %}
       <span style=\"padding-right:10px;color:black;\"><img src=\"/img/icono.png\" width=\"30px\" height=\"20px\" /> {{app.user.username}} <a href=\"{{ path('app_logout') }}\"><img src=\"/img/logout.png\" style=\"margin-left:5px;\"width=\"15px\" height=\"20px\"></a></span>
     {% endif %}
-    
-    
+
+
   </div>
 </nav>
         {% block body %}{% endblock %}
@@ -327,7 +335,8 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
           </div>
         </footer>
     </body>
+
 </html>
-", "base.html.twig", "C:\\xampp\\htdocs\\restaurante2\\templates\\base.html.twig");
+", "base.html.twig", "C:\\xampp\\htdocs\\restaurante\\templates\\base.html.twig");
     }
 }

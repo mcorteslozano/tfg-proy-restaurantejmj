@@ -4,7 +4,6 @@
 
 html {
 	height: 100vh;
-	/*background: url('restaurante1.png') no-repeat center center fixed; */
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -86,4 +85,78 @@ main .caja_main div input[type=submit]{
     margin-top:1rem;
 }
 
-/*** FOOTER ***/
+#carta {
+    background: url('/img/img1.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.fondo_main{
+    margin-top:25px;
+    background-color: rgba(109, 107, 88, 0.9);
+    color:white;
+}
+#carta_main #entrante{
+    padding: 15px;
+}
+/* Contacto */
+main .formulario div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+}
+main .formulario div input[type=submit]{
+    margin-top:1rem;
+    margin-bottom: .6rem;
+}
+main .linea #informacion p {
+    margin:auto;
+}
+main .linea div p span{
+    color:#fff28f;
+}
+main .linea iframe {
+    width:600px;
+    height:450px;
+    padding-bottom: 1.5rem;
+}
+
+/* Carta */
+.fondo_main h2{
+    display: flex;
+    justify-content: center;
+    color:#FFFFFF;
+    padding-top: 1em;
+}
+.fondo_main .linea{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin:.5em;
+    width: 100%
+}
+.fondo_main div{
+    display: flex;
+    flex-direction: column;
+    width:45%;
+    margin:auto;
+}
+.fondo_main div h3{
+    color:#fff28f;
+    margin:0;
+}
+.fondo_main #final {
+    padding-bottom: 1.5rem;
+}
+#carta {
+    background: url('/img/img1.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

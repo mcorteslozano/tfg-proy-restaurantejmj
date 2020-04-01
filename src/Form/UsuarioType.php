@@ -31,10 +31,11 @@ class UsuarioType extends AbstractType
                 "multiple"=>false,
                 'label' => 'Tipo de Usuario',
                 "choices"=>array(
-                    'Encargado'=>"ROLE_ENCARGADO"
+                    'Encargado'=>"ROLE_ENCARGADO",
+                    'Gerente'=>"ROLE_GERENTE"
                 ))
-                
-                
+
+
             )
         ;
         //Transformar el array de los roles a string

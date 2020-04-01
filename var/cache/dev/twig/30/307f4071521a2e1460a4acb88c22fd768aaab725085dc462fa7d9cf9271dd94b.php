@@ -46,15 +46,14 @@ class __TwigTemplate_68e7ba9dc233a08dcaa8fcf26fc153bfead46ed263e1efda242872f3a2f
         // line 2
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 2, $this->source); })()), 'widget');
         echo "
-    <button class=\"btn\">";
-        // line 3
-        echo twig_escape_filter($this->env, (((isset($context["button_label"]) || array_key_exists("button_label", $context))) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 3, $this->source); })()), "Guardar")) : ("Guardar")), "html", null, true);
+    <div id=\"botones_editar\">
+        <button class=\"btn\">";
+        // line 4
+        echo twig_escape_filter($this->env, (((isset($context["button_label"]) || array_key_exists("button_label", $context))) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 4, $this->source); })()), "Guardar")) : ("Guardar")), "html", null, true);
         echo "</button>
 ";
-        // line 4
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 4, $this->source); })()), 'form_end');
-        echo "
-";
+        // line 5
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 5, $this->source); })()), 'form_end');
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -75,15 +74,15 @@ class __TwigTemplate_68e7ba9dc233a08dcaa8fcf26fc153bfead46ed263e1efda242872f3a2f
 
     public function getDebugInfo()
     {
-        return array (  55 => 4,  51 => 3,  47 => 2,  43 => 1,);
+        return array (  56 => 5,  52 => 4,  47 => 2,  43 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{{ form_start(form) }}
     {{ form_widget(form) }}
-    <button class=\"btn\">{{ button_label|default('Guardar') }}</button>
-{{ form_end(form) }}
-", "proveedor/_form.html.twig", "C:\\xampp\\htdocs\\restaurante2\\templates\\proveedor\\_form.html.twig");
+    <div id=\"botones_editar\">
+        <button class=\"btn\">{{ button_label|default('Guardar') }}</button>
+{{ form_end(form) }}", "proveedor/_form.html.twig", "C:\\xampp\\htdocs\\restaurante\\templates\\proveedor\\_form.html.twig");
     }
 }

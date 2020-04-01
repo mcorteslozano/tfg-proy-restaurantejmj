@@ -34,7 +34,10 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-         - { path: ^/articulo, roles: ROLE_ENCARGADO }
-         - { path: ^/proveedor, roles: ROLE_ENCARGADO }
-         - { path: ^/pedido, roles: ROLE_ENCARGADO }
-
+         - { path: '^/articulo', roles: [IS_AUTHENTICATED_FULLY, ROLE_ENCARGADO] }
+         - { path: '^/proveedor', roles: [IS_AUTHENTICATED_FULLY, ROLE_ENCARGADO] }
+         - { path: '^/pedido', roles: [IS_AUTHENTICATED_FULLY, ROLE_ENCARGADO] }
+         - { path: '^/articulo', roles: [IS_AUTHENTICATED_FULLY, ROLE_GERENTE] }
+         - { path: '^/proveedor', roles: [IS_AUTHENTICATED_FULLY, ROLE_GERENTE] }
+         - { path: '^/pedido', roles: [IS_AUTHENTICATED_FULLY, ROLE_GERENTE] }
+         - { path: '^/register', roles: ROLE_GERENTE }

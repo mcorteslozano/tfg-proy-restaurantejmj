@@ -50,3 +50,49 @@ body {
     padding-top: 5px;
     margin-left:10%;
 }
+
+/* EDIT FORMULARIO */
+#articulo_descripcion{
+    resize: none;
+}
+
+#form_articulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 2rem;
+}
+#form_proveedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+#form_articulo div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2em;
+}
+
+#form_proveedor div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2em;
+}
+
+#botones_editar {
+    display: flex !important;
+    flex-direction: row !important;
+}
+#botones_editar button {
+    margin: 0.1em;
+}

@@ -91,10 +91,10 @@ class __TwigTemplate_8efffff7a38404e5b2b806c7c1166f2c158c041ff20296cd100933fc558
         <thead>
             <tr>
                 <th>Nombre</th>
-                <th>Codigo_postal</th>
+                <th>Código Postal</th>
                 <th>Localidad</th>
                 <th>Email</th>
-                <th>Telefono</th>
+                <th>Teléfono</th>
                 <th></th>
                 <th></th>
             </tr>
@@ -164,7 +164,7 @@ class __TwigTemplate_8efffff7a38404e5b2b806c7c1166f2c158c041ff20296cd100933fc558
         if (!$context['_iterated']) {
             // line 32
             echo "            <tr>
-                <td colspan=\"7\">No hay proovedores registrados</td>
+                <td colspan=\"7\">No hay proovedores registrados.</td>
             </tr>
         ";
         }
@@ -216,10 +216,10 @@ class __TwigTemplate_8efffff7a38404e5b2b806c7c1166f2c158c041ff20296cd100933fc558
         <thead>
             <tr>
                 <th>Nombre</th>
-                <th>Codigo_postal</th>
+                <th>Código Postal</th>
                 <th>Localidad</th>
                 <th>Email</th>
-                <th>Telefono</th>
+                <th>Teléfono</th>
                 <th></th>
                 <th></th>
             </tr>
@@ -237,7 +237,7 @@ class __TwigTemplate_8efffff7a38404e5b2b806c7c1166f2c158c041ff20296cd100933fc558
             </tr>
         {% else %}
             <tr>
-                <td colspan=\"7\">No hay proovedores registrados</td>
+                <td colspan=\"7\">No hay proovedores registrados.</td>
             </tr>
         {% endfor %}
         </tbody>
@@ -245,6 +245,6 @@ class __TwigTemplate_8efffff7a38404e5b2b806c7c1166f2c158c041ff20296cd100933fc558
 
     <a href=\"{{ path('proveedor_new') }}\">Añadir proveedor</a>
 {% endblock %}
-", "proveedor/index.html.twig", "C:\\xampp\\htdocs\\restaurante2\\templates\\proveedor\\index.html.twig");
+", "proveedor/index.html.twig", "C:\\xampp\\htdocs\\restaurante\\templates\\proveedor\\index.html.twig");
     }
 }

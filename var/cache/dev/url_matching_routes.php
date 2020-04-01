@@ -16,6 +16,8 @@ return [
         '/articulo' => [[['_route' => 'articulo_index', '_controller' => 'App\\Controller\\ArticuloController::index'], null, ['GET' => 0], null, true, false, null]],
         '/articulo/new' => [[['_route' => 'articulo_new', '_controller' => 'App\\Controller\\ArticuloController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/bienvenida' => [[['_route' => 'bienvenida', '_controller' => 'App\\Controller\\BienvenidaController::index'], null, null, null, false, false, null]],
+        '/carta' => [[['_route' => 'carta', '_controller' => 'App\\Controller\\CartaController::index'], null, null, null, false, false, null]],
+        '/contacto' => [[['_route' => 'contacto', '_controller' => 'App\\Controller\\ContactoController::index'], null, null, null, false, false, null]],
         '/linea/pedido' => [[['_route' => 'linea_pedido_index', '_controller' => 'App\\Controller\\LineaPedidoController::index'], null, ['GET' => 0], null, true, false, null]],
         '/linea/pedido/new' => [[['_route' => 'linea_pedido_new', '_controller' => 'App\\Controller\\LineaPedidoController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\LoginController::login'], null, null, null, false, false, null]],

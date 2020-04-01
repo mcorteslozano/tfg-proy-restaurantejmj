@@ -27,6 +27,7 @@ class __TwigTemplate_7405e29a52369bdc4524c68768c3f8a7d3296f10d36db9ec6616cbe4ee2
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
+            'javascripts' => [$this, 'block_javascripts'],
         ];
     }
 
@@ -85,22 +86,45 @@ class __TwigTemplate_7405e29a52369bdc4524c68768c3f8a7d3296f10d36db9ec6616cbe4ee2
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Edit Articulo</h1>
-
-    ";
+        echo "    <div id=\"form_articulo\">
+        <h3>Editar Artículo</h3>
+        ";
         // line 8
-        echo twig_include($this->env, $context, "articulo/_form.html.twig", ["button_label" => "Update"]);
+        echo twig_include($this->env, $context, "articulo/_form.html.twig", ["button_label" => "Actualizar"]);
         echo "
-
-    <a href=\"";
-        // line 10
+        <button id=\"volver\" class=\"btn\" onclick=\"location.href='";
+        // line 9
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("articulo_index");
-        echo "\">back to list</a>
-
-    ";
-        // line 12
+        echo "'\">Volver</button>
+        ";
+        // line 10
         echo twig_include($this->env, $context, "articulo/_delete_form.html.twig");
         echo "
+</div>
+    </div>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 15
+    public function block_javascripts($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 16
+        echo "<script src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/js/edit.js"), "html", null, true);
+        echo "\"></script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -122,7 +146,7 @@ class __TwigTemplate_7405e29a52369bdc4524c68768c3f8a7d3296f10d36db9ec6616cbe4ee2
 
     public function getDebugInfo()
     {
-        return array (  102 => 12,  97 => 10,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  125 => 16,  115 => 15,  101 => 10,  97 => 9,  93 => 8,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -132,14 +156,17 @@ class __TwigTemplate_7405e29a52369bdc4524c68768c3f8a7d3296f10d36db9ec6616cbe4ee2
 {% block title %}Gestiona JMJ{% endblock %}
 
 {% block body %}
-    <h1>Edit Articulo</h1>
-
-    {{ include('articulo/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href=\"{{ path('articulo_index') }}\">back to list</a>
-
-    {{ include('articulo/_delete_form.html.twig') }}
+    <div id=\"form_articulo\">
+        <h3>Editar Artículo</h3>
+        {{ include('articulo/_form.html.twig', {'button_label': 'Actualizar'}) }}
+        <button id=\"volver\" class=\"btn\" onclick=\"location.href='{{ path('articulo_index') }}'\">Volver</button>
+        {{ include('articulo/_delete_form.html.twig') }}
+</div>
+    </div>
 {% endblock %}
-", "articulo/edit.html.twig", "C:\\xampp\\htdocs\\restaurante2\\templates\\articulo\\edit.html.twig");
+
+{% block javascripts %}
+<script src=\"{{ asset('/js/edit.js') }}\"></script>
+{% endblock %}", "articulo/edit.html.twig", "C:\\xampp\\htdocs\\restaurante\\templates\\articulo\\edit.html.twig");
     }
 }

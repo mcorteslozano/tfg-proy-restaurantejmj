@@ -85,7 +85,7 @@ class __TwigTemplate_b213e8a734937ffb82642b7660785e7d630b086f3b2a9e10dfbd6abd6df
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Create new Proveedor</h1>
+        echo "    <h1>Nuevo Proveedor</h1>
 
     ";
         // line 8
@@ -95,7 +95,7 @@ class __TwigTemplate_b213e8a734937ffb82642b7660785e7d630b086f3b2a9e10dfbd6abd6df
     <a href=\"";
         // line 10
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("proveedor_index");
-        echo "\">back to list</a>
+        echo "\">Volver</a>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -127,12 +127,12 @@ class __TwigTemplate_b213e8a734937ffb82642b7660785e7d630b086f3b2a9e10dfbd6abd6df
 {% block title %}}Gestiona JMJ{% endblock %}
 
 {% block body %}
-    <h1>Create new Proveedor</h1>
+    <h1>Nuevo Proveedor</h1>
 
     {{ include('proveedor/_form.html.twig') }}
 
-    <a href=\"{{ path('proveedor_index') }}\">back to list</a>
+    <a href=\"{{ path('proveedor_index') }}\">Volver</a>
 {% endblock %}
-", "proveedor/new.html.twig", "C:\\xampp\\htdocs\\restaurante2\\templates\\proveedor\\new.html.twig");
+", "proveedor/new.html.twig", "C:\\xampp\\htdocs\\restaurante\\templates\\proveedor\\new.html.twig");
     }
 }

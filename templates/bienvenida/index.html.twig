@@ -6,19 +6,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style/main_page.css">
 	<link rel="icon" type="image/x-icon" href="{{ asset('/img/favicon.ico') }}" />
-	<script type="text/javascript" src="js/funciones.js"></script>
+	<script type="text/javascript" src="js/main_page.js"></script>
 	<title>Restaurante JMJ</title>
 
 </head>
 <body>
 	<header>
 		<div>
-			<img src="img/logo.png" id="logo">
+			<img src="img/logo.png" id="logo" onclick="document.location.href='{{ path('bienvenida' ) }}'">
 		</div>
-		<div id="marginNav">
-			<a href="#" id="contacto">Contacto</a>
+			<div id="marginNav">
+			<a href="{{ path('carta' ) }}">Carta</a>
+			<a href="{{ path('contacto' ) }}">Contacto</a>
 			<a href="{{ path('app_login' ) }}">Gestión</a>
-			<a href="#">Carta</a>
 		</div>
 		<div>
 			<a href="https://es-es.facebook.com/" class="social"><img src="img/facebook.svg"></a>
@@ -28,18 +28,13 @@
 	</header>
 
 	<main>
-		<div id="cajaContacto" class="caja_main">
-			<h1>Contacto</h1>
-			{{ form(contactoForm) }}
-		</div>
-
 		<img src="img/img1.png" class="img_main">
         <img src="img/img2.png" class="img_main">
         <img src="img/img3.png" class="img_main">
         <img src="img/img4.png" class="img_main">
         <img src="img/img5.png" class="img_main">
-
 	</main>
+	
 	<footer>
 		
 	</footer>

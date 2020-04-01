@@ -42,13 +42,15 @@ class __TwigTemplate_680e4145a4980f3eef9f51e0b742c03cb1ccf38a2401b4143520819f3a8
         // line 1
         echo "<form method=\"post\" action=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("proveedor_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["proveedor"]) || array_key_exists("proveedor", $context) ? $context["proveedor"] : (function () { throw new RuntimeError('Variable "proveedor" does not exist.', 1, $this->source); })()), "id", [], "any", false, false, false, 1)]), "html", null, true);
-        echo "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+        echo "\" onsubmit=\"return confirm('¿Está seguro que quiere eliminar el proveedor ";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["proveedor"]) || array_key_exists("proveedor", $context) ? $context["proveedor"] : (function () { throw new RuntimeError('Variable "proveedor" does not exist.', 1, $this->source); })()), "id", [], "any", false, false, false, 1), "html", null, true);
+        echo "?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"";
         // line 3
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, (isset($context["proveedor"]) || array_key_exists("proveedor", $context) ? $context["proveedor"] : (function () { throw new RuntimeError('Variable "proveedor" does not exist.', 3, $this->source); })()), "id", [], "any", false, false, false, 3))), "html", null, true);
         echo "\">
-    <button class=\"btn\">Eliminar</button>
+    <button id=\"eliminar\" class=\"btn\">Eliminar</button>
 </form>
 ";
         
@@ -71,16 +73,16 @@ class __TwigTemplate_680e4145a4980f3eef9f51e0b742c03cb1ccf38a2401b4143520819f3a8
 
     public function getDebugInfo()
     {
-        return array (  49 => 3,  43 => 1,);
+        return array (  51 => 3,  43 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<form method=\"post\" action=\"{{ path('proveedor_delete', {'id': proveedor.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+        return new Source("<form method=\"post\" action=\"{{ path('proveedor_delete', {'id': proveedor.id}) }}\" onsubmit=\"return confirm('¿Está seguro que quiere eliminar el proveedor {{ proveedor.id }}?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ proveedor.id) }}\">
-    <button class=\"btn\">Eliminar</button>
+    <button id=\"eliminar\" class=\"btn\">Eliminar</button>
 </form>
-", "proveedor/_delete_form.html.twig", "C:\\xampp\\htdocs\\restaurante2\\templates\\proveedor\\_delete_form.html.twig");
+", "proveedor/_delete_form.html.twig", "C:\\xampp\\htdocs\\restaurante\\templates\\proveedor\\_delete_form.html.twig");
     }
 }

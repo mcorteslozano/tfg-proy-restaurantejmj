@@ -50,7 +50,7 @@ class __TwigTemplate_6ec9e93a952ded214ad3d6e74339b0c22c6f306c8d8739c1587df9598ad
         // line 3
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, (isset($context["articulo"]) || array_key_exists("articulo", $context) ? $context["articulo"] : (function () { throw new RuntimeError('Variable "articulo" does not exist.', 3, $this->source); })()), "id", [], "any", false, false, false, 3))), "html", null, true);
         echo "\">
-    <button class=\"btn\">Eliminar</button>
+    <button id=\"eliminar\" class=\"btn\">Eliminar</button>
 </form>
 ";
         
@@ -81,8 +81,8 @@ class __TwigTemplate_6ec9e93a952ded214ad3d6e74339b0c22c6f306c8d8739c1587df9598ad
         return new Source("<form method=\"post\" action=\"{{ path('articulo_delete', {'id': articulo.id}) }}\" onsubmit=\"return confirm('¿Está seguro que quiere eliminar el artículo {{ articulo.id }}?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ articulo.id) }}\">
-    <button class=\"btn\">Eliminar</button>
+    <button id=\"eliminar\" class=\"btn\">Eliminar</button>
 </form>
-", "articulo/_delete_form.html.twig", "C:\\xampp\\htdocs\\restaurante2\\templates\\articulo\\_delete_form.html.twig");
+", "articulo/_delete_form.html.twig", "C:\\xampp\\htdocs\\restaurante\\templates\\articulo\\_delete_form.html.twig");
     }
 }

@@ -96,7 +96,7 @@ class __TwigTemplate_75cc4bd6d17a3333a56123d0a624eb465e09643c6e4cb4e84244013c8af
     ";
         }
         // line 10
-        echo "
+        echo " 
     <label for=\"inputEmail\">Email</label>
     <input type=\"email\" value=\"";
         // line 12
@@ -149,7 +149,7 @@ class __TwigTemplate_75cc4bd6d17a3333a56123d0a624eb465e09643c6e4cb4e84244013c8af
     {% if error %}
         <div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
-
+ 
     <label for=\"inputEmail\">Email</label>
     <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control\" required autofocus>
     <label for=\"inputPassword\">Contraseña</label>
@@ -162,6 +162,6 @@ class __TwigTemplate_75cc4bd6d17a3333a56123d0a624eb465e09643c6e4cb4e84244013c8af
     </button>
 </form>
 {% endblock %}
-", "security/login.html.twig", "C:\\xampp\\htdocs\\restaurante2\\templates\\security\\login.html.twig");
+", "security/login.html.twig", "C:\\xampp\\htdocs\\restaurante\\templates\\security\\login.html.twig");
     }
 }

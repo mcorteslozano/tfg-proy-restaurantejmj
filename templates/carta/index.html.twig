@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style/main_page.css">
+	<link rel="icon" type="image/x-icon" href="{{ asset('/img/favicon.ico') }}" />	
+	<script type="text/javascript" src="js/main_page.js"></script>
+	<title>Carta - Restaurante JMJ</title>
+</head>
+<body >
+	<header>
+		<div>
+			<img src="img/logo.png" id="logo" onclick="document.location.href='{{ path('bienvenida' ) }}'">
+		</div>
+		
+		<div id="marginNav">
+			<a href="{{ path('carta' ) }}">Carta</a>
+			<a href="{{ path('contacto' ) }}">Contacto</a>
+			<a href="{{ path('app_login' ) }}">Gestión</a>
+		</div>
+
+		<div>
+			<a href="https://es-es.facebook.com/" class="social"><img src="img/facebook.svg"></a>
+			<a href="https://www.instagram.com/?hl=es" class="social"><img src="img/instagram.svg"></a>
+			<a href="https://twitter.com/?lang=es" class="social"><img src="img/twitter.svg"></a>
+		</div>
+	</header>
+	<main class="fondo_main">
+
+		<img src="img/img1.png" class="img_main">
+		<img src="img/img2.png" class="img_main">
+		<img src="img/img3.png" class="img_main">
+		<img src="img/img4.png" class="img_main">
+		<img src="img/img5.png" class="img_main">
+
+		<h2 id="entrante">ENTRANTES</h2>
+		<div class="linea">
+			<div>
+			 	<h3>GUACAMOLE</h3>
+			 	<p>Receta tradicional Mexicana, preparado en la mesa y servido en molcajete de piedra volcánica, con lima, cilantro y cebolleta tierna. Acompañado de totopos caseros de maíz.</p>
+			 	<h3>PIPARRAS FRITAS </h3>
+			 	<p>Con aceite de oliva virgen, y sal maldón.</p>
+				<h3>TEQUEÑOS</h3>
+			 	<p>Deliciosos bastoncitos rellenos de queso fresco (paisa), acompañados con una salsa natural de tomate y albahaca fresca.</p>
+			</div>
+			<div>
+				<h3>ENSALADA DE BURRATA</h3>
+			 	<p>Con naranja, nueces pecan, aceitunas y espinacas.</p>
+			 	<h3>ENSALADILLA RUSA </h3>
+			 	<p>Con pollo ecológico, tirabeques y crujiente de panceta ibérica.</p>
+			 	<h3>ALCACHOFAS FRITAS NATURALES</h3>
+			 	<p>Corazones de alcachofas fritas acompañados con salsa romescú.</p>
+			 	<h3>TATAKI DE ENTRAÑA</h3>
+			 	<p>A la parilla de carbón, aliñado con soja, sésamo, chimichurri y mayonesa de wasabí.</p>
+			</div>
+		</div>
+		<hr>
+		<h2>PASTA</h2>
+		<div class="linea">
+			<div>
+				<h3>RAVIOLIS</h3>
+				<p>Rellenos de ternera y setas, con una salsa de queso ( Parmesano, Pecorino, Provolone, Gorgonzola ).</p>
+				<h3>ESPAGUETIS</h3>
+				<p>A la carbonara de Italia, sin nata y con bacon o panceta.</p>
+			</div>
+			<div>
+				<h3>TORTELLINI CON SALSA PESTO</h3>	
+				<p>Tortellini con una salsa de Pesto, elaborada con queso parmesano, piñones, albahaca fresca y un diente de ajo.</p>
+				<h3>LASAGNAS</h3>
+				<p>Clásica, a la Bolognesa, Vegetariana</p>
+
+			</div>
+		</div>
+		<hr>
+		<h2>CARNES</h2>
+		<div class="linea">
+			<div>
+				<h3>POLLO ASADO</h3>
+				<p>Al horno con zanahorias, judías verdes y patatas asadas.</p>
+				<h3>COSTILLAS DE CERDO</h3>
+				<p>Ahumadas en madera de Hycory, hechas a baja temperatura, con una salsa de barbacoa japonesa, panela y puerro. Acompañadas de croquetas de maíz y nata agria.</p>
+				<h3>SOLOMILLO DE CERDO</h3>
+				<p>A la plancha, con ramas de perejil, patatas, sal y pimienta.</p>
+			</div>
+			<div>
+				<h3>HAMBURGUESAS</h3>
+				<p>Todas nuestras hamburguesas son elaborada diariamente con carne 100% de vaca rubia Gallega. Pesan 170grs. Con PAN ARTESANO de nuestro obrador elaborado a diario a partir de masa madre y acompañadas de patatas fritas caseras o ensalada.</p>
+				<h3>SOLOMILLO WELLINGTON</h3>
+				<p>Con puré de patata y ensalada de lechuga, tomate, zanahoria y cebolla.</p>
+			</div>
+		</div>
+		<hr>
+		<h2>PESCADOS</h2>
+		<div class="linea">
+			<div>
+				<h3>SALMÓN</h3>
+				<p>A la plancha, acompañado con pimientos, esparragos y dos rodajas de limón.</p>
+				<h3>BACALAO</h3>
+				<p>Ventresca de bacalao al Pil-Pil con quindilla y ajos laminados.</p>
+			</div>
+			<div>
+				<h3>MERLUZA</h3>
+				<p>Al horno, con cebolla, zanahorias, pimientos, perejil, ajo y limón.</p>
+				<h3>RODABALLO</h3>
+				<p>A la plancha con una salsa ligera de yogur natural, mayonesa, cebolleta, patatas y perejil.</p>
+			</div>
+		</div>
+		<hr>
+		<h2>POSTRES</h2>
+		<div class="linea" id="final">
+			<div>
+				<h3>TARTAS</h3>
+				<p>Chocolate, Queso, Manzana, Zanahoria y De la abuela.</p>
+				<h3>FLAN</h3>
+				<p>De huevo ( casero ).</p>
+				<h3>FRUTA VARIADA</h3>
+			</div>
+			<div>
+				<h3>Helados</h3>
+				<p>Chocolate, Limón, Nata, Fresa y Vainilla.</p>
+				<h3>TIRAMISU</h3>
+			</div>
+		</div>
+	</main>
+	<footer>
+		
+	</footer>
+</body>
+</html>

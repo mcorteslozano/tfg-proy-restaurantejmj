@@ -51,22 +51,31 @@ class __TwigTemplate_603325035c3ae5ba2b9d23e000d181b5f42013e99842bc64eaf44d87de7
         // line 8
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/img/favicon.ico"), "html", null, true);
         echo "\" />
-\t<script type=\"text/javascript\" src=\"js/funciones.js\"></script>
+\t<script type=\"text/javascript\" src=\"js/main_page.js\"></script>
 \t<title>Restaurante JMJ</title>
 
 </head>
 <body>
 \t<header>
 \t\t<div>
-\t\t\t<img src=\"img/logo.png\" id=\"logo\">
+\t\t\t<img src=\"img/logo.png\" id=\"logo\" onclick=\"document.location.href='";
+        // line 16
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("bienvenida");
+        echo "'\">
 \t\t</div>
-\t\t<div id=\"marginNav\">
-\t\t\t<a href=\"#\" id=\"contacto\">Contacto</a>
+\t\t\t<div id=\"marginNav\">
+\t\t\t<a href=\"";
+        // line 19
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("carta");
+        echo "\">Carta</a>
 \t\t\t<a href=\"";
         // line 20
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contacto");
+        echo "\">Contacto</a>
+\t\t\t<a href=\"";
+        // line 21
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
         echo "\">Gestión</a>
-\t\t\t<a href=\"#\">Carta</a>
 \t\t</div>
 \t\t<div>
 \t\t\t<a href=\"https://es-es.facebook.com/\" class=\"social\"><img src=\"img/facebook.svg\"></a>
@@ -76,21 +85,13 @@ class __TwigTemplate_603325035c3ae5ba2b9d23e000d181b5f42013e99842bc64eaf44d87de7
 \t</header>
 
 \t<main>
-\t\t<div id=\"cajaContacto\" class=\"caja_main\">
-\t\t\t<h1>Contacto</h1>
-\t\t\t";
-        // line 33
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["contactoForm"]) || array_key_exists("contactoForm", $context) ? $context["contactoForm"] : (function () { throw new RuntimeError('Variable "contactoForm" does not exist.', 33, $this->source); })()), 'form');
-        echo "
-\t\t</div>
-
 \t\t<img src=\"img/img1.png\" class=\"img_main\">
         <img src=\"img/img2.png\" class=\"img_main\">
         <img src=\"img/img3.png\" class=\"img_main\">
         <img src=\"img/img4.png\" class=\"img_main\">
         <img src=\"img/img5.png\" class=\"img_main\">
-
 \t</main>
+\t
 \t<footer>
 \t\t
 \t</footer>
@@ -116,7 +117,7 @@ class __TwigTemplate_603325035c3ae5ba2b9d23e000d181b5f42013e99842bc64eaf44d87de7
 
     public function getDebugInfo()
     {
-        return array (  83 => 33,  67 => 20,  52 => 8,  43 => 1,);
+        return array (  77 => 21,  73 => 20,  69 => 19,  63 => 16,  52 => 8,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -129,19 +130,19 @@ class __TwigTemplate_603325035c3ae5ba2b9d23e000d181b5f42013e99842bc64eaf44d87de7
 \t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
 \t<link rel=\"stylesheet\" href=\"style/main_page.css\">
 \t<link rel=\"icon\" type=\"image/x-icon\" href=\"{{ asset('/img/favicon.ico') }}\" />
-\t<script type=\"text/javascript\" src=\"js/funciones.js\"></script>
+\t<script type=\"text/javascript\" src=\"js/main_page.js\"></script>
 \t<title>Restaurante JMJ</title>
 
 </head>
 <body>
 \t<header>
 \t\t<div>
-\t\t\t<img src=\"img/logo.png\" id=\"logo\">
+\t\t\t<img src=\"img/logo.png\" id=\"logo\" onclick=\"document.location.href='{{ path('bienvenida' ) }}'\">
 \t\t</div>
-\t\t<div id=\"marginNav\">
-\t\t\t<a href=\"#\" id=\"contacto\">Contacto</a>
+\t\t\t<div id=\"marginNav\">
+\t\t\t<a href=\"{{ path('carta' ) }}\">Carta</a>
+\t\t\t<a href=\"{{ path('contacto' ) }}\">Contacto</a>
 \t\t\t<a href=\"{{ path('app_login' ) }}\">Gestión</a>
-\t\t\t<a href=\"#\">Carta</a>
 \t\t</div>
 \t\t<div>
 \t\t\t<a href=\"https://es-es.facebook.com/\" class=\"social\"><img src=\"img/facebook.svg\"></a>
@@ -151,22 +152,17 @@ class __TwigTemplate_603325035c3ae5ba2b9d23e000d181b5f42013e99842bc64eaf44d87de7
 \t</header>
 
 \t<main>
-\t\t<div id=\"cajaContacto\" class=\"caja_main\">
-\t\t\t<h1>Contacto</h1>
-\t\t\t{{ form(contactoForm) }}
-\t\t</div>
-
 \t\t<img src=\"img/img1.png\" class=\"img_main\">
         <img src=\"img/img2.png\" class=\"img_main\">
         <img src=\"img/img3.png\" class=\"img_main\">
         <img src=\"img/img4.png\" class=\"img_main\">
         <img src=\"img/img5.png\" class=\"img_main\">
-
 \t</main>
+\t
 \t<footer>
 \t\t
 \t</footer>
 </body>
-</html>", "bienvenida/index.html.twig", "C:\\xampp\\htdocs\\restaurante2\\templates\\bienvenida\\index.html.twig");
+</html>", "bienvenida/index.html.twig", "C:\\xampp\\htdocs\\restaurante\\templates\\bienvenida\\index.html.twig");
     }
 }
