@@ -56,7 +56,7 @@ class UsuarioController extends AbstractController
 
             $password =  $form->get('password')->getData();
             if(!empty($password)) {
-                $passwordEncode = $passwordEncoder->encodePassword($usuario, $form->get('password')->getData());
+                $passwordEncode = $passwordEncoder->encodePassword($usuario, $password);
                 $usuario->setPassword($passwordEncode);
 
                 $em->persist($usuario);
