@@ -53,15 +53,18 @@ class UsuarioController extends AbstractController
 //        $filesystem = new Filesystem();
 
         if ($form->isSubmitted() && $form->isValid()) {
-
+            $oldPassword = $usuario->getPassword();
             $password =  $form->get('password')->getData();
+
             if(!empty($password)) {
                 $passwordEncode = $passwordEncoder->encodePassword($usuario, $password);
                 $usuario->setPassword($passwordEncode);
 
-                $em->persist($usuario);
-
+            } else {
+                $usuario->setPassword($oldPassword);
             }
+
+            $em->persist($usuario);
 
             $brochureFile = $form->get('foto')->getData();
             if ($brochureFile) {
