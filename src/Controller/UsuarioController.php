@@ -4,6 +4,7 @@ namespace App\Controller;
 use App\Entity\Usuario;
 use App\Form\UsuarioType;
 use App\Repository\UsuarioRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -40,32 +41,29 @@ class UsuarioController extends AbstractController
     /**
      * @Route("/{id}/edit", name="usuario_edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, Usuario $usuario, UserPasswordEncoderInterface $passwordEncoder, UsuarioRepository $usuarioRepository): Response
+    public function edit(Request $request, EntityManagerInterface $em, Filesystem $filesystem, Usuario $usuario, UserPasswordEncoderInterface $passwordEncoder, UsuarioRepository $usuarioRepository): Response
     {
         $form = $this->createForm(UsuarioType::class, $usuario);
         $form->handleRequest($request);
-        $filesystem = new Filesystem();
-        
+//        $filesystem = new Filesystem();
+
         if ($form->isSubmitted() && $form->isValid()) {
 
-          /*  $password =  $form->get('password')->getData();
-            if($password){
+            $password =  $form->get('password')->getData();
+            if(!empty($password)) {
                 $passwordEncode = $passwordEncoder->encodePassword($usuario, $form->get('password')->getData());
                 $usuario->setPassword($passwordEncode);
 
-                $entityManager = $this->getDoctrine()->getManager();
-                $entityManager->persist($usuario);
-                $entityManager->flush();
-            }  else {
-                $usuario->setPassword($contraseña); 
-            }*/
-            
+                $em->persist($usuario);
+
+            }
+
             $brochureFile = $form->get('foto')->getData();
             if ($brochureFile) {
 
                 $originalFilename = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME);
                 $id = $usuario->getId();
-                
+
                 $newFilename = $originalFilename.$id.'.'.$brochureFile->guessExtension();
 
                 $filesystem->remove($this->getParameter('fotos_dir').'/'.$usuario->getFoto());
@@ -76,17 +74,15 @@ class UsuarioController extends AbstractController
                         $newFilename
                     );
                     $usuario->setFoto($newFilename);
-                    $entityManager = $this->getDoctrine()->getManager();
 
-                    $entityManager->persist($usuario);
-                    $entityManager->flush();
+                    $em->persist($usuario);
 
                 } catch (FileException $e) {
 
                 }
             }
-            
-            $this->getDoctrine()->getManager()->flush();
+
+            $em->flush();
 
             return $this->redirectToRoute('articulo_index');
         }
