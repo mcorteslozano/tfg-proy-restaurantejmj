@@ -70,17 +70,13 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
 
     <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
     <ul class=\"navbar-nav mr-auto\">
-    ";
-        // line 24
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_GERENTE")) {
-            // line 25
-            echo "    <li class=\"nav-item active\">
-        <a class=\"nav-link\" href=\"/register\">Registro</a>
+   
+    <li class=\"nav-item active\">
+        <a class=\"nav-link\" href=\"/register\">Registrar</a>
     </li>
+    
     ";
-        }
         // line 29
-        echo "    ";
         if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 29, $this->source); })()), "user", [], "any", false, false, false, 29)) {
             // line 30
             echo "      <li class=\"nav-item active\">
@@ -103,7 +99,7 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
         <a class=\"nav-link\" href=\"/pedido\">Pedidos</a>
       </li> 
       <form class=\"form-inline my-2 my-lg-0\">
-        <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"\" aria-label=\"Search\">
+        <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"\" aria-label=\"Search\" name=\"key\" id=\"key\" onkeyup=\"buscar(this.value)\">
         <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Buscar</button>
       </form>
       ";
@@ -114,25 +110,28 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
         // line 51
         if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 51, $this->source); })()), "user", [], "any", false, false, false, 51)) {
             // line 52
-            echo "      <span style=\"padding-right:10px;color:black;\"><img src=\"/img/icono.png\" width=\"30px\" height=\"20px\" /> ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 52, $this->source); })()), "user", [], "any", false, false, false, 52), "username", [], "any", false, false, false, 52), "html", null, true);
-            echo " <a href=\"";
+            echo "      <span style=\"padding-right:10px;color:black;\"><img class=\"icono\" src=\"/img/usuarios/";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 52, $this->source); })()), "user", [], "any", false, false, false, 52), "foto", [], "any", false, false, false, 52), "html", null, true);
+            echo "\"/><a class=\"link_usuario\" href=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("usuario_show", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 52, $this->source); })()), "user", [], "any", false, false, false, 52), "id", [], "any", false, false, false, 52)]), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 52, $this->source); })()), "user", [], "any", false, false, false, 52), "nombreUsuario", [], "any", false, false, false, 52), "html", null, true);
+            echo "</a><a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
-            echo "\"><img src=\"/img/logout.png\" style=\"margin-left:5px;\"width=\"15px\" height=\"20px\"></a></span>
+            echo "\"><img class=\"salir\" src=\"/img/logout.png\"></a></span>
     ";
         }
         // line 54
         echo "
-
   </div>
 </nav>
         ";
-        // line 58
+        // line 57
         $this->displayBlock('body', $context, $blocks);
-        // line 59
+        // line 58
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 64
+        // line 63
         echo "
         <footer>
           <div class=\"footerPropio\">
@@ -207,7 +206,7 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
 
     }
 
-    // line 58
+    // line 57
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -225,7 +224,7 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
 
     }
 
-    // line 59
+    // line 58
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -235,7 +234,7 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 60
+        // line 59
         echo "        <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
         <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
@@ -260,7 +259,7 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
 
     public function getDebugInfo()
     {
-        return array (  239 => 60,  229 => 59,  211 => 58,  199 => 12,  195 => 11,  191 => 10,  186 => 9,  184 => 8,  174 => 7,  155 => 6,  136 => 64,  133 => 59,  131 => 58,  125 => 54,  117 => 52,  115 => 51,  112 => 50,  95 => 35,  92 => 34,  86 => 30,  83 => 29,  77 => 25,  75 => 24,  65 => 17,  60 => 14,  58 => 7,  54 => 6,  47 => 1,);
+        return array (  238 => 59,  228 => 58,  210 => 57,  198 => 12,  194 => 11,  190 => 10,  185 => 9,  183 => 8,  173 => 7,  154 => 6,  135 => 63,  132 => 58,  130 => 57,  125 => 54,  113 => 52,  111 => 51,  108 => 50,  91 => 35,  88 => 34,  82 => 30,  80 => 29,  65 => 17,  60 => 14,  58 => 7,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -288,11 +287,11 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
 
     <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
     <ul class=\"navbar-nav mr-auto\">
-    {% if is_granted('ROLE_GERENTE') %}
+   
     <li class=\"nav-item active\">
-        <a class=\"nav-link\" href=\"/register\">Registro</a>
+        <a class=\"nav-link\" href=\"/register\">Registrar</a>
     </li>
-    {% endif %}
+    
     {% if not app.user %}
       <li class=\"nav-item active\">
         <a class=\"nav-link\" href=\"/login\">Acceder</a>
@@ -310,15 +309,14 @@ class __TwigTemplate_15372d98d8f15d7392b3b4e116503e0fc41def69f446e6c012601c47974
         <a class=\"nav-link\" href=\"/pedido\">Pedidos</a>
       </li> 
       <form class=\"form-inline my-2 my-lg-0\">
-        <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"\" aria-label=\"Search\">
+        <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"\" aria-label=\"Search\" name=\"key\" id=\"key\" onkeyup=\"buscar(this.value)\">
         <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Buscar</button>
       </form>
       {% endif %}
     </ul>
     {% if app.user %}
-      <span style=\"padding-right:10px;color:black;\"><img src=\"/img/icono.png\" width=\"30px\" height=\"20px\" /> {{app.user.username}} <a href=\"{{ path('app_logout') }}\"><img src=\"/img/logout.png\" style=\"margin-left:5px;\"width=\"15px\" height=\"20px\"></a></span>
+      <span style=\"padding-right:10px;color:black;\"><img class=\"icono\" src=\"/img/usuarios/{{ app.user.foto }}\"/><a class=\"link_usuario\" href=\"{{ path('usuario_show', {'id': app.user.id}) }}\">{{app.user.nombreUsuario}}</a><a href=\"{{ path('app_logout') }}\"><img class=\"salir\" src=\"/img/logout.png\"></a></span>
     {% endif %}
-
 
   </div>
 </nav>

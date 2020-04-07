@@ -9,6 +9,8 @@ use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Validator\Constraints\File;
 use Symfony\Component\Form\CallbackTransformer;
 
 class UsuarioType extends AbstractType
@@ -16,15 +18,51 @@ class UsuarioType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('nombre',TextType::class,[
+                'attr' => array(
+                    'placeholder' => 'Nombre'
+                )
+            ])
+            ->add('telefono',TextType::class,[
+                'attr' => array(
+                    'placeholder' => 'Telefono'
+                )
+            ])
+            ->add('nombreUsuario',TextType::class,[
+                'attr' => array(
+                    'placeholder' => 'Nombre de Usuario'
+                )
+            ])
             ->add('email', EmailType::class,[
                 'attr' => array(
                     'placeholder' => 'Email'
                 )
             ])
             ->add('password', PasswordType::class,[
+                'empty_data' => '',
                 'attr' => array(
                     'placeholder' => 'Contraseña'
+                    
                 )
+            ])
+            ->add('foto', FileType::class, [
+                'label' => 'Foto',
+
+                'mapped' => false,
+
+                'required' => false,
+
+                'constraints' => [
+                    new File([
+                        'maxSize' => '1024k',
+                        'mimeTypes' => [
+                            'image/jpeg',
+                            'image/png',
+                            'image/pjpeg',
+                        ],
+                        'mimeTypesMessage' => 'Una imagen',
+                    ])
+                ],
             ])
             ->add('roles', ChoiceType::class,array(
                 "expanded"=>true,

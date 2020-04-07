@@ -74,6 +74,7 @@
     <parameter key="kernel.container_class">App_KernelDevDebugContainer</parameter>
     <parameter key="container.dumper.inline_class_loader">true</parameter>
     <parameter key="container.dumper.inline_factories">true</parameter>
+    <parameter key="fotos_dir">C:\xampp\htdocs\restaurante/public/img/usuarios</parameter>
     <parameter key="fragment.renderer.hinclude.global_template"></parameter>
     <parameter key="fragment.path">/_fragment</parameter>
     <parameter key="kernel.secret">%env(APP_SECRET)%</parameter>
@@ -388,6 +389,13 @@
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.pNNo5z3.App\Controller\RegisterController"/>
+      </call>
+    </service>
+    <service id="App\Controller\UsuarioController" class="App\Controller\UsuarioController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.pNNo5z3.App\Controller\UsuarioController"/>
       </call>
     </service>
     <service id="App\Form\ArticuloType" class="App\Form\ArticuloType" autowire="true" autoconfigure="true">
@@ -4286,13 +4294,6 @@
         </argument>
         <argument>null</argument>
       </call>
-      <call method="add">
-        <argument type="service" id=".security.request_matcher.O7Tsk.w"/>
-        <argument type="collection">
-          <argument>ROLE_GERENTE</argument>
-        </argument>
-        <argument>null</argument>
-      </call>
     </service>
     <service id="security.context_listener" class="Symfony\Component\Security\Http\Firewall\ContextListener" public="false">
       <tag name="monolog.logger" channel="security"/>
@@ -4709,9 +4710,6 @@
     <service id=".security.request_matcher.W3v1bVO" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
       <argument>^/pedido</argument>
     </service>
-    <service id=".security.request_matcher.O7Tsk.w" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
-      <argument>^/register</argument>
-    </service>
     <service id="security.command.user_password_encoder" class="Symfony\Bundle\SecurityBundle\Command\UserPasswordEncoderCommand" public="false">
       <tag name="console.command" command="security:encode-password"/>
       <argument type="service" id="security.encoder_factory.generic"/>
@@ -4959,6 +4957,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RegisterController" class="App\Controller\RegisterController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RegisterController" class="App\Controller\RegisterController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\RegisterController" class="App\Controller\RegisterController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UsuarioController" class="App\Controller\UsuarioController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UsuarioController" class="App\Controller\UsuarioController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\UsuarioController" class="App\Controller\UsuarioController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ArticuloType" class="App\Form\ArticuloType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ArticuloType" class="App\Form\ArticuloType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ContactoType" class="App\Form\ContactoType" autowire="true" abstract="true"/>
@@ -5233,13 +5234,34 @@
         <argument key="proveedor" type="service" id=".errored..service_locator.7wiT78o.App\Entity\Proveedor"/>
       </argument>
     </service>
-    <service id=".service_locator.8Z_jHRB" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.w8lGWe8" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="passwordEncoder" type="service" id="security.user_password_encoder.generic"/>
+        <argument key="usuariosRepositorio" type="service" id="App\Repository\UsuarioRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.qI1x.hx" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.Ee0e0h." class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="usuarioRepository" type="service" id="App\Repository\UsuarioRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator._g6XNTO" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="usuario" type="service" id=".errored..service_locator._g6XNTO.App\Entity\Usuario"/>
+      </argument>
+    </service>
+    <service id=".service_locator.FEIfleO" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="passwordEncoder" type="service" id="security.user_password_encoder.generic"/>
+        <argument key="usuario" type="service" id=".errored..service_locator.FEIfleO.App\Entity\Usuario"/>
+        <argument key="usuarioRepository" type="service" id="App\Repository\UsuarioRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.3HpA.AM" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\ArticuloController::delete" type="service" id=".service_locator.qlXgPWB"/>
@@ -5262,7 +5284,11 @@
         <argument key="App\Controller\ProveedorController::edit" type="service" id=".service_locator.7wiT78o"/>
         <argument key="App\Controller\ProveedorController::index" type="service" id=".service_locator.YxR9_CP"/>
         <argument key="App\Controller\ProveedorController::show" type="service" id=".service_locator.7wiT78o"/>
-        <argument key="App\Controller\RegisterController::register" type="service" id=".service_locator.8Z_jHRB"/>
+        <argument key="App\Controller\RegisterController::register" type="service" id=".service_locator.w8lGWe8"/>
+        <argument key="App\Controller\UsuarioController::delete" type="service" id=".service_locator._g6XNTO"/>
+        <argument key="App\Controller\UsuarioController::edit" type="service" id=".service_locator.FEIfleO"/>
+        <argument key="App\Controller\UsuarioController::index" type="service" id=".service_locator.Ee0e0h."/>
+        <argument key="App\Controller\UsuarioController::show" type="service" id=".service_locator._g6XNTO"/>
       </argument>
     </service>
     <service id=".service_locator.Y7gDuDN" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5610,6 +5636,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.pNNo5z3" method="withContext"/>
     </service>
+    <service id=".service_locator.pNNo5z3.App\Controller\UsuarioController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\UsuarioController"/>
+      <argument>App\Controller\UsuarioController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.pNNo5z3" method="withContext"/>
+    </service>
     <service id=".service_locator.JFjjyG5" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5749,12 +5781,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.qI1x.hx"/>
+      <argument type="service" id=".service_locator.3HpA.AM"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.qI1x.hx"/>
+      <argument type="service" id=".service_locator.3HpA.AM"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -5768,6 +5800,8 @@
     <service id=".errored..service_locator.hPBZMGd.App\Entity\LineaPedido" class="App\Entity\LineaPedido"/>
     <service id=".errored..service_locator.SZzy9V..App\Entity\Pedido" class="App\Entity\Pedido"/>
     <service id=".errored..service_locator.7wiT78o.App\Entity\Proveedor" class="App\Entity\Proveedor"/>
+    <service id=".errored..service_locator._g6XNTO.App\Entity\Usuario" class="App\Entity\Usuario"/>
+    <service id=".errored..service_locator.FEIfleO.App\Entity\Usuario" class="App\Entity\Usuario"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.3t4ia0Q"/>
       <argument type="collection">
@@ -6145,7 +6179,7 @@
     <service id="Swift_Transport" alias="swiftmailer.mailer.default.transport.spool" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.qI1x.hx"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.3HpA.AM"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

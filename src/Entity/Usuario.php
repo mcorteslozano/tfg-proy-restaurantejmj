@@ -33,6 +33,28 @@ class Usuario implements UserInterface
      */
     private $password;
 
+    /**
+     * @ORM\Column(type="string", length=50)
+     */
+    private $nombre;
+
+    /**
+     * @ORM\Column(type="string", length=30)
+     */
+    private $nombreUsuario;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $telefono;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $foto;
+
+    
+
     public function getId(): ?int
     {
         return $this->id;
@@ -46,6 +68,54 @@ class Usuario implements UserInterface
     public function setEmail(string $email): self
     {
         $this->email = $email;
+
+        return $this;
+    }
+
+    public function getNombre(): ?string
+    {
+        return $this->nombre;
+    }
+
+    public function setNombre(string $nombre): self
+    {
+        $this->nombre = $nombre;
+
+        return $this;
+    }
+
+    public function getNombreUsuario(): ?string
+    {
+        return $this->nombreUsuario;
+    }
+
+    public function setNombreUsuario(string $nombreUsuario): self
+    {
+        $this->nombreUsuario = $nombreUsuario;
+
+        return $this;
+    }
+
+    public function getTelefono(): ?int
+    {
+        return $this->telefono;
+    }
+
+    public function setTelefono(int $telefono): self
+    {
+        $this->telefono = $telefono;
+
+        return $this;
+    }
+
+    public function getFoto(): ?string
+    {
+        return $this->foto;
+    }
+
+    public function setFoto(?string $foto): self
+    {
+        $this->foto = $foto;
 
         return $this;
     }
@@ -67,7 +137,7 @@ class Usuario implements UserInterface
     {
         $roles = $this->roles;
         // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
+        //$roles[] = 'ROLE_USER';
 
         return array_unique($roles);
     }

@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Proveedor;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -16,7 +17,7 @@ class ProveedorType extends AbstractType
             ->add('codigo_postal')
             ->add('localidad')
             ->add('email')
-            ->add('telefono')
+            ->add('telefono', TextType::class)
         ;
     }
 

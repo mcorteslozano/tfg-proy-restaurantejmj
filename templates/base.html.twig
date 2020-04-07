@@ -21,11 +21,11 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-    {% if is_granted('ROLE_GERENTE') %}
+   
     <li class="nav-item active">
-        <a class="nav-link" href="/register">Registro</a>
+        <a class="nav-link" href="/register">Registrar</a>
     </li>
-    {% endif %}
+    
     {% if not app.user %}
       <li class="nav-item active">
         <a class="nav-link" href="/login">Acceder</a>
@@ -43,15 +43,14 @@
         <a class="nav-link" href="/pedido">Pedidos</a>
       </li> 
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+        <input class="form-control mr-sm-2" type="text" placeholder="" aria-label="Search" name="key" id="key" onkeyup="buscar(this.value)">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
       </form>
       {% endif %}
     </ul>
     {% if app.user %}
-      <span style="padding-right:10px;color:black;"><img src="/img/icono.png" width="30px" height="20px" /> {{app.user.username}} <a href="{{ path('app_logout') }}"><img src="/img/logout.png" style="margin-left:5px;"width="15px" height="20px"></a></span>
+      <span style="padding-right:10px;color:black;"><img class="icono" src="/img/usuarios/{{ app.user.foto }}"/><a class="link_usuario" href="{{ path('usuario_show', {'id': app.user.id}) }}">{{app.user.nombreUsuario}}</a><a href="{{ path('app_logout') }}"><img class="salir" src="/img/logout.png"></a></span>
     {% endif %}
-
 
   </div>
 </nav>

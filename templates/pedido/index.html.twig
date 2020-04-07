@@ -79,3 +79,7 @@
     {{ include('pedido/_form.html.twig') }}
     </div>
 {% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('/js/unidades_pedido_validacion.js') }}"></script>
+{% endblock %}

@@ -118,7 +118,7 @@ class __TwigTemplate_97ac93c3aa43f90ddd3ed20487de046e3340bee4b42841af12d959c5b5d
         }
         foreach ($context['_seq'] as $context["_key"] => $context["articulo"]) {
             // line 20
-            echo "            <tr>
+            echo "            <tr class=\"hover_fila\">
                 <td>";
             // line 21
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["articulo"], "nombre", [], "any", false, false, false, 21), "html", null, true);
@@ -218,7 +218,7 @@ class __TwigTemplate_97ac93c3aa43f90ddd3ed20487de046e3340bee4b42841af12d959c5b5d
         </thead>
         <tbody>
         {% for articulo in articulos %}
-            <tr>
+            <tr class=\"hover_fila\">
                 <td>{{ articulo.nombre }}</td>
                 <td>{{ articulo.descripcion }}</td>
                 <td>{{ articulo.precio }}€</td>
@@ -236,6 +236,6 @@ class __TwigTemplate_97ac93c3aa43f90ddd3ed20487de046e3340bee4b42841af12d959c5b5d
 
     <a href=\"{{ path('articulo_new') }}\">Añadir artículo</a>
 {% endblock %}
-", "articulo/index.html.twig", "C:\\xampp\\htdocs\\restaurante2\\templates\\articulo\\index.html.twig");
+", "articulo/index.html.twig", "C:\\xampp\\htdocs\\restaurante\\templates\\articulo\\index.html.twig");
     }
 }

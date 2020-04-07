@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}}Gestiona JMJ{% endblock %}
+{% block title %}Gestiona JMJ{% endblock %}
 
 {% block body %}
     <h1>Nuevo Proveedor</h1>
@@ -8,4 +8,9 @@
     {{ include('proveedor/_form.html.twig') }}
 
     <a href="{{ path('proveedor_index') }}">Volver</a>
+{% endblock %}
+
+
+{% block javascripts %}
+    <script src="{{ asset('/js/telefono_validacion.js') }}"></script>
 {% endblock %}

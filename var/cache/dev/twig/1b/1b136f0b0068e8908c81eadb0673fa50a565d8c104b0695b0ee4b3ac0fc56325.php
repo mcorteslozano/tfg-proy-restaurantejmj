@@ -58,10 +58,10 @@ class __TwigTemplate_603325035c3ae5ba2b9d23e000d181b5f42013e99842bc64eaf44d87de7
 <body>
 \t<header>
 \t\t<div>
-\t\t\t<img src=\"img/logo.png\" id=\"logo\" onclick=\"document.location.href='";
+\t\t\t<a href='";
         // line 16
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("bienvenida");
-        echo "'\">
+        echo "'><img src=\"img/logo.png\" id=\"logo\"></a>
 \t\t</div>
 \t\t\t<div id=\"marginNav\">
 \t\t\t<a href=\"";
@@ -137,7 +137,7 @@ class __TwigTemplate_603325035c3ae5ba2b9d23e000d181b5f42013e99842bc64eaf44d87de7
 <body>
 \t<header>
 \t\t<div>
-\t\t\t<img src=\"img/logo.png\" id=\"logo\" onclick=\"document.location.href='{{ path('bienvenida' ) }}'\">
+\t\t\t<a href='{{ path('bienvenida')}}'><img src=\"img/logo.png\" id=\"logo\"></a>
 \t\t</div>
 \t\t\t<div id=\"marginNav\">
 \t\t\t<a href=\"{{ path('carta' ) }}\">Carta</a>

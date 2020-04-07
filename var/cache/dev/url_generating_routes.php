@@ -41,6 +41,10 @@ return [
     'proveedor_edit' => [['id'], ['_controller' => 'App\\Controller\\ProveedorController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/proveedor']], [], []],
     'proveedor_delete' => [['id'], ['_controller' => 'App\\Controller\\ProveedorController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/proveedor']], [], []],
     'register' => [[], ['_controller' => 'App\\Controller\\RegisterController::register'], [], [['text', '/register']], [], []],
+    'usuario_index' => [[], ['_controller' => 'App\\Controller\\UsuarioController::index'], [], [['text', '/usuario/']], [], []],
+    'usuario_show' => [['id'], ['_controller' => 'App\\Controller\\UsuarioController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/usuario']], [], []],
+    'usuario_edit' => [['id'], ['_controller' => 'App\\Controller\\UsuarioController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/usuario']], [], []],
+    'usuario_delete' => [['id'], ['_controller' => 'App\\Controller\\UsuarioController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/usuario']], [], []],
     'index' => [[], ['_controller' => 'App\\Controller\\BienvenidaController::index'], [], [['text', '/']], [], []],
     'logout' => [[], [], [], [['text', '/logout']], [], []],
 ];

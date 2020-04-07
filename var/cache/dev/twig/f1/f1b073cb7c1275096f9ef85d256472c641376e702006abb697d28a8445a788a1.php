@@ -1006,6 +1006,6 @@ class __TwigTemplate_419117103d43e103a792459b98abe9dc6649da71929e07c90af43eaf0f0
         {% endif %}
     {% endfor %}
 {% endblock %}
-", "@Swiftmailer/Collector/swiftmailer.html.twig", "C:\\xampp\\htdocs\\restaurante2\\vendor\\symfony\\swiftmailer-bundle\\Resources\\views\\Collector\\swiftmailer.html.twig");
+", "@Swiftmailer/Collector/swiftmailer.html.twig", "C:\\xampp\\htdocs\\restaurante\\vendor\\symfony\\swiftmailer-bundle\\Resources\\views\\Collector\\swiftmailer.html.twig");
     }
 }
