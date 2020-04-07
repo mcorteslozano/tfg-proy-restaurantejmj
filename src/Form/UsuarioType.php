@@ -42,7 +42,7 @@ class UsuarioType extends AbstractType
                 'empty_data' => '',
                 'attr' => array(
                     'placeholder' => 'Contraseña'
-                    
+
                 )
             ])
             ->add('foto', FileType::class, [
@@ -80,7 +80,7 @@ class UsuarioType extends AbstractType
         $builder->get('roles')
         ->addModelTransformer(new CallbackTransformer(
             function ($rolesArray) {
-                return implode(', ', $rolesArray);
+                return implode(', ', $rolesArray??[]);
             },
             function ($rolesString) {
                 return [$rolesString];

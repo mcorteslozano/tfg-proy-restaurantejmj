@@ -8,6 +8,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
@@ -41,8 +42,12 @@ class UsuarioController extends AbstractController
     /**
      * @Route("/{id}/edit", name="usuario_edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, EntityManagerInterface $em, Filesystem $filesystem, Usuario $usuario, UserPasswordEncoderInterface $passwordEncoder, UsuarioRepository $usuarioRepository): Response
+    public function edit(Request $request, EntityManagerInterface $em, Filesystem $filesystem, string $id, UserPasswordEncoderInterface $passwordEncoder, UsuarioRepository $usuarioRepository): Response
     {
+        $usuario = $usuarioRepository->find($id);
+        if (!$usuario) {
+            throw new NotFoundHttpException('No existe el usuario');
+        }
         $form = $this->createForm(UsuarioType::class, $usuario);
         $form->handleRequest($request);
 //        $filesystem = new Filesystem();
