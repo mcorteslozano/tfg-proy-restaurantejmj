@@ -59,7 +59,6 @@ class UsuarioController extends AbstractController
             if(!empty($password)) {
                 $passwordEncode = $passwordEncoder->encodePassword($usuario, $password);
                 $usuario->setPassword($passwordEncode);
-
             } else {
                 $usuario->setPassword($oldPassword);
             }

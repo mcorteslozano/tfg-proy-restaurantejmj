@@ -11,22 +11,4 @@
 </div>
 {% endblock %}
 {% block javascripts %}
-<script>
-    var input = document.getElementById('usuario_password');
-    
-    input.style.display = "none";
-    input.required = "";
-    var contenedor = document.getElementById('usuario');
-    var hijo = contenedor.childNodes[4];
-    console.log(hijo);
-    var boton = document.createElement("button");
-    boton.setAttribute("id","boton_password");
-    boton.innerHTML = "Cambiar Contraseña";
-    hijo.appendChild(boton);
-    boton.addEventListener('click',function(){
-        boton.style.display = "none";
-        input.style.display = "initial";
-        input.required = "required";
-    })
-</script>
 {% endblock %}

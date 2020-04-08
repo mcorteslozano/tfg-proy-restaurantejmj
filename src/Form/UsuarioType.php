@@ -42,8 +42,8 @@ class UsuarioType extends AbstractType
                 'empty_data' => '',
                 'attr' => array(
                     'placeholder' => 'Contraseña'
-
-                )
+                ),
+                'required' => false
             ])
             ->add('foto', FileType::class, [
                 'label' => 'Foto',
