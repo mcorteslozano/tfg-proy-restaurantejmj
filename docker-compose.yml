@@ -9,7 +9,7 @@ services:
             - FRONT_HOST=localhost
             - START_PAGE=index.php
         volumes:
-            - C:/Users/34627/Documents/proyects/code:/var/www/current
+            - ./:/var/www/current
   mysql:
         image: mysql:8.0
         restart: on-failure
