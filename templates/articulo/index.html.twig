@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestiona JMJ{% endblock %}
+
+{% block body %}
+    <h3>Almacén</h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio/Unidad</th>
+                <th>Existencias</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for articulo in articulos %}
+            <tr class="hover_fila">
+                <td>{{ articulo.nombre }}</td>
+                <td>{{ articulo.descripcion }}</td>
+                <td>{{ articulo.precio }}€</td>
+                <td>{{ articulo.existencias }}</td>
+                <td colspan="2"><button class="btn" onclick="window.location.href='{{ path('articulo_edit', {'id': articulo.id}) }}'">Editar</button></td>
+                <td>{{ include('articulo/_delete_form.html.twig') }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">No hay artículos registrados</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('articulo_new') }}">Añadir artículo</a>
+{% endblock %}

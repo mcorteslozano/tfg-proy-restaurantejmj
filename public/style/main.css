@@ -1,0 +1,156 @@
+html {
+    min-height:100%;
+    position:relative;
+}
+body {
+    background-image: url('/img/fondo.png') !important;
+    margin: 0px 10px;
+
+    margin-left:1%;
+    margin-right:1%;
+    margin-bottom:60px;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+}
+
+.logo_tamaño{
+    width: 40px;
+}
+
+.btn{
+    color: white !important;
+    background-color:black !important;
+}
+
+.form_linea{
+    position: relative;
+    float:left;
+    left: 25%;
+    margin-bottom: 5%;
+}
+
+.form_pedido{
+    position: relative;
+    float:right;
+    right: 25%;
+    margin-bottom: 5%;
+}
+
+.footerPropio{
+    position: fixed;
+    bottom:0;
+    width:80%;
+    left:0;
+    height:5%;
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding-top: 5px;
+    margin-left:10%;
+}
+/*Hover Filas*/
+.hover_fila:hover{
+    background-color: rgba(255, 242, 143, 0.5);
+}
+
+/* EDIT FORMULARIO */
+#articulo_descripcion{
+    resize: none;
+}
+
+#form_articulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+#form_proveedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+#form_usuario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+#form_articulo div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2em;
+}
+
+#form_proveedor div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2em;
+}
+
+#form_usuario div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2em;
+}
+#form_usuario #usuario_roles{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2em;
+}
+
+#botones_editar {
+    display: flex !important;
+    flex-direction: row !important;
+}
+#botones_editar button {
+    margin: 0.1em;
+}
+
+/*Navbar Usuario*/
+.link_usuario, .link_usuario:visited{
+    color:black;
+    text-decoration: none;
+}
+
+.link_usuario:hover{
+    color: rgba(255, 242, 143);
+    text-decoration: none;
+}
+
+.icono {
+    width: 20px;
+    margin-right: 2px;
+}
+.salir{
+    margin-left:6px;
+    width:15px;
+    height:20px;
+}
+
+.img_usuario{
+    width:100px;
+    height: 100px;
+}
+#show_panel_tabla{
+    width: auto !important;
+}

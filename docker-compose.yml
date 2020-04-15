@@ -1,0 +1,18 @@
+version: '3'
+services:
+  app:
+        image: waynabox/waynabox_php7_server:symfony4
+        ports:
+            - '80:80'
+        environment:
+            - SERVER_PROFILE=prod
+            - FRONT_HOST=localhost
+            - START_PAGE=index.php
+        volumes:
+            - C:/Users/34627/Documents/proyects/code:/var/www/current
+  mysql:
+        image: mysql:8.0
+        restart: on-failure
+        environment: 
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_ROOT_DATABASE: example

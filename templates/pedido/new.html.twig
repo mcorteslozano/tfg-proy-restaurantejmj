@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestiona JMJ{% endblock %}
+
+{% block body %}
+    <h1>Pedido</h1>
+
+    {{ include('pedido/_form.html.twig') }}
+
+    <a href="{{ path('pedido_index') }}">Volver</a>
+
+{% endblock %}

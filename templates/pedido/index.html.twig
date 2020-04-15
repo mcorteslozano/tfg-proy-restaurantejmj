@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestiona JMJ{% endblock %}
+
+{% block body %}
+
+    <h3>Registro</h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Número de Pedido</th>
+                <th>Proveedor</th>
+                <th>Fecha de pedido</th>
+                <th>Fecha de entrega</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for pedido in pedidos %}
+        
+            <tr>
+                <td>{{ pedido.id }}</td>
+                <td>{{ pedido.getIdProveedor }}</td>
+                <td>{{ pedido.fechaPedido ? pedido.fechaPedido|date('d-m-Y') : '' }}</td>
+                <td>{{ pedido.fechaEntrega ? pedido.fechaEntrega|date('d-m-Y') : '' }}</td>
+                <td colspan="2"><button class="btn" onclick="window.location.href='{{ path('pedido_edit', {'id': pedido.id}) }}'">Editar</button></td>
+                <td>{{ include('pedido/_delete_form.html.twig') }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">No hay pedidos registrados</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Linea de Pedido -->
+    <br>
+    <br>
+    <br>
+    <h3>Nuevo pedido</h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Número de línea</th>
+                <th>Artículo</th>
+                <th>Unidades</th>
+                <th>Precio Total</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for linea_pedido in linea_pedidos %}
+            <tr>
+                <td>{{ linea_pedido.id }}</td>
+                <td>{{ linea_pedido.getIdArticulo() }}</td>
+                <td>{{ linea_pedido.unidades }}</td>
+                <td>{{ linea_pedido.precioLinea }}€</td>
+                <td colspan="2"><button class="btn" onclick="window.location.href='{{ path('linea_pedido_edit', {'id': linea_pedido.id}) }}'">Editar</button></td>
+                <td>{{ include('linea_pedido/_delete_form.html.twig') }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">No hay líneas de pedido registradas</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="form_linea">
+    <h6><b>Nueva línea</b></h6>
+    {{ include('linea_pedido/_form.html.twig') }}
+    </div>
+
+    <div class="form_pedido">
+    <h6><b>Nuevo pedido</b></h6>
+    {{ include('pedido/_form.html.twig') }}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('/js/unidades_pedido_validacion.js') }}"></script>
+{% endblock %}

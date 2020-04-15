@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestiona JMJ{% endblock %}
+
+{% block body %}
+    <h1>Usuario</h1>
+
+    <table id ="show_panel_tabla" class="table">
+        <tbody>
+            <tr>
+                <th>Email</th>
+                <td>{{ usuario.email }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ usuario.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Telefono</th>
+                <td>{{ usuario.telefono }}</td>
+            </tr>
+            <tr>
+                <th>NombreUsuario</th>
+                <td>{{ usuario.nombreUsuario }}</td>
+            </tr>
+            <tr>
+                <th>Foto</th>
+                <td><img class="img_usuario" src="/img/usuarios/{{ usuario.foto }}"/></td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn" onclick="location.href='{{ path('usuario_edit', {'id': usuario.id}) }}'">Editar</button>
+    <button class="btn" onclick="location.href='/articulo'">Volver</button>
+    {{ include('usuario/_delete_form.html.twig') }}
+{% endblock %}

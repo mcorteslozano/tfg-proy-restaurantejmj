@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestiona JMJ{% endblock %}
+
+{% block body %}
+    <div id="form_articulo">
+        <h3>Editar Artículo</h3>
+        {{ include('articulo/_form.html.twig', {'button_label': 'Actualizar'}) }}
+        <button id="volver" class="btn" onclick="location.href='{{ path('articulo_index') }}'">Volver</button>
+        {{ include('articulo/_delete_form.html.twig') }}
+</div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('/js/edit.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestiona JMJ{% endblock %}
+
+{% block body %}
+<div id="form_usuario">
+    <h3>Editar Usuario</h3>
+    {{ include('usuario/_form.html.twig', {'button_label': 'Actualizar'}) }}
+    {{ include('usuario/_delete_form.html.twig') }}
+    </div>
+</div>
+{% endblock %}
+{% block javascripts %}
+{% endblock %}
