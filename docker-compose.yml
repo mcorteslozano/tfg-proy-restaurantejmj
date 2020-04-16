@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-        image: waynabox/waynabox_php7_server:symfony4v2
+        image: waynabox/waynabox_php7_server:symfony4v3
         ports:
             - '80:80'
         environment:
@@ -10,10 +10,3 @@ services:
             - START_PAGE=index.php
         volumes:
             - ./:/var/www/current
-  sqlite3:
-    image: nouchka/sqlite3:latest
-    stdin_open: true
-    tty: true
-    volumes:
-     - ./db/:/root/db/
-     - ./var/restaurante.db:/root/restaurante.db
