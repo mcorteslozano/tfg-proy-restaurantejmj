@@ -10,16 +10,9 @@ services:
             - START_PAGE=index.php
         volumes:
             - ./:/var/www/current
-  mysql:
-        image: mysql:8.0
-        restart: on-failure
-        environment: 
-            MYSQL_ROOT_PASSWORD: mario.1234.
-            MYSQL_ROOT_DATABASE: example
-            MYSQL_USER: mario
-            MYSQL_PASSWORD: mario.1234.
-            MYSQL_DATABASE: 'restaurantejmj'
-        ports:
-            - '3306:3306'
-        expose: 
-            - '3306'
+  sqlite3:
+    image: nouchka/sqlite3:latest
+    stdin_open: true
+    tty: true
+    volumes:
+     - ./db/:/root/db/
