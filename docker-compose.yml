@@ -1,9 +1,9 @@
 version: '3'
 services:
   app:
-        image: waynabox/waynabox_php7_server:symfony4
+        image: waynabox/waynabox_php7_server:symfony4v2
         ports:
-            - '80:80'
+            - '8000:80'
         environment:
             - SERVER_PROFILE=prod
             - FRONT_HOST=localhost
