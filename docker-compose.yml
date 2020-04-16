@@ -16,3 +16,4 @@ services:
     tty: true
     volumes:
      - ./db/:/root/db/
+     - ./var/restaurante.db:/root/restaurante.db
