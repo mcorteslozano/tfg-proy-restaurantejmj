@@ -14,5 +14,10 @@ services:
         image: mysql:8.0
         restart: on-failure
         environment: 
-            MYSQL_ROOT_PASSWORD: root
+            MYSQL_ROOT_PASSWORD: mario.1234.
             MYSQL_ROOT_DATABASE: example
+            MYSQL_USER: mario
+        ports:
+            - '3306:3306'
+        expose: 
+            - '3306'
