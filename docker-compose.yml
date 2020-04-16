@@ -17,6 +17,7 @@ services:
             MYSQL_ROOT_PASSWORD: mario.1234.
             MYSQL_ROOT_DATABASE: example
             MYSQL_USER: mario
+            MYSQL_PASSWORD: mario.1234.
         ports:
             - '3306:3306'
         expose: 
