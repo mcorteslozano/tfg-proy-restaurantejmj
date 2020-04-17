@@ -20,11 +20,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-
+   {% if is_granted('ROLE_GERENTE') %}
     <li class="nav-item active">
         <a class="nav-link" href="/register">Registrar</a>
     </li>
- 
+  {% endif %}
     {% if not app.user %}
       <li class="nav-item active">
         <a class="nav-link" href="/login">Acceder</a>

@@ -40,4 +40,4 @@ security:
          - { path: '^/articulo', roles: [IS_AUTHENTICATED_FULLY, ROLE_GERENTE] }
          - { path: '^/proveedor', roles: [IS_AUTHENTICATED_FULLY, ROLE_GERENTE] }
          - { path: '^/pedido', roles: [IS_AUTHENTICATED_FULLY, ROLE_GERENTE] }
-        # - { path: '^/register', roles: ROLE_GERENTE }
+         - { path: '^/register', roles: ROLE_GERENTE }
