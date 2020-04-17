@@ -1,4 +1,8 @@
 {{ form_start(form_pedido) }}
     {{ form_widget(form_pedido) }}
-    <button class="btn">{{ button_label|default('Enviar') }}</button>
+    {% if not linea_pedidos %}
+    <button class="btn" disabled="disabled">{{ button_label|default('Enviar') }}</button>
+    {% else %}
+    <button id="boton" class="btn">{{ button_label|default('Enviar') }}</button>
+    {% endif %}
 {{ form_end(form_pedido) }}
