@@ -38,6 +38,7 @@ class ProveedorController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($proveedor);
             $entityManager->flush();
+            $this->addFlash('new_proveedor','Proveedor -'.strtolower($proveedor->getNombre()).'- creado con éxito.');
 
             return $this->redirectToRoute('proveedor_index');
         }
@@ -87,8 +88,8 @@ class ProveedorController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($proveedor);
             $entityManager->flush();
+            $this->addFlash('delete_proveedor','Proveedor -'.strtolower($proveedor->getNombre()).'- eliminado con éxito.');
         }
-
         return $this->redirectToRoute('proveedor_index');
     }
 }

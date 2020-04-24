@@ -2,10 +2,10 @@ html {
     min-height:100%;
     position:relative;
 }
+
 body {
     background-image: url('/img/fondo.png') !important;
     margin: 0px 10px;
-
     margin-left:1%;
     margin-right:1%;
     margin-bottom:60px;
@@ -13,6 +13,60 @@ body {
     -moz-background-size:cover;
     -o-background-size:cover;
     background-size:cover;
+}
+
+.icono_informacion {
+    float: right;
+    margin-top: 5px;
+    margin-right:1.5%;
+    width:20px;
+    height:20px;
+}
+
+.text {
+  font-size:28px;
+  font-family:helvetica;
+  font-weight:bold;
+  color:#71d90b;
+  text-transform:uppercase;
+}
+.parpadea {
+  
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name:parpadeo;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes parpadeo{  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes parpadeo {  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+   100% { opacity: 1.0; }
+}
+
+@keyframes parpadeo {  
+  0% { opacity: 1.0; }
+   50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+.icono_editdelete {
+    border:none; 
+    text-decoration:none !important;
+    width:25px;
+    height:25px;
+    padding: 0px;
 }
 
 .logo_tamaño{
@@ -38,18 +92,18 @@ body {
     margin-bottom: 5%;
 }
 
-.footerPropio{
-    position: fixed;
-    bottom:0;
-    width:80%;
-    left:0;
-    height:5%;
-    background-color:black;
-    color:white;
-    text-align:center;
-    padding-top: 5px;
-    margin-left:10%;
+
+
+footer {
+    background-color: #33b5e5;
+    width:40%;
+    height:20%;
+    padding-top:5px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+
 /*Hover Filas*/
 .hover_fila:hover{
     background-color: rgba(255, 242, 143, 0.5);
@@ -138,7 +192,8 @@ body {
 }
 
 .icono {
-    width: 20px;
+    height:20px;
+    width: 24px;
     margin-right: 2px;
 }
 .salir{
@@ -151,6 +206,7 @@ body {
     width:100px;
     height: 100px;
 }
+
 #show_panel_tabla{
     width: auto !important;
 }

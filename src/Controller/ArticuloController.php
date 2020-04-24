@@ -38,7 +38,7 @@ class ArticuloController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($articulo);
             $entityManager->flush();
-
+            $this->addFlash('new_articulo','Artículo -'.strtolower($articulo->getNombre()).'- creado con éxito.');
             return $this->redirectToRoute('articulo_index');
         }
 
@@ -87,8 +87,9 @@ class ArticuloController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($articulo);
             $entityManager->flush();
+            $this->addFlash('delete_articulo','Artículo -'.strtolower($articulo->getNombre()).'- eliminado con éxito.');
         }
-
+        
         return $this->redirectToRoute('articulo_index');
     }
 }

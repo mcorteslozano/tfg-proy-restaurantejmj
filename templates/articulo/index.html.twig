@@ -3,6 +3,19 @@
 {% block title %}Gestiona JMJ{% endblock %}
 
 {% block body %}
+
+    {% for flash_message in app.session.flashbag.get('new_articulo') %}
+        <div class="alert alert-success" role="alert">
+            {{ flash_message }}
+        </div>
+    {% endfor %}
+
+    {% for flash_message in app.session.flashbag.get('delete_articulo') %}
+        <div class="alert alert-danger" role="alert">
+            {{ flash_message }}
+        </div>
+    {% endfor %}
+
     <h3>Almacén</h3>
 
     <table class="table">
@@ -22,7 +35,7 @@
                 <td>{{ articulo.descripcion }}</td>
                 <td>{{ articulo.precio }}€</td>
                 <td>{{ articulo.existencias }}</td>
-                <td colspan="2"><button class="btn" onclick="window.location.href='{{ path('articulo_edit', {'id': articulo.id}) }}'">Editar</button></td>
+                <td colspan="2"><a href="{{ path('articulo_edit', {'id': articulo.id}) }}"><img class="icono_editdelete" src="/img/icono-editar.svg"/></a></td>
                 <td>{{ include('articulo/_delete_form.html.twig') }}</td>
             </tr>
         {% else %}

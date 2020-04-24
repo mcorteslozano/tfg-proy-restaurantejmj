@@ -124,6 +124,7 @@ class PedidoController extends AbstractController
             $statement = $connection->prepare("DELETE FROM linea_pedido");
             $statement->execute();
 
+            $this->addFlash('new_pedido','Pedido con identificación -'.$pedido->getId().'- creado con éxito.');
             return $this->redirectToRoute('pedido_index');
         }
         
@@ -168,6 +169,7 @@ class PedidoController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($pedido);
             $entityManager->flush();
+            $this->addFlash('delete_pedido','Pedido con identificación -'.$pedido->getId().'- eliminado con éxito.');
         }
 
         return $this->redirectToRoute('pedido_index');
