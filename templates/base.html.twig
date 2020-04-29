@@ -6,9 +6,9 @@
         <title>{% block title %}Gestiona JMJ{% endblock %}</title>
         {% block stylesheets %}
         <link rel="icon" type="image/x-icon" href="{{ asset('/img/favicon.ico') }}" />
-        <link rel="stylesheet" href="{{ asset('/style/bootstrap4/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('/style/bootstrap4/css/bootstrap-reboot.css') }}">
-        <link rel="stylesheet" href="{{ asset('/style/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('/css/bootstrap4/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('/css/bootstrap4/css/bootstrap-reboot.css') }}">
+        <link rel="stylesheet" href="{{ asset('/css/gestion.css') }}">
         {% endblock %}
     </head>
 
@@ -56,8 +56,9 @@
 
 <img id="icono_informacion" class="icono_informacion parpadea text" src="/img/info.svg"/>
 
+  <div class="eremutonto">
         {% block body %}{% endblock %}
-     
+     </div>
         {% block javascripts %}
         <script src="{{ asset('/js/animacion_iconoinfo.js') }}"></script>
         <script src="https://kit.fontawesome.com/de27dfa134.js" crossorigin="anonymous"></script>
@@ -69,7 +70,7 @@
 
  {% block content %}
 {% if is_granted('ROLE_ENCARGADO') or is_granted('ROLE_GERENTE') %}
-        <!-- Footer -->
+        <!-- Footer 
         <footer class="page-footer font-small pt-4 fixed-bottom" background-color="blue">
           <div class="container-fluid text-center text-md-left">
             <div class="row">
@@ -97,10 +98,10 @@
           <div class="footer-copyright text-center py-3">© 2020 Copyright:
             <a href="http://restaurantejmj.es/">restaurantejmj.es</a>
           </div>
-        </footer>
+        </footer>-->
 {% endif %}
 {% endblock %}
 
 
-    </body>
+</body>
 </html>

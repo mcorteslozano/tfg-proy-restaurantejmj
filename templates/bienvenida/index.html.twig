@@ -1,42 +1,565 @@
-
 <!DOCTYPE html>
-<html lang=es>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style/main_page.css">
-	<link rel="icon" type="image/x-icon" href="{{ asset('/img/favicon.ico') }}" />
-	<script type="text/javascript" src="js/main_page.js"></script>
-	<title>Restaurante JMJ</title>
+<html class="no-js" lang="ES">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Restaurente JMJ</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 
-</head>
-<body>
-	<header>
-		<div>
-			<a href='{{ path('bienvenida') }}'><img src="img/logo.png" id="logo"></a>
-		</div>
-			<div id="marginNav">
-			<a href="{{ path('carta' ) }}">Carta</a>
-			<a href="{{ path('contacto' ) }}">Contacto</a>
-			<a href="{{ path('app_login' ) }}">Gestión</a>
-		</div>
-		<div>
-			<a href="https://es-es.facebook.com/" class="social"><img src="img/facebook.svg"></a>
-			<a href="https://www.instagram.com/?hl=es" class="social"><img src="img/instagram.svg"></a>
-			<a href="https://twitter.com/?lang=es" class="social"><img src="img/twitter.svg"></a>
-		</div>
-	</header>
+<body >
 
-	<main>
-		<img src="img/img1.png" class="img_main">
-        <img src="img/img2.png" class="img_main">
-        <img src="img/img3.png" class="img_main">
-        <img src="img/img4.png" class="img_main">
-        <img src="img/img5.png" class="img_main">
-	</main>
-	
-	<footer>
-		
-	</footer>
+<!-- Comienzo loader -->
+<div id="loader-wrapper">
+	<div class="logo"></div>
+    <div id="loader">
+    </div>
+</div>
+<!-- Fin loader -->
+
+<!-- Comienzo header Section -->
+<header class="main_menu_sec navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-12">
+				<div class="lft_hd">
+					<a href="index.html"><img src="img/logo.png" alt=""/></a>
+				</div>
+			</div>			
+			<div class="col-lg-9 col-md-9 col-sm-12">
+				<div class="rgt_hd">					
+					<div class="main_menu">
+						<nav id="nav_menu">
+							<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							</button>	
+						<div id="navbar">
+							<ul>
+								<li><a class="page-scroll" href="{{ path('bienvenida') }}">Home</a></li> 								
+								<li><a class="page-scroll" href="#concepto_sec">Concepto</a></li> 
+								<li><a class="page-scroll" href="#servicio_sec">Servicios</a></li>
+								<li><a class="page-scroll" href="">Carta</a></li>
+								<li><a class="page-scroll" href="#foto_sec">Fotos</a></li>
+								<li><a class="page-scroll" href="#equipo_sec">Equipo</a></li>
+								<li><a class="page-scroll" href="#opinion_sec">Reseñas</a></li>
+								<li><a class="page-scroll" href="#noticias_sec">Noticias</a></li>
+								<li><a class="page-scroll" href="#contacto_sec">Contacto</a></li>
+								<li><a class="page-scroll" href="{{ path('app_login' ) }}">Gestión</a></li>
+							</ul>
+						</div>		
+						</nav>			
+					</div>							
+				</div>
+			</div>	
+		</div>	
+	</div>	
+</header>
+<!-- Final header Section -->
+
+<!-- Comienzo slider Section -->
+<section id="slider_sec">
+	<div class="container">
+		<div class="row">
+			<div class="slider">
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators 
+				  <ol class="carousel-indicators">
+					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				  </ol>-->
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<div class="wrap_caption">
+						  <div class="caption_carousel">
+							<h1>RESTAURANTE</h1>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Comidas y cenas al más puro elegante&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+						  </div>						
+						</div>
+					</div>					
+					<div class="item">
+						<div class="wrap_caption">
+						  <div class="caption_carousel">
+							<h1>TERRAZA</h1>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acondicionada para las mejores reuniones de amigos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+						  </div>						
+						</div>
+					</div>					
+					<div class="item ">
+						<div class="wrap_caption">
+						  <div class="caption_carousel">
+							<h1>COCKTAIL</h1>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Los mejores cocktails de Madrid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+						  </div>						
+						</div>
+					</div>			
+				  </div>
+
+				  <!-- Controls
+				  <a class="left left_crousel_btn" href="#carousel-example-generic" role="button" data-slide="prev">
+					<i class="fa fa-angle-left"></i>
+					<span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right right_crousel_btn" href="#carousel-example-generic" role="button" data-slide="next">
+					<i class="fa fa-angle-right"></i>
+					<span class="sr-only">Next</span>
+				  </a>  -->
+				</div>
+			</div>	
+		</div>			
+	</div>	
+</section>
+<!-- Final slider Section -->
+
+<!-- Comienzo concepto Section -->
+<section id="concepto_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>CONCEPTO</h1>
+				</div>			
+			</div>		
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="abt">
+					<p>Restaurente JMJ es un fantástico restaurante de cocina internacional ubicado en el exclusivo barrio de salamanca. Distribuido en una única planta y una estupenda terraza, destaca por su decoración urbana con toques rústicos, que dotan al local de un ambiente especial y acogedor.
+					<br><br>Disfruta de sus desayunos, estimula tus sentidos con nuestros mejores platos o disfruta de nuestro AfterWork en buena compañía.
+					<br><br>En Restaurente JMJ encontrarás clásicos de la gastronomía mundial, elaborados con productos siempre frescos, de calidad y un toque de personalidad.</p>
+				</div>
+			</div>			
+		</div>
+	</div>
+</section>
+<!-- Final concepto Section -->
+
+
+<!-- Comienzo servicios Section -->
+<section id="servicio_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>NUESTROS SERVICIOS</h1>
+					<h2>RESTAURENTE JMJ ES ESPECIALISTA EN 4 APARTADOS:</h2>
+				</div>			
+			</div>		
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<div class="service">						
+					<i class="fa fa-globe"></i>
+					<h2>DESAYUNOS</h2>
+					<div class="service_hoverly">
+						<i class="fa fa-globe"></i>
+						<h2>DESAYUNOS</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ab odio quas  , voluptate aspernatur!</p>
+					</div>
+				</div>
+			</div>				
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<div class="service">						
+					<i class="fa fa-paper-plane"></i>
+					<h2>COMIDAS</h2>
+					<div class="service_hoverly">
+						<i class="fa fa-paper-plane"></i>
+						<h2>COMIDAS</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ab odio quas  , voluptate aspernatur!</p>
+					</div>
+				</div>
+			</div>				
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<div class="service">						
+					<i class="fa fa-wordpress"></i>
+					<h2>AFTERWORK</h2>
+					<div class="service_hoverly">
+						<i class="fa fa-wordpress"></i>
+						<h2>AFTERWORK</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ab odio quas  , voluptate aspernatur!</p>
+					</div>
+				</div>
+			</div>				
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<div class="service">						
+					<i class="fa fa-paint-brush"></i>
+					<h2>CENAS</h2>
+					<div class="service_hoverly">
+						<i class="fa fa-paint-brush"></i>
+						<h2>CENAS</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ab odio quas  , voluptate aspernatur!</p>
+					</div>
+				</div>
+			</div>			
+		</div>
+	</div>
+</section>
+<!-- Final servicios Section -->
+
+<!-- Comienzo fotos Section -->
+<section id="foto_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>FOTOS</h1>
+				</div>			
+			</div>		
+			<div class="col-lg-12">
+				<div class="portfolio-filter text-uppercase text-center">
+				</div>
+				 
+				<div class="all-portfolios">
+					<div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+					<div class="single-portfolio web-design">
+					<img class="img-responsive" src="img/img2.png" alt="">
+					</div>				
+					</div>				
+					<div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+					<div class="single-portfolio web-design">
+					<img class="img-responsive" src="img/img3.png" alt="">
+					</div>				
+					</div>					
+					<div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+					<div class="single-portfolio web-design">
+					<img class="img-responsive" src="img/img4.png" alt="">
+					</div>				
+					</div>					
+					<div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+					<div class="single-portfolio graphic">
+					<img class="img-responsive" src="img/img5.png" alt="">
+					</div>				
+					</div>					
+					<div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+					<div class="single-portfolio web-design">
+					<img class="img-responsive" src="img/img2.png" alt="">
+					</div>				
+					</div>					
+					<div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+					<div class="single-portfolio photography">
+					<img class="img-responsive" src="img/img3.png" alt="">
+					</div>				
+					</div>				
+					<div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+					<div class="single-portfolio web-design">
+					<img class="img-responsive" src="img/img4.png" alt="">
+					</div>				
+					</div>				
+					<div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+					<div class="single-portfolio web-design">
+					<img class="img-responsive" src="img/img5.png" alt="">
+					</div>				
+					</div>				
+					<div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+					<div class="single-portfolio photography">
+					<img class="img-responsive" src="img/img2.png" alt="">
+					</div>				
+					</div>				
+					<div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+					<div class="single-portfolio web-design">
+					<img class="img-responsive" src="img/img3.png" alt="">
+					</div>				
+					</div>					
+					<div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+					<div class="single-portfolio web-design">
+					<img class="img-responsive" src="img/img4.png" alt="">
+					</div>				
+					</div>			
+					<div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+					<div class="single-portfolio photography">
+					<img class="img-responsive" src="img/img5.png" alt="">
+					</div>				
+					</div>
+				</div>		
+		</div>
+</section>
+<!-- Final fotos Section -->
+
+<!-- Comienzo equipo Section -->
+<section id="equipo_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>NUESTRO EQUIPO</h1>
+				</div>			
+			</div>		
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12">
+				<div class="all_team">
+					<div class="sngl_team">						
+						<img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-1.png" alt=""/>	
+						<h3> Mario Cortés Lozano <span>GERENTE</span></h3>
+						<p>Lorem ipsum dolor sit amet, consecttur adipisicing elit. Laudant</p>						
+					</div>					
+					<div class="sngl_team">						
+						<img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-2.png" alt=""/>	
+						<h3> Jaime Paniagua <span> GERENTE </span></h3>
+						<p>Lorem ipsum dolor sit amet, consecttur adipisicing elit. Laudant</p>						
+					</div>				
+					<div class="sngl_team">						
+						<img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-3.png" alt=""/>	
+						<h3> José Manuel López-Calle <span>   GERENTE   </span></h3>
+						<p>Lorem ipsum dolor sit amet, consecttur adipisicing elit. Laudant</p>						
+					</div>	
+					<div class="sngl_team">						
+						<img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-3.png" alt=""/>	
+						<h3> Amadeo Mora <span>   TUTOR   </span></h3>
+						<p>Lorem ipsum dolor sit amet, consecttur adipisicing elit. Laudant</p>						
+					</div>															
+				</div>			
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Final equipo Section -->
+
+<!-- Comienzo opinión Section -->
+<section id="opinion_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="all_tstm">
+					
+				<div class="clnt_tstm">
+					<div class="sngl_tstm">
+						<i class="fa fa-quote-right"></i>
+						<h3>¿Qué dice la gente sobre nosotros?</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur sequi accusamus voluptatum rem itaque alias deleniti nostrum aperiam fugiat voluptates debitis praesentium incidunt accusantium distinctio,</p>
+						<h6>- Persona</h6>					
+					</div>
+				</div>						
+				
+				<div class="clnt_tstm">
+					<div class="sngl_tstm">
+						<i class="fa fa-quote-right"></i>
+						<h3>Opinión 1</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur sequi accusamus voluptatum rem itaque alias deleniti nostrum aperiam fugiat voluptates debitis praesentium incidunt accusantium distinctio,</p>
+						<h6>- Persona</h6>					
+					</div>
+				</div>				
+				<div class="clnt_tstm">
+					<div class="sngl_tstm">
+						<i class="fa fa-quote-right"></i>
+						<h3>Opinión 2</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur sequi accusamus voluptatum rem itaque alias deleniti nostrum aperiam fugiat voluptates debitis praesentium incidunt accusantium distinctio,</p>
+						<h6>- Persona</h6>					
+					</div>
+				</div>				
+				<div class="clnt_tstm">
+					<div class="sngl_tstm">
+						<i class="fa fa-quote-right"></i>
+						<h3>Opinión 3</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur sequi accusamus voluptatum rem itaque alias deleniti nostrum aperiam fugiat voluptates debitis praesentium incidunt accusantium distinctio,</p>
+						<h6>- Persona</h6>					
+					</div>
+				</div>				
+				<div class="clnt_tstm">
+					<div class="sngl_tstm">
+						<i class="fa fa-quote-right"></i>
+						<h3>Opinión 4</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur sequi accusamus voluptatum rem itaque alias deleniti nostrum aperiam fugiat voluptates debitis praesentium incidunt accusantium distinctio,</p>
+						<h6>- Persona</h6>					
+					</div>
+				</div>	
+					
+				</div>
+			</div>	
+		</div>
+	</div>
+</section>
+<!-- Final opinión Section -->
+
+
+<!-- Comienzo noticia Section -->
+<section id="noticias_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>ÚLTIMAS NOTICIAS</h1>
+					<h2>ÚLTIMA ACTUALIZACIÓN 28/04/2020</h2>
+				</div>			
+			</div>		
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="lts_pst">						
+					<img src="http://cdn.shopify.com/s/files/1/1039/5466/files/blog-img2.jpg?10828543012475550494" alt=""/>
+					<h2>NOTICIA 1</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ab odio quas  , voluptate aspernatur!</p>				
+				</div>
+			</div>			
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="lts_pst">						
+					<img src="http://cdn.shopify.com/s/files/1/1039/5466/files/blog-img3.jpg?16122351990094232768" alt=""/>
+					<h2>NOTICIA 2</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ab odio quas  , voluptate aspernatur!</p>				
+				</div>
+			</div>		
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="lts_pst">						
+					<img src="http://cdn.shopify.com/s/files/1/1039/5466/files/blog-img1.jpg?1960436319992241823" alt=""/>
+					<h2>NOTICIA 3</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ab odio quas  , voluptate aspernatur!</p>				
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Final notica Section -->
+
+<!-- Comienzo contacto Section -->
+<section id="contacto_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>INFORMACIÓN DE CONTACTO</h1>
+					<h2>PUEDE CONTACTAR CON NOSOTROS A TRAVÉS DE</h2>
+				</div>			
+			</div>		
+			<div class="col-sm-6"> 
+				<div id="cnt_form">
+					<form id="contact-form" class="contact" name="contact-form" method="post" action="send-mail.php">
+						<div class="form-group">
+						<input type="text" name="name" class="form-control name-field" required="required" placeholder="Nombre">
+						</div>
+						<div class="form-group">
+							<input type="email" name="email" class="form-control mail-field" required="required" placeholder="Correo Electrónico">
+						</div> 
+						<div class="form-group">
+							<textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Mensaje"></textarea>
+						</div> 
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary">Enviar</button>
+						</div>
+					</form> 
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6">
+				<div class="cnt_info">
+					<ul>
+						<li><i class="fa fa-street-view"></i><p>Calle del Padre Claret, 8, 28002 Madrid</p></li>
+						<li><i class="fa fa-envelope"></i><p>restaurantejmj@gmail.com</p></li>
+						<li><i class="fa fa-phone"></i><p>+34 915 19 52 57</p></li>
+					</ul>
+				</div>
+			</div>			
+		</div>
+	</div>
+</section>
+<!-- Final contacto  Section -->
+
+<!-- Comienzo mapa Section -->
+<section id="ltd_map_sec">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="map">						
+			<h1>LOCALÍZANOS</h1><a href="#slidingDiv" class="show_hide" rel="#slidingDiv"><i class="fa fa-angle-up"></i></a>
+			<div id="slidingDiv">
+				<div class="map_area">
+					<div style="width:100%;height:350px;"><iframe  width="600" height="400" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.307085309799!2d-3.666308785236553!3d40.44633976176318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228d2f0d7df85%3A0x3a937702539f2525!2sCalle%20del%20Padre%20Claret%2C%208%2C%2028002%20Madrid!5e0!3m2!1ses!2ses!4v1585735354439!5m2!1ses!2ses"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+				</div>
+			</div>	
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+<!-- Final mapa  Section -->
+
+<!-- Comienzo footer Section -->
+<footer id="ft_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ft">						
+					<ul>
+						<li><a href="https://es-es.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="https://www.google.com/"><i class="fa fa-google"></i></a></li>
+						<li><a href="#contacto_sec"><i class="fa fa-envelope"></i></a></li>
+					</ul>					
+				</div>
+				<ul class="copy_right">
+					<li>&copy; Restaurante JMJ 2020</li>
+					<li>Desarrolado por Mario - Jaime - José</li>
+				</ul>					
+			</div>	
+		</div>
+	</div>
+</footer>
+<!-- Final footer Section -->
+
+<!-- Scripts -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="js/vendor/jquery-1.11.2.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/showHide.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/scrolling-nav.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="showHide.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+   // Click mostrar/cerrar para el mapa
+   $('.show_hide').showHide({			 
+		speed: 1000,  	
+		easing: '', 
+		changeText: 1, 
+		showText: 'Mostrar',
+		hideText: 'Cerrar' 		 
+	}); 
+
+});
+</script>
+
+<script>
+    jQuery(document).ready(function( $ ) {
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1000
+        });
+    });
+</script>
+
+<script>
+	// Esconder overflow hasta que no se cargue el body
+	$(document).ready(function(){
+	    $("body").css("overflow", "hidden");
+	});
+	// Mostrar overflow cuando todo esté cargado
+	$(window).load(function(){
+	    $("body").css("overflow", "visible");        
+	    var nice=$('html').niceScroll({
+		cursorborder:"5",
+		cursorcolor:"#00AFF0",
+		cursorwidth:"3px",
+		boxzoom:true, 
+		autohidemode:true
+		});
+	});
+</script>
+<!-- Final Scripts -->
+
 </body>
 </html>
