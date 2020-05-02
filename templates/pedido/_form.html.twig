@@ -1,4 +1,5 @@
 {{ form_start(form_pedido) }}
     {{ form_widget(form_pedido) }}
-    <button id="boton" class="btn">{{ button_label|default('Enviar') }}</button>
+    <div id="botones_editar">
+        <button id="boton" class="btn">{{ button_label|default('Enviar') }}</button>
 {{ form_end(form_pedido) }}

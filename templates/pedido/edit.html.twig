@@ -4,9 +4,9 @@
 
 {% block body %}
     <h1>Editar Pedido</h1>
-
-    {{ include('pedido/_form.html.twig', {'button_label': 'Actualizar'}) }}
-
-    <a href="{{ path('pedido_index') }}">Volver</a>
-
+    
+    <div id="form_proveedor">
+        {{ include('pedido/_form.html.twig', {'button_label': 'Actualizar'}) }}
+        <a href="{{ path('pedido_index') }}" onclick="window.close()">Volver</a>
+    </div>
 {% endblock %}

@@ -3,9 +3,13 @@
 {% block title %}Gestiona JMJ{% endblock %}
 
 {% block body %}
-    <h1>Nuevo artículo</h1>
-
+    <div id="form_articulo">
     {{ include('articulo/_form.html.twig') }}
+    <button id="volver" class="btn" onclick="window.close()">Volver</button>
+    </div>
+</div>
+{% endblock %}
 
-    <a href="{{ path('articulo_index') }}">Volver</a>
+{% block javascripts %}
+<script src="{{ asset('/js/formularios.js') }}"></script>
 {% endblock %}

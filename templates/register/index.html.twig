@@ -4,6 +4,7 @@
 
 {% block body %}
 {{ form_start(form) }}
+<div id="form_register">
     {{ form_row(form.email) }}
     {{ form_row(form.nombre) }}
     {{ form_row(form.nombreUsuario) }}
@@ -11,7 +12,10 @@
     {{ form_row(form.foto) }}
     {{ form_row(form.password) }}
     {{ form_row(form.roles) }}
-
-    <button class="btn" type="submit">Registrar</button>
+    <div id="botones_editar">
+        <button class="btn" type="submit">Registrar</button>
+        <button id="volver" class="btn" onclick="location.href='{{ path('articulo_index') }}'">Volver</button>
+    </div>
+</div>
 {{ form_end(form) }}
 {% endblock %}

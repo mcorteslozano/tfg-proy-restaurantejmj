@@ -3,11 +3,10 @@
 {% block title %}Gestiona JMJ{% endblock %}
 
 {% block body %}
-    <h1>Editar Línea</h1>
+    <div id="form_linea">
+        {{ include('linea_pedido/_form.html.twig', {'button_label': 'Actualizar'}) }}
+        <button id="volver" class="btn" onclick="location.href='{{ path('pedido_index') }}'">Volver</button>
+        </div>
+    </div>
 
-    {{ include('linea_pedido/_form.html.twig', {'button_label': 'Actualizar'}) }}
-
-    <a href="{{ path('linea_pedido_index') }}">Volver</a>
-
-    {{ include('linea_pedido/_delete_form.html.twig') }}
 {% endblock %}

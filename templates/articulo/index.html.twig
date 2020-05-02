@@ -35,7 +35,7 @@
                 <td>{{ articulo.descripcion }}</td>
                 <td>{{ articulo.precio }}€</td>
                 <td>{{ articulo.existencias }}</td>
-                <td colspan="2"><a href="{{ path('articulo_edit', {'id': articulo.id}) }}"><img class="icono_editdelete" src="/img/icono-editar.svg"/></a></td>
+                <td colspan="2"><a onclick="window.open('{{ path('articulo_edit', {'id': articulo.id}) }}','', ',height=600,width=600,left=500,top=60')"><img class="icono_editdelete" src="/img/icono-editar.svg"/></a></td>
                 <td>{{ include('articulo/_delete_form.html.twig') }}</td>
             </tr>
         {% else %}
@@ -46,5 +46,9 @@
         </tbody>
     </table>
 
-    <a href="{{ path('articulo_new') }}">Añadir artículo</a>
+
+<input type="image" class="add_icon" src="/img/plus-circle-solid.svg" onclick="window.open('{{ path('articulo_new') }}','', ',height=600,width=600,left=500,top=60')">
+    
+
 {% endblock %}
+

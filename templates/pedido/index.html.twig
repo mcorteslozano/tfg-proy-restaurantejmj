@@ -36,12 +36,12 @@
                 <td>{{ pedido.getIdProveedor }}</td>
                 <td>{{ pedido.fechaPedido ? pedido.fechaPedido|date('d-m-Y') : '' }}</td>
                 <td>{{ pedido.fechaEntrega ? pedido.fechaEntrega|date('d-m-Y') : '' }}</td>
-                <td colspan="2"><a href="{{ path('pedido_edit', {'id': pedido.id}) }}"><img class="icono_editdelete" src="/img/icono-editar.svg"/></a></td>
+                <td colspan="2"><a onclick="window.open('{{ path('pedido_edit', {'id': pedido.id}) }}','', ',height=600,width=600,left=500,top=60')"><img class="icono_editdelete" src="/img/icono-editar.svg"/></a></td>
                 <td>{{ include('pedido/_delete_form.html.twig') }}</td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="4">No hay pedidos registrados</td>
+                <td colspan="4">No hay pedidos registrados.</td>
             </tr>
         {% endfor %}
         </tbody>
@@ -51,7 +51,7 @@
     <br>
     <br>
     <br>
-    <h3>Nuevo pedido</h3>
+    <h3>Líneas de pedido</h3>
 
     <table class="table">
         <thead>
@@ -71,7 +71,7 @@
                 <td>{{ linea_pedido.getIdArticulo() }}</td>
                 <td>{{ linea_pedido.unidades }}</td>
                 <td>{{ linea_pedido.precioLinea }}€</td>
-                <td colspan="2"><a href="{{ path('linea_pedido_edit', {'id': linea_pedido.id}) }}"><img class="icono_editdelete" src="/img/icono-editar.svg"/></a></td>
+                <td colspan="2"><a onclick="window.open('{{ path('linea_pedido_edit', {'id': linea_pedido.id}) }}','', ',height=600,width=600,left=500,top=60')"><img class="icono_editdelete" src="/img/icono-editar.svg"/></a></td>
                 <td>{{ include('linea_pedido/_delete_form.html.twig') }}</td>
             </tr>
         {% else %}
@@ -82,13 +82,15 @@
         </tbody>
     </table>
     <div class="form_linea">
-    <h6><b>Nueva línea</b></h6>
+    <h6><b>Nueva línea de pedido</b></h6>
     {{ include('linea_pedido/_form.html.twig') }}
+    </div>
     </div>
 
     <div class="form_pedido">
-    <h6><b>Nuevo pedido</b></h6>
+    <h6><b>Realizar pedido</b></h6>
     {{ include('pedido/_form.html.twig') }}
+    </div>
     </div>
 {% endblock %}
 

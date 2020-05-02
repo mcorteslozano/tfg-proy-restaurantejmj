@@ -4,9 +4,8 @@
 
 {% block body %}
 <div id="form_usuario">
-    <h3>Editar Usuario</h3>
     {{ include('usuario/_form.html.twig', {'button_label': 'Actualizar'}) }}
-    {{ include('usuario/_delete_form.html.twig') }}
+    <button id="volver" class="btn" onclick="location.href='{{ path('usuario_delete', {'id': usuario.id}) }}'">Volver</button>
     </div>
 </div>
 {% endblock %}

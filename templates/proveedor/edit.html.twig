@@ -6,7 +6,7 @@
 <div id="form_proveedor">
     <h3>Editar Proveedor</h3>
     {{ include('proveedor/_form.html.twig', {'button_label': 'Actualizar'}) }}
-    <button id="volver" class="btn" onclick="location.href='{{ path('proveedor_index') }}'">Volver</button>
+    <button id="volver" class="btn" onclick="window.close()">Volver</button>
     {{ include('proveedor/_delete_form.html.twig') }}
     </div>
 </div>

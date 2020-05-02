@@ -12,96 +12,59 @@
         {% endblock %}
     </head>
 
-    
     <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href='{{ path('bienvenida')}}'><img class="logo_tamaño" src="{{ asset('/img/logo.png') }}"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-   {% if is_granted('ROLE_GERENTE') %}
-    <li class="nav-item active">
-        <a class="nav-link" href="/register">Registrar</a>
-    </li>
-  {% endif %}
-    {% if not app.user %}
-      <li class="nav-item active">
-        <a class="nav-link" href="/login">Acceder</a>
-      </li>
-      {% endif %}
-      {% if is_granted('ROLE_ENCARGADO') or is_granted('ROLE_GERENTE') %}
-      <li class="nav-item">
-        <a class="nav-link" href="/articulo">Artículos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/proveedor">Proveedores</a>
-      </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="/pedido">Pedidos</a>
-      </li> 
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="" aria-label="Search" name="key" id="key" onkeyup="buscar(this.value)">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-      </form>
-      {% endif %}
-    </ul>
-    {% if app.user %}
-      <span style="padding-right:10px;color:black;"><img class="icono" src="/img/usuarios/{{ app.user.foto }}"/><a class="link_usuario" href="{{ path('usuario_show', {'id': app.user.id}) }}">{{app.user.nombreUsuario}}</a><a href="{{ path('app_logout') }}"><img class="salir" src="/img/logout.png"></a></span>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href='{{ path('bienvenida')}}'><img class="logo_tamaño" src="{{ asset('/img/logo.png') }}"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+    {% if is_granted('ROLE_GERENTE') %}
+      <li class="nav-item active">
+          <a class="nav-link" href="/register">Registrar</a>
+      </li>
     {% endif %}
-  </div>
-</nav>
+      {% if not app.user %}
+        <li class="nav-item active">
+          <a class="nav-link" href="/login">Acceder</a>
+        </li>
+        {% endif %}
+        {% if is_granted('ROLE_ENCARGADO') or is_granted('ROLE_GERENTE') %}
+        <li class="nav-item">
+          <a class="nav-link" href="/articulo">Artículos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/proveedor">Proveedores</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/pedido">Pedidos</a>
+        </li> 
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="" aria-label="Search" name="key" id="key" onkeyup="buscar(this.value)">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+        {% endif %}
+      </ul>
+      {% if app.user %}
+        <span style="padding-right:10px;color:black;"><img class="icono" src="/img/usuarios/{{ app.user.foto }}"/><a class="link_usuario" href="{{ path('usuario_show', {'id': app.user.id}) }}">{{app.user.nombreUsuario}}</a><a href="{{ path('app_logout') }}"><img class="salir" src="/img/logout.png"></a></span>
+      {% endif %}
+    </div>
+  </nav>
 
 <img id="icono_informacion" class="icono_informacion parpadea text" src="/img/info.svg"/>
 
-  <div class="eremutonto">
         {% block body %}{% endblock %}
-     </div>
-        {% block javascripts %}
+     
+        {% block javascripts %}     
         <script src="{{ asset('/js/animacion_iconoinfo.js') }}"></script>
         <script src="https://kit.fontawesome.com/de27dfa134.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         {% endblock %}
-
-
- {% block content %}
-{% if is_granted('ROLE_ENCARGADO') or is_granted('ROLE_GERENTE') %}
-        <!-- Footer 
-        <footer class="page-footer font-small pt-4 fixed-bottom" background-color="blue">
-          <div class="container-fluid text-center text-md-left">
-            <div class="row">
-              <div class="col-md-6 mt-md-0 mt-3">
-                <h5 class="text-uppercase">RESTAURANTE JMJ</h5>
-                <p>Aplicación creada con Symfony 4. Realizada por Mario Cortés, Jaime Indart y José Manuel López.</p>
-              </div>
-              <hr class="clearfix w-100 d-md-none pb-3">
-              <div class="col-md-6 mb-md-0 mb-6">
-                <h5 class="text-uppercase">ENLACES DE INTERÉS</h5>
-                <ul class="list-unstyled">
-                  <li>
-                    <a href="/articulo">Artículos</a>
-                  </li>
-                  <li>
-                    <a href="/proveedor">Proveedores</a>
-                  </li>
-                  <li>
-                    <a href="/pedido">Pedidos</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="http://restaurantejmj.es/">restaurantejmj.es</a>
-          </div>
-        </footer>-->
-{% endif %}
-{% endblock %}
-
 
 </body>
 </html>
