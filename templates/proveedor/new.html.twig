@@ -3,10 +3,9 @@
 {% block title %}Gestiona JMJ{% endblock %}
 
 {% block body %}
-    <h1>Nuevo Proveedor</h1>
-
+ 
+    <div id="form_proveedor">
     {{ include('proveedor/_form.html.twig') }}
-
     <a href="{{ path('proveedor_index') }}" onclick="window.close()">Volver</a>
 {% endblock %}
 
