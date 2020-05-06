@@ -39,8 +39,8 @@
                 <td>{{ proveedor.localidad }}</td>
                 <td>{{ proveedor.email }}</td>
                 <td>{{ proveedor.telefono }}</td>
-                <td colspan="2"><a onclick="window.open('{{ path('proveedor_edit', {'id': proveedor.id}) }}','', ',height=600,width=600,left=500,top=60')"><img class="icono_editdelete" src="/img/icono-editar.svg"/></a></td>
-                <td>{{ include('proveedor/_delete_form.html.twig') }}</td>
+                <td class="celda_edit"><input type="image" class="icono_editdelete" src="/img/icono-editar.svg" onclick="window.open('{{ path('proveedor_edit', {'id': proveedor.id}) }}','', ',height=600,width=600,left=500,top=60')"></td>
+                <td class="celda_delete">{{ include('proveedor/_delete_form.html.twig') }}</td>
             </tr>
         {% else %}
             <tr>

@@ -263,7 +263,12 @@ form #form_register {
 #botones_editar button {
     margin: 0.1em;
 }
-
+.celda_edit, .celda_delete{
+    width: 1% !important;
+}
+#pedido_aviso{
+    font-size: 12px;
+}
 /*Navbar Usuario*/
 .link_usuario, .link_usuario:visited{
     color:black;

@@ -118,9 +118,14 @@ float : left;
 padding : 0;
 position : relative;
 }
+#nav_menu ul li #gestion:hover{
+    transition : all 0.4s 0s ease;
+    background : #fdd05a;
+    color:black;
+}
 #nav_menu ul li a:hover {
-transition : all 0.4s 0s ease;
-background : #0078BF;
+    transition : all 0.4s 0s ease;
+    background : #0078BF;
 }
 #nav_menu ul ul {
 background : none 0 0 repeat scroll #0078bf;
@@ -584,7 +589,7 @@ margin : 0 auto;
     flex-direction: row;
     justify-content: center;
     margin:.5em;
-    width: 100%
+    width: 90%
 }
 .linea div{
     display: flex;
