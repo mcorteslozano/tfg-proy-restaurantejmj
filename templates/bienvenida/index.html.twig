@@ -522,7 +522,7 @@
 			</div>		
 			<div class="col-sm-6"> 
 				<div id="cnt_form">
-					<form id="contact-form" class="contact" name="contact-form contacto" method="post">
+					<form id="contact-form" class="contact" name="contacto" method="post" action="/bienvenida">
 						<div class="form-group" id="contacto">
 							<input type="text" name="contacto[nombre]" class="form-control name-field" required="required" placeholder="Nombre" id="contacto_nombre">
 							</div>
@@ -535,7 +535,7 @@
 							<div class="form-group">
 								<button type="submit" class="btn btn-primary" id="contacto_enviar" name="contacto[enviar]">Enviar</button>
 						</div>
-						<input type="hidden" id="contacto__token" name="contacto[_token]" value="8_dwsVxmakLBGUcPuYO1br-552Q-CJtz7bNELjIMz_0">
+						{{ form_row(contactoForm._token) }}
 					</form>	
 				</div>
 			</div>
