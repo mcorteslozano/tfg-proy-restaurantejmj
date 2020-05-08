@@ -294,3 +294,14 @@ form #form_register {
 #show_panel_tabla{
     width: auto !important;
 }
+
+#login{
+    margin-left:35%;
+    margin-top: 2%;
+    width: 30% !important;
+}
+
+#login_icono{
+    float: right !important;
+    margin-top: 1.5%;
+}

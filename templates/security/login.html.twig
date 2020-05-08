@@ -3,7 +3,7 @@
 {% block title %}Restaurante JMJ{% endblock %}
 
 {% block body %}
-<form method="post">
+<form method="post" id="login">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
@@ -12,11 +12,9 @@
     <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
     <label for="inputPassword">Contraseña</label>
     <input type="password" name="password" id="inputPassword" class="form-control" required>
-
     <input type="hidden" name="_csrf_token"value="{{ csrf_token('authenticate') }}">
 
-    <button class="btn btn-lg btn-primary" type="submit">
-        Acceder
-    </button>
+    <input type="image" id="login_icono" class="add_icon" src="/img/sign-in-alt-solid.svg">
+
 </form>
 {% endblock %}

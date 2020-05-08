@@ -34,7 +34,7 @@
     {% endif %}
       {% if not app.user %}
         <li class="nav-item active">
-          <a class="nav-link" href="/login">PANEL DE GESTIÓN</a>
+          <a class="nav-link">PANEL DE GESTIÓN</a>
         </li>
         {% endif %}
         {% if is_granted('ROLE_ENCARGADO') or is_granted('ROLE_GERENTE') %}
@@ -61,17 +61,31 @@
         </div>
       </li>
         {% endif %}
-      </ul>
+       </ul>
 
       {% if is_granted('ROLE_ENCARGADO') or is_granted('ROLE_GERENTE') %}
-      <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="" aria-label="Search" name="key" id="key" onkeyup="buscar(this.value)">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-      </form>
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <ul class="navbar-nav ml-auto">
+
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="" aria-label="Search" name="key" id="key" onkeyup="buscar(this.value)">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img src="/img/spain-flag-button-round-icon-32.png">&nbsp;Español
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item"><img src="/img/united-kingdom-flag-3d-round-icon-32.png">&nbsp;English</a>
+            <a class="dropdown-item"><img src="/img/france-flag-button-round-icon-32.png">&nbsp;Français</a>
+          </div>
+        </li>
+
+      </ul>
       {% endif %}
     </div>
   </nav>
-
 
         {% block body %}{% endblock %}
      
