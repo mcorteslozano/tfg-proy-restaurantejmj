@@ -41,7 +41,7 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="4">No hay pedidos registrados.</td>
+                <td colspan="4">No hay pedidos registrados</td>
             </tr>
         {% endfor %}
         </tbody>
@@ -53,7 +53,7 @@
     <br>
     <h3>Líneas de pedido</h3>
 
-    <table class="table" id="tabla_linea">
+    <table id="tabla_linea" class="table">
         <thead>
             <tr>
                 <th>Número de línea</th>
@@ -92,9 +92,25 @@
     {{ include('pedido/_form.html.twig') }}
     </div>
     </div>
+
+    <!-- Validación líneas de pedido para poder hacerlo -->
+    <script>
+        var tabla = document.getElementById('tabla_linea');
+        var celda = tabla.getElementsByTagName('td');
+        var boton = document.getElementById('boton');
+        var aviso = document.getElementById('pedido_aviso');
+
+        if(celda[0].innerHTML != "No hay líneas de pedido registradas"){
+            boton.disabled = false;
+            aviso.style.visibility = "hidden";
+        }else{
+            boton.disabled = true;
+            aviso.style.visibility = "visible";
+        }
+    </script>
+
 {% endblock %}
 
 {% block javascripts %}
     <script src="{{ asset('/js/unidades_pedido_validacion.js') }}"></script>
-    <script src="{{ asset('/js/pedido_aviso.js') }}"></script>
 {% endblock %}

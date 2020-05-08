@@ -1,13 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Gestiona JMJ{% endblock %}
+{% block title %}Actualizar pedido {{ pedido.id }}{% endblock %}
 
 {% block body %}
-
-    <div id="form_proveedor">
+    <div id="form_pedido">
         {{ include('pedido/_form.html.twig', {'button_label': 'Actualizar'}) }}
-        <button id="volver" class="btn" onclick="window.close()">Volver</button>
-
+        <button id="volver" class="btn" onclick="location.href='{{ path('pedido_index') }}'">Volver</button>
+        </div>
     </div>
 {% endblock %}
 
