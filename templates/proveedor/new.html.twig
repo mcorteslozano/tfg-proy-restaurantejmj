@@ -6,7 +6,8 @@
  
     <div id="form_proveedor">
     {{ include('proveedor/_form.html.twig') }}
-    <a href="{{ path('proveedor_index') }}" onclick="window.close()">Volver</a>
+    <button id="volver" class="btn" onclick="window.close()">Volver</button>
+
 {% endblock %}
 
 

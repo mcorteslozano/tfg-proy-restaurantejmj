@@ -109,6 +109,35 @@
         }
     </script>
 
+    <!-- Validación fecha de pedido -->
+    <script>
+        var fecha_input = document.getElementById('pedido_fecha_entrega');
+    
+        fecha_input.addEventListener('blur',function(){
+            console.log(fecha_input.value);
+            var fecha = new Date();
+
+            var mes = (fecha.getMonth() + 1).toString();
+
+            if (mes.length <=1 ) {
+                mes = "0" + mes;
+            }
+
+            var dia = fecha.getDate().toString();
+
+            if (dia.length <=1 ) {
+                dia = "0" + dia;
+            }
+
+            var fecha_actual = fecha.getFullYear() + "-" + mes + "-" + dia;
+
+            if( fecha_input.value <= fecha_actual){
+                alert('Fecha de entrega anterior a la fecha de pedido!!');
+                fecha_input.value = "";
+            }
+        })
+    </script>
+
 {% endblock %}
 
 {% block javascripts %}

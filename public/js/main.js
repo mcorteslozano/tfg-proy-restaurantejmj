@@ -52,7 +52,7 @@ jQuery(document).ready(function () {
 		nav:true,
 		autoplay:true,
 		smartSpeed:3000,
-		navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+		//navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
 		responsive:{
 			0:{
 				items:1
@@ -76,7 +76,7 @@ jQuery(document).ready(function () {
 		nav:true,
 		autoplay:true,
 		smartSpeed:3000,	
-		navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+		//navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
 		responsive:{
 			0:{
 				items:1
@@ -100,7 +100,7 @@ jQuery(document).ready(function () {
 		nav:true,
 		autoplay:true,
 		smartSpeed:3000,	
-		navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+		//navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
 		responsive:{
 			0:{
 				items:1
@@ -123,7 +123,6 @@ $(window).load(function() { // makes sure the whole site is loaded
 	$('body').delay(200).css({'overflow-x':'hidden'});
 })	
 	
-	
-	
+
 });
 

@@ -4,35 +4,27 @@
 
 {% block body %}
  
-    <div id="datos_usuario">
-        <table id ="show_panel_tabla" class="table">
-            <tbody>
-                <tr>
-                    <th>Email</th>
-                    <td>{{ usuario.email }}</td>
-                </tr>
-                <tr>
-                    <th>Nombre</th>
-                    <td>{{ usuario.nombre }}</td>
-                </tr>
-                <tr>
-                    <th>Teléfono</th>
-                    <td>{{ usuario.telefono }}</td>
-                </tr>
-                <tr>
-                    <th>Nombre de Usuario</th>
-                    <td>{{ usuario.nombreUsuario }}</td>
-                </tr>
-                <tr>
-                    <th>Foto</th>
-                    <td><img src="/img/usuarios/{{ usuario.foto }}" width="30%"/></td>
-                </tr>
-            </tbody>
-        </table>
+   <div class="contenedor_usuario">
+    <div class="datos_usuario">
+        <table>
+            <tr style="width=100px"><td rowspan="6"><img src="/img/usuarios/{{ usuario.foto }}" width="200px"></td></tr>
+            <tr><td>{{ usuario.nombre }}<hr style="border:0.5px solid black;"></td></tr>
 
-        <div id="botones_editar">
-            <button class="btn" onclick="location.href='{{ path('usuario_edit', {'id': usuario.id}) }}'">Editar</button>
-            <button class="btn" onclick="location.href='/articulo'">Volver</button>
-        </div>
+            <tr><td><i class="far fa-user" style="margin-right:5px;"></i>&nbsp;&nbsp;{{ usuario.nombreUsuario }}</td></tr>
+            <tr><td><i class="far fa-envelope" style="margin-right:3px;"></i>&nbsp;&nbsp;{{ usuario.email }}</td></tr>
+            <tr><td><i class="fas fa-mobile-alt" style="margin-right:6px;"></i>&nbsp;&nbsp;{{ usuario.telefono }}</td></tr>
+                {% if is_granted('ROLE_GERENTE') %}
+                <tr><td><i class="fas fa-briefcase" style="margin-right:5px;"></i> Gerente</td></tr>
+                {% endif %}
+                {% if is_granted('ROLE_ENCARGADO') %}
+                <tr><td><i class="fas fa-briefcase" style="margin-right:5px;"></i> Encargado</td></tr>
+                {% endif %}
+            </tr>
+        </table>
     </div>
+    <div id="botones_editar">
+        <button class="btn" onclick="location.href='{{ path('usuario_edit', {'id': usuario.id}) }}'">Editar</button>
+        <button class="btn" onclick="location.href='/articulo'">Volver</button>
+    </div>
+</div>
 {% endblock %}
