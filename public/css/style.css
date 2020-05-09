@@ -1009,23 +1009,3 @@ width : 355px !important ;
 width : 731px !important ;
 }
 
-/** Usuario **/
-.contenedor_usuario {
-    width:30%;
-    padding: 20px;
-    border: 1px solid black;
-    border-radius: 25px;
-    background-color: rgba(237, 237, 237,0.9);
-}
-
-.contenedor_usuario{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    margin-top: 2rem;
-}
-.contenedor_usuario #botones_editar{
-    margin-top: 20px;
-}
