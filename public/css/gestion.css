@@ -1,105 +1,122 @@
 html {
-    min-height:100%;
-    position:relative;
+    min-height: 100%;
+    position: relative;
 }
 
 body {
     background-image: url('/img/fondo.png') !important;
     margin: 0px 10px;
-    margin-left:1%;
-    margin-right:1%;
-    margin-bottom:60px;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 60px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .icono_informacion {
     float: right;
     margin-top: 5px !important;
-    margin-right:1.5% !important;
-    width:20px !important;
-    height:20px !important;
+    margin-right: 1.5% !important;
+    width: 20px !important;
+    height: 20px !important;
 }
 
 .text {
-  font-size:28px;
-  font-family:helvetica;
-  font-weight:bold;
-  color:#71d90b;
-  text-transform:uppercase;
+    font-size: 28px;
+    font-family: helvetica;
+    font-weight: bold;
+    color: #71d90b;
+    text-transform: uppercase;
 }
+
 .parpadea {
-  
-  animation-name: parpadeo;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-
-  -webkit-animation-name:parpadeo;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
+    animation-name: parpadeo;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: parpadeo;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
 }
 
-@-moz-keyframes parpadeo{  
-  0% { opacity: 1.0; }
-  50% { opacity: 0.0; }
-  100% { opacity: 1.0; }
+@-moz-keyframes parpadeo {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
 }
 
-@-webkit-keyframes parpadeo {  
-  0% { opacity: 1.0; }
-  50% { opacity: 0.0; }
-   100% { opacity: 1.0; }
+@-webkit-keyframes parpadeo {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
 }
 
-@keyframes parpadeo {  
-  0% { opacity: 1.0; }
-   50% { opacity: 0.0; }
-  100% { opacity: 1.0; }
+@keyframes parpadeo {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
 }
 
 .icono_editdelete {
-    border:none; 
-    text-decoration:none !important;
-    width:25px !important;
-    height:25px !important;
+    border: none;
+    text-decoration: none !important;
+    width: 25px !important;
+    height: 25px !important;
     padding: 0px !important;
 }
 
 .add_icon {
-    border:none; 
-    text-decoration:none !important;
-    width:25px !important;
-    height:25px !important;
+    border: none;
+    text-decoration: none !important;
+    width: 25px !important;
+    height: 25px !important;
     padding: 0px !important;
-    margin-left:25px !important;
+    margin-left: 25px !important;
 }
 
-.logo_tamaño{
+.logo_tamaño {
     width: 40px !important;
 }
 
-.btn{
+.btn {
     color: white !important;
-    background-color:black !important;
+    background-color: black !important;
 }
 
 
-
 /* Formularios */
-.form_linea{
+
+.form_linea {
     position: relative;
-    float:left;
+    float: left;
     left: 25%;
     margin-bottom: 5%;
 }
 
-.form_pedido{
+.form_pedido {
     position: relative;
-    float:right;
+    float: right;
     right: 25%;
     margin-bottom: 5%;
 }
@@ -109,52 +126,28 @@ body {
     padding: 10px;
     border: 1px solid black;
     border-radius: 25px;
-    background-color: rgba(237, 237, 237,0.9)
+    background-color: rgba(237, 237, 237, 0.9)
 }
 
 #form_articulo form {
     padding: 10px;
     border: 1px solid black;
     border-radius: 25px;
-    background-color: rgba(237, 237, 237,0.9);
+    background-color: rgba(237, 237, 237, 0.9);
 }
 
 #form_proveedor form {
     padding: 10px;
     border: 1px solid black;
     border-radius: 25px;
-    background-color: rgba(237, 237, 237,0.9);
-}
-
-#form_linea form {
-    width: 40%;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 25px;
-    background-color: rgba(237, 237, 237,0.9);
-}
-
-#form_pedido form {
-    width: 40%;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 25px;
-    background-color: rgba(237, 237, 237,0.9);
+    background-color: rgba(237, 237, 237, 0.9);
 }
 
 #form_usuario form {
     padding: 10px;
     border: 1px solid black;
     border-radius: 25px;
-    background-color: rgba(237, 237, 237,0.9);
-}
-
-form #form_register {
-    width: 30%;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 25px;
-    background-color: rgba(237, 237, 237,0.9);
+    background-color: rgba(237, 237, 237, 0.9);
 }
 
 .form_linea {
@@ -162,14 +155,16 @@ form #form_register {
     padding: 10px;
     border: 1px solid black;
     border-radius: 25px;
-    background-color: rgba(237, 237, 237,0.9);
+    background-color: rgba(237, 237, 237, 0.9);
 }
+
 .form_linea h6 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .form_linea button {
     margin-left: auto !important;
     margin-right: auto !important;
@@ -182,23 +177,28 @@ form #form_register {
     justify-content: center;
     align-items: center;
 }
+
 .form_pedido button {
-   margin-left: auto !important;
-   margin-right: auto !important;
-   display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
 }
 
+
 /*Hover Filas*/
-.hover_fila:hover{
+
+.hover_fila:hover {
     background-color: rgba(255, 242, 143, 0.5);
 }
 
+
 /* EDIT FORMULARIO */
-#articulo_descripcion{
+
+#articulo_descripcion {
     resize: none;
 }
 
-#form_articulo{
+#form_articulo {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -207,7 +207,7 @@ form #form_register {
     margin-top: 2rem;
 }
 
-#form_proveedor{
+#form_proveedor {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -216,7 +216,7 @@ form #form_register {
     margin-top: 2rem;
 }
 
-#form_usuario{
+#form_usuario {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -225,7 +225,7 @@ form #form_register {
     margin-top: 2rem;
 }
 
-#form_articulo div{
+#form_articulo div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -233,7 +233,7 @@ form #form_register {
     margin: 0.2em;
 }
 
-#form_proveedor div{
+#form_proveedor div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -241,14 +241,15 @@ form #form_register {
     margin: 0.2em;
 }
 
-#form_usuario div{
+#form_usuario div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0.2em;
 }
-#form_usuario #usuario_roles{
+
+#form_usuario #usuario_roles {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -260,62 +261,65 @@ form #form_register {
     display: flex !important;
     flex-direction: row !important;
 }
+
 #botones_editar button {
     margin: 0.1em;
 }
-.celda_edit, .celda_delete{
+
+.celda_edit,
+.celda_delete {
     width: 1% !important;
 }
-#pedido_aviso{
+
+#pedido_aviso {
     font-size: 12px;
 }
+
+
 /*Navbar Usuario*/
-.link_usuario, .link_usuario:visited{
-    color:black;
+
+.link_usuario,
+.link_usuario:visited {
+    color: black;
     text-decoration: none;
 }
 
-.link_usuario:hover{
+.link_usuario:hover {
     color: rgba(255, 242, 143);
     text-decoration: none;
 }
 
 .icono {
-    height:20px !important;
+    height: 20px !important;
     width: 24px !important;
     margin-right: 2px;
 }
-.salir{
-    margin-left:6px;
-    width:15px;
-    height:20px;
+
+.salir {
+    margin-left: 6px;
+    width: 15px;
+    height: 20px;
 }
 
-#show_panel_tabla{
+#show_panel_tabla {
     width: auto !important;
 }
 
-#login{
-    margin-left:35%;
+#login {
+    margin-left: 35%;
     margin-top: 2%;
     width: 30% !important;
 }
 
-#login_icono{
+#login_icono {
     float: right !important;
     margin-top: 1.5%;
 }
 
-/** Usuario **/
-.contenedor_usuario {
-    width:30%;
-    padding: 20px;
-    border: 1px solid black;
-    border-radius: 25px;
-    background-color: rgba(237, 237, 237,0.9);
-}
 
-.contenedor_usuario{
+/*FORMULARIO REGISTRO*/
+
+#form_register {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -323,6 +327,119 @@ form #form_register {
     margin: auto;
     margin-top: 2rem;
 }
-.contenedor_usuario #botones_editar{
+
+#form_register div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2em;
+}
+
+#form_register #usuario_roles {
+    flex-direction: row;
+}
+
+#usuario_roles label {
+    margin: 0em 0.5em;
+}
+
+form #form_register {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: rgba(237, 237, 237, 0.9);
+}
+
+
+/* Formulario Edit Pedido */
+
+#form_pedido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+#form_pedido div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2em;
+}
+
+#form_pedido form {
+    width: 40%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: rgba(237, 237, 237, 0.9);
+}
+
+
+/* Formulario Edit Linea Pedido */
+
+#form_linea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+#form_linea div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2em;
+}
+
+#form_linea form {
+    width: 40%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: rgba(237, 237, 237, 0.9);
+}
+
+
+/** Usuario **/
+
+.contenedor_usuario {
+    width: 40%;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: rgba(237, 237, 237, 0.9);
+}
+
+.contenedor_usuario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.contenedor_usuario #botones_editar {
     margin-top: 20px;
+}
+
+
+/* Tabla artículo */
+
+.celda_articulo_precio,
+.celda_articulo_existencias {
+    text-align: center;
+}
+
+.celda_articulo_nombre {
+    width: 19% !important;
 }

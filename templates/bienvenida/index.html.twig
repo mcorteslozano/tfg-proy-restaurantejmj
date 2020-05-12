@@ -34,7 +34,7 @@
 		<div class="row">
 			<div class="col-lg-3 col-md-3 col-sm-12">
 				<div class="lft_hd">
-					<a href="index.html"><img src="img/logo.png" alt=""/></a>
+					<a href="{{ path('bienvenida')}}"><img src="img/logo.png" alt=""/></a>
 				</div>
 			</div>			
 			<div class="col-lg-9 col-md-9 col-sm-12">
@@ -57,7 +57,7 @@
 								<li><a class="page-scroll" href="#opinion_sec">Reseñas</a></li>
 								<li><a class="page-scroll" href="#noticias_sec">Noticias</a></li>
 								<li><a class="page-scroll" href="#contacto_sec">Contacto</a></li>
-								<li><a id="gestion" class="page-scroll" href="{{ path('app_login' ) }}">Gestión</a></li>
+								<li><a id="gestion" class="page-scroll" href="{{ path('articulo_index' ) }}">Gestión</a></li>
 							</ul>
 						</div>		
 						</nav>			
@@ -231,12 +231,22 @@
 
 <!-- Comienzo Carta Section -->
 <section id="carta_sec">
-	<div class="title_sec">
-		<h1>CARTA</h1>
+	<div class="title_sec carta_margin_bot">
+		<h1 class="carta_sec_title">CARTA</h1>
 		<h2>NUESTROS PLATOS PRINCIPALES SON:</h2>
-	</div>			
-	<h2>ENTRANTES</h2>
-	<div class="linea">
+	</div>	
+	<hr>
+	<div id="carta_secciones">
+		<div class="hvr-underline-from-right hvr-bubble-bottom">ENTRANTES</div>
+		<div class="hvr-underline-from-right hvr-bubble-bottom">PASTAS</div>
+		<div class="hvr-underline-from-right hvr-bubble-bottom">CARNES</div>
+		<div class="hvr-underline-from-right hvr-bubble-bottom">PESCADOS</div>
+		<div class="hvr-underline-from-right hvr-bubble-bottom">POSTRES</div>
+	</div>
+	<hr>
+
+	<!-- Contenido -->
+	<div class="linea" id="contenido_entrante">
 		<div>
 		 	<h3>GUACAMOLE</h3>
 		 	<p>Receta tradicional Mexicana, preparado en la mesa y servido en molcajete de piedra volcánica, con lima, cilantro y cebolleta tierna. Acompañado de totopos caseros de maíz.</p>
@@ -254,9 +264,8 @@
 		 	<p>Corazones de alcachofas fritas acompañados con salsa romescú.</p>
 		</div>
 	</div>
-	<hr>
-	<h2>PASTA</h2>
-	<div class="linea">
+
+	<div class="linea" id="contenido_pasta">
 		<div>
 			<h3>RAVIOLIS</h3>
 			<p>Rellenos de ternera y setas, con una salsa de queso ( Parmesano, Pecorino, Provolone, Gorgonzola ).</p>
@@ -270,9 +279,8 @@
 			<p>Clásica, a la Bolognesa, Vegetariana</p>
 			</div>
 	</div>
-	<hr>
-	<h2>CARNES</h2>
-	<div class="linea">
+
+	<div class="linea" id="contenido_carne">
 		<div>
 			<h3>POLLO ASADO</h3>
 			<p>Al horno con zanahorias, judías verdes y patatas asadas.</p>
@@ -286,9 +294,8 @@
 			<p>Con puré de patata y ensalada de lechuga, tomate, zanahoria y cebolla.</p>
 		</div>
 	</div>
-	<hr>
-	<h2>PESCADOS</h2>
-	<div class="linea">
+
+	<div class="linea" id="contenido_pescado">
 		<div>
 			<h3>SALMÓN</h3>
 			<p>A la plancha, acompañado con pimientos, esparragos y dos rodajas de limón.</p>
@@ -302,15 +309,13 @@
 			<p>A la plancha con una salsa ligera de yogur natural, mayonesa, cebolleta, patatas y perejil.</p>
 		</div>
 	</div>
-	<hr>
-	<h2>POSTRES</h2>
-	<div class="linea">
+
+	<div class="linea" id="contenido_postre">
 		<div>
 			<h3>TARTAS</h3>
 			<p>Chocolate, Queso, Manzana, Zanahoria y De la abuela.</p>
 			<h3>FLAN</h3>
 			<p>De huevo (casero).</p>
-			<h3>FRUTA VARIADA</h3>
 		</div>
 		<div>
 			<h3>Helados</h3>
@@ -318,6 +323,8 @@
 			<h3>TIRAMISU</h3>
 		</div>
 	</div>
+
+
 </section>
 <!-- Final Carta Section -->
 
@@ -413,22 +420,22 @@
 					<div class="sngl_team">						
 						<img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-1.png" alt=""/>	
 						<h3> Mario Cortés Lozano <span>GERENTE</span></h3>
-						<p>Lorem ipsum dolor sit amet, consecttur adipisicing elit. Laudant</p>						
+						<p>Gerente general. Encargado de supervisar las operaciones del restaurante.</p>				
 					</div>					
 					<div class="sngl_team">						
 						<img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-2.png" alt=""/>	
 						<h3> Jaime Indart Paniagua <span> GERENTE </span></h3>
-						<p>Lorem ipsum dolor sit amet, consecttur adipisicing elit. Laudant</p>						
+						<p>Asistente general. Encargado de supervisar las operaciones del restaurante en ausencia del gerente.</p>
 					</div>				
 					<div class="sngl_team">						
 						<img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-3.png" alt=""/>	
 						<h3> José Manuel López-Calle <span>   GERENTE   </span></h3>
-						<p>Lorem ipsum dolor sit amet, consecttur adipisicing elit. Laudant</p>						
+						<p>Chef ejecutivo. Coordina el trabajo, crea recetas, ajusta el menu y supervisa los ingredientes.</p>				
 					</div>	
 					<div class="sngl_team">						
 						<img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-3.png" alt=""/>	
 						<h3> Amadeo Mora <span>   TUTOR   </span></h3>
-						<p>Lorem ipsum dolor sit amet, consecttur adipisicing elit. Laudant</p>						
+						<p>Encargado de supervisar, orientar y coordinar a toda la plantilla.</p>				
 					</div>															
 				</div>			
 			</div>
@@ -547,7 +554,7 @@
 								<input type="email" name="contacto[email]" class="form-control mail-field" required="required" placeholder="Correo Electrónico" id="contacto_email">
 							</div> 
 							<div class="form-group">
-								<textarea name="contacto[mensaje]" id="contacto_mensaje message" required="required" class="form-control" rows="8" placeholder="Mensaje"></textarea>
+								<textarea name="contacto[mensaje]" id="contacto_mensaje message" required="required" class="form-control" rows="4" placeholder="Mensaje"></textarea>
 							</div> 
 							<div class="form-group">
 								<button type="submit" class="btn btn-primary" id="contacto_enviar" name="contacto[enviar]">Enviar</button>
@@ -631,6 +638,7 @@
 <script src="js/main.js"></script>
 <script src="showHide.js" type="text/javascript"></script>
 <script src="https://kit.fontawesome.com/c1ba5129c9.js" crossorigin="anonymous"></script>
+<script src="js/carta.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){
