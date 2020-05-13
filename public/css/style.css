@@ -996,6 +996,10 @@ a:hover {
     padding-left: 30px;
 }
 
+#form_tipo {
+    width: 25%;
+}
+
 .map_area {
     margin-bottom: 93px;
 }

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Restaurente JMJ</title>
+        <title>KALAMAR</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -546,6 +546,7 @@
 			</div>		
 			<div class="col-sm-6"> 
 				<div id="cnt_form">
+					<!-- Formulario Contacto -->
 					<form id="contact-form" class="contact" name="contacto" method="post" action="/bienvenida">
 						<div class="form-group" id="contacto">
 							<input type="text" name="contacto[nombre]" class="form-control name-field" required="required" placeholder="Nombre" id="contacto_nombre">
@@ -560,7 +561,47 @@
 								<button type="submit" class="btn btn-primary" id="contacto_enviar" name="contacto[enviar]">Enviar</button>
 						</div>
 						{{ form_row(contactoForm._token) }}
-					</form>	
+					</form>
+					<!-- Formulario Reserva -->  
+					<form id="contact-form-reserva" class="contact" name="contacto" method="post" action="/bienvenida">
+						<div class="form-group" id="contacto">
+							<input type="text" name="" class="form-control name-field" required="required" placeholder="RESERVA" id="">
+							</div>
+							<div class="form-group">
+								<input type="email" name="" class="form-control mail-field" required="required" placeholder="RESERVA" id="">
+							</div> 
+							<div class="form-group">
+								<textarea name="" id="" required="required" class="form-control" rows="4" placeholder="RESERVA"></textarea>
+							</div> 
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary" id="" name="">Enviar</button>
+						</div>
+					</form>
+					<!-- Formulario Evento -->
+					<form id="contact-form-evento" class="contact" name="contacto" method="post" action="/bienvenida">
+						<div class="form-group" id="contacto">
+							<input type="text" name="" class="form-control name-field" required="required" placeholder="EVENTO" id="">
+							</div>
+							<div class="form-group">
+								<input type="email" name="" class="form-control mail-field" required="required" placeholder="EVENTO" id="">
+							</div> 
+							<div class="form-group">
+								<textarea name="" id="" required="required" class="form-control" rows="4" placeholder="EVENTO"></textarea>
+							</div> 
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary" id="" name="">Enviar</button>
+						</div>
+					</form>
+		
+					<!-- Select tipo de Formulario -->
+					<div class="form-group">
+					  <select class="form-control" name="form_tipo" class="btn btn-primary" id="form_tipo">
+						<option value="Contacto">Contacto</option>
+						<option value="Reserva">Reserva</option>
+						<option value="Evento">Evento</option>
+					  </select>
+					</div>
+
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6">
@@ -639,6 +680,7 @@
 <script src="showHide.js" type="text/javascript"></script>
 <script src="https://kit.fontawesome.com/c1ba5129c9.js" crossorigin="anonymous"></script>
 <script src="js/carta.js"></script>
+<script src="js/form_tipo.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){

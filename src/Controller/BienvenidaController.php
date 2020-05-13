@@ -19,7 +19,9 @@ class BienvenidaController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
+            
             $contacto = $form->getData();
+            
 
             /* Envío de mensaje correo electrónico */
             $mensaje = (new \Swift_Message('Nuevo mensaje de un cliente'))

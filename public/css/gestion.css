@@ -1,7 +1,12 @@
+/*Estilo HTML*/
+
 html {
     min-height: 100%;
     position: relative;
 }
+
+
+/*Estilo Body*/
 
 body {
     background-image: url('/img/fondo.png') !important;
@@ -78,6 +83,9 @@ body {
     }
 }
 
+
+/*Iconos CRUD*/
+
 .icono_editdelete {
     border: none;
     text-decoration: none !important;
@@ -95,9 +103,15 @@ body {
     margin-left: 25px !important;
 }
 
+
+/*LOGO*/
+
 .logo_tamaño {
     width: 40px !important;
 }
+
+
+/*Estilo Botones*/
 
 .btn {
     color: white !important;
@@ -105,52 +119,13 @@ body {
 }
 
 
-/* Formularios */
+/* FORMULARIO NUEVA LINEA DE PEDIDO INDEX PEDIDO */
 
 .form_linea {
     position: relative;
     float: left;
     left: 25%;
     margin-bottom: 5%;
-}
-
-.form_pedido {
-    position: relative;
-    float: right;
-    right: 25%;
-    margin-bottom: 5%;
-}
-
-.form_pedido {
-    margin-top: 5%;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 25px;
-    background-color: rgba(237, 237, 237, 0.9)
-}
-
-#form_articulo form {
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 25px;
-    background-color: rgba(237, 237, 237, 0.9);
-}
-
-#form_proveedor form {
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 25px;
-    background-color: rgba(237, 237, 237, 0.9);
-}
-
-#form_usuario form {
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 25px;
-    background-color: rgba(237, 237, 237, 0.9);
-}
-
-.form_linea {
     margin-top: 5%;
     padding: 10px;
     border: 1px solid black;
@@ -171,6 +146,21 @@ body {
     display: block !important;
 }
 
+
+/* FORMULARIO NUEVO PEDIDO INDEX PEDIDO */
+
+.form_pedido {
+    position: relative;
+    float: right;
+    right: 25%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: rgba(237, 237, 237, 0.9);
+}
+
 .form_pedido h6 {
     display: flex;
     flex-direction: column;
@@ -185,18 +175,14 @@ body {
 }
 
 
-/*Hover Filas*/
+/*DIV AVISO SCRIPT PEDIDO*/
 
-.hover_fila:hover {
-    background-color: rgba(255, 242, 143, 0.5);
+#pedido_aviso {
+    font-size: 12px;
 }
 
 
-/* EDIT FORMULARIO */
-
-#articulo_descripcion {
-    resize: none;
-}
+/*FORMULARIOS ARTICULO NEW/EDIT*/
 
 #form_articulo {
     display: flex;
@@ -205,6 +191,38 @@ body {
     align-items: center;
     margin: auto;
     margin-top: 2rem;
+}
+
+#form_articulo form {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: rgba(237, 237, 237, 0.9);
+}
+
+#form_articulo div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2em;
+}
+
+
+/*TEXT AREA ARTICULO*/
+
+#articulo_descripcion {
+    resize: none;
+}
+
+
+/*FORMULARIOS PROVEEDOR NEW/EDIT*/
+
+#form_proveedor form {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: rgba(237, 237, 237, 0.9);
 }
 
 #form_proveedor {
@@ -216,6 +234,24 @@ body {
     margin-top: 2rem;
 }
 
+#form_proveedor div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2em;
+}
+
+
+/*FORMULARIOS USUARIO NEW/EDIT*/
+
+#form_usuario form {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: rgba(237, 237, 237, 0.9);
+}
+
 #form_usuario {
     display: flex;
     flex-direction: column;
@@ -223,22 +259,6 @@ body {
     align-items: center;
     margin: auto;
     margin-top: 2rem;
-}
-
-#form_articulo div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0.2em;
-}
-
-#form_proveedor div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0.2em;
 }
 
 #form_usuario div {
@@ -257,6 +277,36 @@ body {
     margin: 0.2em;
 }
 
+
+/*HOVER TABLAS*/
+
+.hover_fila:hover {
+    background-color: rgba(255, 242, 143, 0.5);
+}
+
+
+/*CELDAS EDIT/DELETE TABLAS*/
+
+.celda_edit,
+.celda_delete {
+    width: 1% !important;
+}
+
+
+/*CELDAS Articulo*/
+
+.celda_articulo_precio,
+.celda_articulo_existencias {
+    text-align: center;
+}
+
+.celda_articulo_nombre {
+    width: 14% !important;
+}
+
+
+/*BOTONES FORMULARIOS*/
+
 #botones_editar {
     display: flex !important;
     flex-direction: row !important;
@@ -264,15 +314,6 @@ body {
 
 #botones_editar button {
     margin: 0.1em;
-}
-
-.celda_edit,
-.celda_delete {
-    width: 1% !important;
-}
-
-#pedido_aviso {
-    font-size: 12px;
 }
 
 
@@ -317,6 +358,30 @@ body {
 }
 
 
+/*SHOW USUARIO*/
+
+.contenedor_usuario {
+    width: 40%;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: rgba(237, 237, 237, 0.9);
+}
+
+.contenedor_usuario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.contenedor_usuario #botones_editar {
+    margin-top: 20px;
+}
+
+
 /*FORMULARIO REGISTRO*/
 
 #form_register {
@@ -353,7 +418,7 @@ form #form_register {
 }
 
 
-/* Formulario Edit Pedido */
+/*Formulario Edit Pedido*/
 
 #form_pedido {
     display: flex;
@@ -381,7 +446,7 @@ form #form_register {
 }
 
 
-/* Formulario Edit Linea Pedido */
+/*Formulario Edit Linea Pedido*/
 
 #form_linea {
     display: flex;
@@ -406,40 +471,4 @@ form #form_register {
     border: 1px solid black;
     border-radius: 25px;
     background-color: rgba(237, 237, 237, 0.9);
-}
-
-
-/** Usuario **/
-
-.contenedor_usuario {
-    width: 40%;
-    padding: 20px;
-    border: 1px solid black;
-    border-radius: 25px;
-    background-color: rgba(237, 237, 237, 0.9);
-}
-
-.contenedor_usuario {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    margin-top: 2rem;
-}
-
-.contenedor_usuario #botones_editar {
-    margin-top: 20px;
-}
-
-
-/* Tabla artículo */
-
-.celda_articulo_precio,
-.celda_articulo_existencias {
-    text-align: center;
-}
-
-.celda_articulo_nombre {
-    width: 19% !important;
 }
