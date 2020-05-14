@@ -984,6 +984,16 @@ a:hover {
     display: none;
 }
 
+#pruebaForm div {
+    display: table;
+    width: 67%;
+}
+
+#pruebaForm h2 {
+    display: table-cell;
+    width: 50%;
+}
+
 #contacto_sec {
     padding-top: 95px;
     padding-bottom: 95px;
