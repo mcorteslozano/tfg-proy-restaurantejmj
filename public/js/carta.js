@@ -5,7 +5,7 @@ window.onload = function() {
     var contenido_carne = document.getElementById('contenido_carne');
     var contenido_pescado = document.getElementById('contenido_pescado');
     var contenido_postre = document.getElementById('contenido_postre');
-
+    alert('hola');
     contenido_pasta.style.display = "none";
     contenido_carne.style.display = "none";
     contenido_pescado.style.display = "none";

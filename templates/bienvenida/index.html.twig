@@ -252,16 +252,12 @@
 		 	<p>Receta tradicional Mexicana, preparado en la mesa y servido en molcajete de piedra volcánica, con lima, cilantro y cebolleta tierna. Acompañado de totopos caseros de maíz.</p>
 		 	<h3>PIPARRAS FRITAS </h3>
 		 	<p>Con aceite de oliva virgen, y sal maldón.</p>
-			<h3>TEQUEÑOS</h3>
-		 	<p>Deliciosos bastoncitos rellenos de queso fresco (paisa), acompañados con una salsa natural de tomate y albahaca fresca.</p>
 		</div>
 		<div>
 			<h3>ENSALADA DE BURRATA</h3>
 		 	<p>Con naranja, nueces pecan, aceitunas y espinacas.</p>
 		 	<h3>ENSALADILLA RUSA </h3>
 		 	<p>Con pollo ecológico, tirabeques y crujiente de panceta ibérica.</p>
-		 	<h3>ALCACHOFAS FRITAS NATURALES</h3>
-		 	<p>Corazones de alcachofas fritas acompañados con salsa romescú.</p>
 		</div>
 	</div>
 
@@ -289,7 +285,7 @@
 		</div>
 		<div>
 			<h3>HAMBURGUESAS</h3>
-			<p>Todas nuestras hamburguesas son elaborada diariamente con carne 100% de vaca rubia Gallega. Pesan 170grs. Con PAN ARTESANO de nuestro obrador elaborado a diario a partir de masa madre y acompañadas de patatas fritas caseras o ensalada.</p>
+			<p>Todas nuestras hamburguesas son elaborada diariamente con carne 100% de vaca rubia Gallega. Pesan 170grs.</p>
 			<h3>SOLOMILLO WELLINGTON</h3>
 			<p>Con puré de patata y ensalada de lechuga, tomate, zanahoria y cebolla.</p>
 		</div>
@@ -306,7 +302,7 @@
 			<h3>MERLUZA</h3>
 			<p>Al horno, con cebolla, zanahorias, pimientos, perejil, ajo y limón.</p>
 			<h3>RODABALLO</h3>
-			<p>A la plancha con una salsa ligera de yogur natural, mayonesa, cebolleta, patatas y perejil.</p>
+			<p>A la plancha con una salsa ligera de yogur natural, mayonesa, cebolleta, patatas y perejil.</p><br>
 		</div>
 	</div>
 
@@ -321,6 +317,7 @@
 			<h3>Helados</h3>
 			<p>Chocolate, Limón, Nata, Fresa y Vainilla.</p>
 			<h3>TIRAMISU</h3>
+			<p>El conocido postre italiano.</p><br>
 		</div>
 	</div>
 
@@ -418,22 +415,22 @@
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12">
 				<div class="all_team">
 					<div class="sngl_team">						
-						<img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-1.png" alt=""/>	
+						<!--<img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-1.png" alt=""/>-->
 						<h3> Mario Cortés Lozano <span>GERENTE</span></h3>
 						<p>Gerente general. Encargado de supervisar las operaciones del restaurante.</p>				
 					</div>					
 					<div class="sngl_team">						
-						<img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-2.png" alt=""/>	
+						<!--<img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-2.png" alt=""/>-->
 						<h3> Jaime Indart Paniagua <span> GERENTE </span></h3>
 						<p>Asistente general. Encargado de supervisar las operaciones del restaurante en ausencia del gerente.</p>
 					</div>				
 					<div class="sngl_team">						
-						<img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-3.png" alt=""/>	
+						<!--<img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-3.png" alt=""/>-->	
 						<h3> José Manuel López-Calle <span>   GERENTE   </span></h3>
 						<p>Chef ejecutivo. Coordina el trabajo, crea recetas, ajusta el menu y supervisa los ingredientes.</p>				
 					</div>	
 					<div class="sngl_team">						
-						<img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-3.png" alt=""/>	
+						<!--<img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-3.png" alt=""/>-->
 						<h3> Amadeo Mora <span>   TUTOR   </span></h3>
 						<p>Encargado de supervisar, orientar y coordinar a toda la plantilla.</p>				
 					</div>															
@@ -562,37 +559,64 @@
 						</div>
 						{{ form_row(contactoForm._token) }}
 					</form>
+					
 					<!-- Formulario Reserva -->  
 					<form id="contact-form-reserva" class="contact" name="contacto" method="post" action="/bienvenida">
 						<div class="form-group" id="contacto">
-							<input type="text" name="" class="form-control name-field" required="required" placeholder="RESERVA" id="">
-							</div>
-							<div class="form-group">
-								<input type="email" name="" class="form-control mail-field" required="required" placeholder="RESERVA" id="">
-							</div> 
-							<div class="form-group">
-								<textarea name="" id="" required="required" class="form-control" rows="4" placeholder="RESERVA"></textarea>
-							</div> 
-							<div class="form-group">
-								<button type="submit" class="btn btn-primary" id="" name="">Enviar</button>
+							<input type="text" name="contacto_reserva[nombre]" class="form-control name-field" required="required" placeholder="Nombre" id="contacto_reserva_nombre">
 						</div>
+						<div class="form-group">
+						<select class="form-control" name="contacto_reserva[personas]" id="contacto_reserva_personas">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+						</div>
+						<div class="form-group">
+							<input class="form-control" type="date" value="01/01/2020" id="contacto_reserva_fecha" name="contacto_reserva[fecha]">
+						</div>
+						<div class="form-group">
+							<input type="email" name="contacto_reserva[email]" class="form-control mail-field" required="required" placeholder="Email" id="contacto_reserva_email">
+						</div> 
+						<div class="form-group">
+							<textarea name="contacto_reserva[mensaje]" id="contacto_reserva_mensaje" required="required" class="form-control" rows="4" placeholder="Mensaje. (Especificar hora de llegada)."></textarea>
+						</div> 
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary" id="contacto_reserva_enviar" name="contacto_reserva[enviar]">Enviar</button>
+						</div>
+						{{ form_row(contactoReserva._token) }}
 					</form>
+
 					<!-- Formulario Evento -->
 					<form id="contact-form-evento" class="contact" name="contacto" method="post" action="/bienvenida">
 						<div class="form-group" id="contacto">
-							<input type="text" name="" class="form-control name-field" required="required" placeholder="EVENTO" id="">
+							<input type="text" name="contacto_evento[nombre]" class="form-control name-field" required="required" placeholder="Nombre" id="contacto_evento_nombre">
 							</div>
-							<div class="form-group">
-								<input type="email" name="" class="form-control mail-field" required="required" placeholder="EVENTO" id="">
-							</div> 
-							<div class="form-group">
-								<textarea name="" id="" required="required" class="form-control" rows="4" placeholder="EVENTO"></textarea>
-							</div> 
-							<div class="form-group">
-								<button type="submit" class="btn btn-primary" id="" name="">Enviar</button>
+						<div class="form-group" id="contacto">
+							<input type="number" name="contacto_evento[numpersonas]" class="form-control name-field" required="required" placeholder="Número de Personas" id="contacto_evento_numpersonas">
+							</div>
+						<div class="form-group">
+							<input class="form-control" type="date" value="01/01/2020" id="contacto_evento_fecha" name="contacto_evento[fecha]">
 						</div>
+						<div class="form-group">
+							<input type="email" name="contacto_evento[email]" class="form-control mail-field" required="required" placeholder="Email" id="contacto_evento_email">
+						</div> 
+						<div class="form-group">
+							<textarea name="contacto_evento[mensaje]" id="contacto_evento_mensaje" required="required" class="form-control" rows="4" placeholder="Mensaje"></textarea>
+						</div> 
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary" id="contacto_evento_enviar" name="contacto_evento[enviar]">Enviar</button>
+						</div>
+						{{ form_row(contactoEvento._token) }}
 					</form>
-		
+					
 					<!-- Select tipo de Formulario -->
 					<div class="form-group">
 					  <select class="form-control" name="form_tipo" class="btn btn-primary" id="form_tipo">
@@ -662,11 +686,12 @@
 <!-- Final footer Section -->
 
 <!-- Scripts -->
+<!--<script src="js/vendor/jquery-1.11.2.min.js"></script>-->
+<!--<script src="showHide.js" type="text/javascript"></script>-->
+<!--<script src="js/jquery-ui.js"></script>-->
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="js/vendor/jquery-1.11.2.min.js"></script>
 <script src="js/isotope.pkgd.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/jquery-ui.js"></script>
 <script src="js/appear.js"></script>
 <script src="js/jquery.counterup.min.js"></script>
 <script src="js/waypoints.min.js"></script>
@@ -677,9 +702,9 @@
 <script src="js/scrolling-nav.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
-<script src="showHide.js" type="text/javascript"></script>
 <script src="https://kit.fontawesome.com/c1ba5129c9.js" crossorigin="anonymous"></script>
 <script src="js/carta.js"></script>
+
 <script src="js/form_tipo.js"></script>
 
 <script type="text/javascript">
@@ -721,6 +746,68 @@ $(document).ready(function(){
 		autohidemode:true
 		});
 	});
+</script>
+
+<!-- Carta.js -->
+<script>
+    var contenido_entrante = document.getElementById('contenido_entrante');
+    var contenido_pasta = document.getElementById('contenido_pasta');
+    var contenido_carne = document.getElementById('contenido_carne');
+    var contenido_pescado = document.getElementById('contenido_pescado');
+    var contenido_postre = document.getElementById('contenido_postre');
+  
+    contenido_pasta.style.display = "none";
+    contenido_carne.style.display = "none";
+    contenido_pescado.style.display = "none";
+    contenido_postre.style.display = "none";
+
+    var secciones = document.getElementById('carta_secciones');
+    var secciones_titulos = secciones.getElementsByTagName('div');
+
+    var i;
+    for (i = 0; i < secciones_titulos.length; i++) {
+
+        secciones_titulos[i].addEventListener('click', function(e) {
+
+            if (e.target.innerHTML == 'ENTRANTES') {
+                contenido_entrante.style.display = "flex";
+                contenido_pasta.style.display = "none";
+                contenido_carne.style.display = "none";
+                contenido_pescado.style.display = "none";
+                contenido_postre.style.display = "none";
+            }
+            if (e.target.innerHTML == 'PASTAS') {
+                contenido_entrante.style.display = "none";
+                contenido_pasta.style.display = "flex";
+                contenido_carne.style.display = "none";
+                contenido_pescado.style.display = "none";
+                contenido_postre.style.display = "none";
+            }
+            if (e.target.innerHTML == 'CARNES') {
+                contenido_entrante.style.display = "none";
+                contenido_pasta.style.display = "none";
+                contenido_carne.style.display = "flex";
+                contenido_pescado.style.display = "none";
+                contenido_postre.style.display = "none";
+            }
+            if (e.target.innerHTML == 'PESCADOS') {
+                contenido_entrante.style.display = "none";
+                contenido_pasta.style.display = "none";
+                contenido_carne.style.display = "none";
+                contenido_pescado.style.display = "flex";
+                contenido_postre.style.display = "none";
+            }
+            if (e.target.innerHTML == 'POSTRES') {
+                contenido_entrante.style.display = "none";
+                contenido_pasta.style.display = "none";
+                contenido_carne.style.display = "none";
+                contenido_pescado.style.display = "none";
+                contenido_postre.style.display = "flex";
+            }
+
+        });
+    }
+
 </script>
 <!-- Final Scripts -->
 

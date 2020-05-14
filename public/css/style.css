@@ -279,7 +279,7 @@ a:hover {
 }
 
 #noticias_sec {
-    padding-top: 30px;
+    padding-top: 100px;
 }
 
 .all_brouse_btn {
@@ -512,6 +512,7 @@ a:hover {
 
 #servicio_sec {
     padding: 70px 0;
+    padding-top: 10px !important;
 }
 
 .service {
@@ -572,10 +573,12 @@ a:hover {
 #foto_sec {
     background: none 0 0 repeat scroll #f0f0f0;
     padding: 70px 0;
+    margin-top: 10%;
 }
 
 #equipo_sec {
-    padding: 70px 0;
+    padding-top: 105px;
+    padding-bottom: 105px;
 }
 
 .sngl_team h3 {
@@ -740,6 +743,26 @@ a:hover {
 
 .carta_margin_bot {
     margin-bottom: -1%;
+}
+
+#contenido_entrante,
+#contenido_pasta,
+#contenido_carne,
+#contenido_pescado,
+#contenido_postre {
+    overflow: hidden;
+    animation-name: menu;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+}
+
+@keyframes menu {
+    from {
+        margin-left: 150%;
+    }
+    to {
+        margin-left: 0%;
+    }
 }
 
 
@@ -962,7 +985,8 @@ a:hover {
 }
 
 #contacto_sec {
-    padding: 70px 0;
+    padding-top: 95px;
+    padding-bottom: 95px;
 }
 
 #cnt_form .btn {
