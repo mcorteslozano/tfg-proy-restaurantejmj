@@ -8,5 +8,11 @@
     <button id="volver" class="btn" onclick="location.href='{{ path('usuario_delete', {'id': usuario.id}) }}'">Volver</button>
     </div>
 </div>
+
+<script>
+
+    document.getElementById('usuario_password').required = true;
+    
+</script>
 {% endblock %}
 

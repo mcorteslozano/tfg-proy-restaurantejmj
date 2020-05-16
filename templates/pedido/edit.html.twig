@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Actualizar pedido {{ pedido.id }}{% endblock %}
+{% block title %}Editar - Pedido{% endblock %}
 
 {% block body %}
     <div id="form_pedido">
@@ -8,10 +8,7 @@
         <button id="volver" class="btn" onclick="location.href='{{ path('pedido_index') }}'">Volver</button>
         </div>
     </div>
-{% endblock %}
-
-{% block javascripts %}
-<script>
+    <script>
     document.getElementById('pedido_aviso').style.visibility="hidden";
-</script>
+    </script>
 {% endblock %}

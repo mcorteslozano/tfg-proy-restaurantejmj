@@ -109,22 +109,6 @@
         }
     </script>
 
-    <!-- Validación líneas de pedido para poder hacerlo -->
-    <script>
-        var tabla = document.getElementById('tabla_linea');
-        var celda = tabla.getElementsByTagName('td');
-        var boton = document.getElementById('boton');
-        var aviso = document.getElementById('pedido_aviso');
-
-        if(celda[0].innerHTML != "No hay líneas de pedido registradas"){
-            boton.disabled = false;
-            aviso.style.visibility = "hidden";
-        }else{
-            boton.disabled = true;
-            aviso.style.visibility = "visible";
-        }
-    </script>
-
     <!-- Validación fecha de pedido -->
     <script>
         var fecha_input = document.getElementById('pedido_fecha_entrega');
@@ -154,25 +138,24 @@
             var fecha_entrega = new Date(fecha_input.value.substring(0,4), fecha_input.value.substring(5,7), fecha_input.value.substring(8,10));
 
             if( fecha_input.value <= fecha_actual){
-                alert('Ha seleccionado una fecha anterior o igual a la actual.');
+                alert('Fecha de entrega anterior o igual a la fecha de pedido!!');
                 fecha_input.value = "";
             }else if( fecha_entrega.getMonth() > (fecha_pedido.getMonth()+2) ){
-                alert('Ha seleccionado una fecha que supera el límite de dos meses en adelante.');
+                alert('La fecha de entrega no puede ser superior a 2 meses de la fecha de pedido.');
                 fecha_input.value = "";
             }else if( fecha_entrega.getMonth() == (fecha_pedido.getMonth()+2) && fecha_entrega.getDate() > fecha_pedido.getDate() ){
-                alert('Ha seleccionado una fecha que supera el límite de dos meses en adelante.');
+                alert('La fecha de entrega no puede ser superior a 2 meses de la fecha de pedido.');
                 fecha_input.value = "";
             }else if( fecha_entrega.getMonth() == (fecha_pedido.getMonth()+2) && fecha_entrega.getFullYear() > fecha_pedido.getFullYear() ){
-                alert('Ha seleccionado una fecha que supera el límite de dos meses en adelante.');
+                alert('La fecha de entrega no puede ser superior a 2 meses de la fecha de pedido.');
                 fecha_input.value = "";
             }else if( fecha_entrega.getFullYear() > fecha_pedido.getFullYear() ){
-                alert('Ha seleccionado una fecha que supera el límite de dos meses en adelante.');
+                alert('La fecha de entrega no puede ser superior a 2 meses de la fecha de pedido.');
                 fecha_input.value = "";
             }
         })
     </script>
-    
-    
+
 {% endblock %}
 
 {% block javascripts %}
