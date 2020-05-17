@@ -31,7 +31,7 @@
         <tbody>
         {% for articulo in articulos %}
             <tr class="hover_fila">
-                <td class="celda_articulo_nombre">{{ articulo.nombre }}</td>
+                <td id="{{ articulo.nombre }}" class="celda_articulo_nombre">{{ articulo.nombre }}</td>
                 <td class="celda_articulo_descripcion">{{ articulo.descripcion }}</td>
                 <td class="celda_articulo_precio">{{ articulo.precio }}€</td>
                 <td class="celda_articulo_existencias">{{ articulo.existencias }}</td>

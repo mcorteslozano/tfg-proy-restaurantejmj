@@ -17,7 +17,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+        
         {% endblock %}
     </head>
 
@@ -30,11 +30,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-    {% if is_granted('ROLE_GERENTE') %}
+    
       <li class="nav-item active">
           <a class="nav-link" onclick="window.open('/register','', ',height=600,width=600,left=500,top=60')">Registro</a>
       </li>
-    {% endif %}
+    
       {% if not app.user %}
         <li class="nav-item active">
           <a class="nav-link">PANEL DE GESTIÓN</a>
@@ -70,11 +70,9 @@
       <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
       <ul class="navbar-nav ml-auto">
 
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="" aria-label="Search" name="key" id="key" onkeyup="buscar(this.value)">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-        </form>
-
+        
+      <input class="form-control mr-sm-2" type="text" placeholder="Buscar..." aria-label="Search" id="valor_buscar">
+    
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <img src="/img/spain-flag-button-round-icon-32.png">&nbsp;Español
@@ -92,9 +90,18 @@
 
         {% block body %}{% endblock %}
      
-        {% block othersjs %}   
-
-        <script src="{{ asset('/js/sweetalert2/sweetalert2.js') }}"></script>
+        {% block othersjs %} 
+        <script>
+             $("#valor_buscar").on("keyup", function() {
+             var value = $(this).val();
+             if(value!='') {
+                 $("table tbody tr").hide();
+             }else{
+                 $("table tbody tr").show();
+             }
+             $('table tbody tr td:contains("'+value+'")').parent('tr').show(); 
+             });
+        </script>
 
         <script src="{{ asset('/js/animacion_iconoinfo.js') }}"></script>
         <script src="https://kit.fontawesome.com/de27dfa134.js" crossorigin="anonymous"></script>

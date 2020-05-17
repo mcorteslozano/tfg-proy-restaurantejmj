@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class BienvenidaController extends AbstractController
 {
     /**
-     * @Route("/bienvenida", name="bienvenida")
+     * @Route("/", name="bienvenida")
      */
     public function index(Request $request, \Swift_Mailer $mailer)
     {
