@@ -111,5 +111,79 @@ left : 0;
 width : 100%;
 margin-bottom : 20px;
 }
+.lft_hd a{
+    display: none;
+}
+#nav_menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#nav_menu ul{
+    width: 350px;
+}
+#nav_menu ul a {
+    display: inline !important;
+    padding: 0px 7px !important;
+}
+#slider_sec{
+    height : 100% !important;
+    width : 100%;
+    margin-top: 3%;
+}
+
+.caption_carousel h1 {
+    font-size: 40px !important;
+    color: #fff;
+    margin-top: -3%;
+}
+.caption_carousel p {
+ /*   font-family: lato;
+    font-size: 11   px !important;
+    color: #f6f6f6; 
+    border-top: 1px none #fff !important;
+    border-bottom: 1px none #fff !important;
+
+    display: inline;
+    line-height: 35px;
+    text-align: center;
+    padding: 8px;*/
+    display: none !important;
+}
+.linea {
+    flex-direction: column !important;
+    text-align: center;
+}
+#carta_sec .linea div{
+    margin-top: 0;
+    margin-left: 5%;
+    width: 90% !important;
+}
+#opinion_sec {
+    background-image: none !important;
+    background-color:#363636 !important;
+}
+.cnt_info ul {
+    border-left : 1px none #C7C7C7 !important;
+ }
+.map_area {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+iframe{
+    width: 100% !important;
+    height: 100% !important;
+}
+#pruebaForm_h2 {
+	display: none !important;
+}
+#form_tipo {
+	width: 100% !important;
+}
+#form_tipo_query {
+	margin: auto !important;
+}
+
 }
 @media only screen and (min-width:320px) and (max-width:479px) 
