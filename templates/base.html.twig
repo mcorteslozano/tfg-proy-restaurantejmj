@@ -30,11 +30,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-    
+      {% if is_granted('ROLE_GERENTE') %}
       <li class="nav-item active">
           <a class="nav-link" onclick="window.open('/register','', ',height=600,width=600,left=500,top=60')">Registro</a>
       </li>
-    
+      {% endif %}
       {% if not app.user %}
         <li class="nav-item active">
           <a class="nav-link">PANEL DE GESTIÓN</a>
