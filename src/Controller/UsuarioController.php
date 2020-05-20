@@ -50,18 +50,8 @@ class UsuarioController extends AbstractController
         }
         $form = $this->createForm(UsuarioType::class, $usuario);
         $form->handleRequest($request);
-//        $filesystem = new Filesystem();
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $oldPassword = $usuario->getPassword();
-            $password =  $form->get('password')->getData();
-
-            if(!empty($password)) {
-                $passwordEncode = $passwordEncoder->encodePassword($usuario, $password);
-                $usuario->setPassword($passwordEncode);
-            } else {
-                $usuario->setPassword($oldPassword);
-            }
 
             $em->persist($usuario);
 

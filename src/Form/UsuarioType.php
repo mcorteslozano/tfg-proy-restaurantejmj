@@ -38,13 +38,7 @@ class UsuarioType extends AbstractType
                     'placeholder' => 'Email'
                 )
             ])
-            ->add('password', PasswordType::class,[
-                'empty_data' => '',
-                'attr' => array(
-                    'placeholder' => 'Contraseña'
-                ),
-                'required' => false
-            ])
+            ->add('password', PasswordType::class)
             ->add('foto', FileType::class, [
                 'label' => 'Foto',
 
