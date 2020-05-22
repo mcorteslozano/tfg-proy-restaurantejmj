@@ -132,7 +132,6 @@ width : 100%;
 .lft_hd a{
     display: none;
 }
-
 #nav_menu{
     display: flex !important;
     flex-direction: column !important;
@@ -140,12 +139,15 @@ width : 100%;
 }
 
 #nav_menu ul{
-    width: 480px !important;
+    width: 320px !important;
 }
 #nav_menu ul a {
-    display: inline !important;
+    display: inline;
     padding: 0px 5px !important;
-    font-size: 12px !important;
+    font-size: 10px !important;
+}
+#equipo_header, #resenias_header {
+    display: none !important;
 }
 #slider_sec{
     height : 100% !important;
