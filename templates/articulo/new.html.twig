@@ -3,11 +3,11 @@
 {% block title %}Nuevo - Artículo{% endblock %}
 
 {% block body %}
-    <div id="form_articulo">
-    {{ include('articulo/_form.html.twig') }}
-    <button id="volver" class="btn" onclick="window.close()">Volver</button>
+    <div id="form_articulo_new_edit">
+        {{ include('articulo/_form.html.twig') }}
+        <button id="volver" class="btn" onclick="window.close()">Volver</button>
+        </div>
     </div>
-</div>
 
 <script>
     document.getElementById('articulo_descripcion').rows = "5";

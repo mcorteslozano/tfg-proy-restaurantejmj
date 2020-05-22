@@ -1,0 +1,5 @@
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <div id="botones_editar">
+        <button id="boton" class="btn" onclick="window.opener.location.reload();window.close();">{{ button_label|default('Añadir') }}</button>
+{{ form_end(form) }}

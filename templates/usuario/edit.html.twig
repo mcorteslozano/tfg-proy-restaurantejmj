@@ -3,7 +3,7 @@
 {% block title %}Gestiona JMJ{% endblock %}
 
 {% block body %}
-<div id="form_usuario">	
+<div id="form_usuario_edit">	
     {{ include('usuario/_form.html.twig', {'button_label': 'Actualizar'}) }}
     <button id="volver" class="btn" onclick="location.href='{{ path('usuario_delete', {'id': usuario.id}) }}'">Volver</button>
     </div>

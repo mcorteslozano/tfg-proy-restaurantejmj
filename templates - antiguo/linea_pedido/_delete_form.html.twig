@@ -1,0 +1,5 @@
+<form method="post" action="{{ path('linea_pedido_delete', {'id': linea_pedido.id}) }}" onsubmit="return confirm('¿Está seguro que quiere eliminar la línea {{ linea_pedido.id }}?');">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ linea_pedido.id) }}">
+    <input type="image" class="icono_editdelete" src="/img/icono-eliminar.svg">
+</form>

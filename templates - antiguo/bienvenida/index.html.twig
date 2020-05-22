@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ES">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Restaurente JMJ</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" type="image/x-icon" href="{{ asset('/img/favicon.ico') }}" />
+    </head>
+
+<body >
+
+<!-- Comienzo loader -->
+<div id="loader-wrapper">
+	<div class="logo"></div>
+    <div id="loader">
+    </div>
+</div>
+<!-- Fin loader -->
+
+<!-- Comienzo header Section -->
+<header class="main_menu_sec navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-12">
+				<div class="lft_hd">
+					<a href="{{ path('bienvenida')}}"><img src="img/logo.png" alt=""/></a>
+				</div>
+			</div>			
+			<div class="col-lg-9 col-md-9 col-sm-12">
+				<div class="rgt_hd">					
+					<div class="main_menu">
+						<nav id="nav_menu">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							</button>	
+						<div id="navbar">
+							<ul>
+								<li><a class="page-scroll" href="{{ path('bienvenida') }}">Home</a></li> 								
+								<li><a class="page-scroll" href="#concepto_sec">Concepto</a></li> 
+								<li><a class="page-scroll" href="#servicio_sec">Servicios</a></li>
+								<li><a class="page-scroll" href="#carta_sec">Carta</a></li>
+								<li><a class="page-scroll" href="#equipo_sec">Equipo</a></li>
+								<li><a class="page-scroll" href="#opinion_sec">Reseñas</a></li>
+								<li><a class="page-scroll" href="#noticias_sec">Noticias</a></li>
+								<li><a class="page-scroll" href="#contacto_sec">Contacto</a></li>
+								<li><a id="gestion" class="page-scroll" href="{{ path('articulo_index' ) }}">Gestión</a></li>
+							</ul>
+						</div>		
+						</nav>			
+					</div>							
+				</div>
+			</div>	
+		</div>	
+	</div>	
+</header>
+<!-- Final header Section -->
+
+<!-- Comienzo slider Section -->
+<section id="slider_sec">
+	<div class="container">
+		<div class="row">
+			<div class="slider">
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<div class="wrap_caption">
+						  <div class="caption_carousel">
+							<h1>RESTAURANTE</h1>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Comidas y cenas al más puro elegante&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+						  </div>						
+						</div>
+					</div>					
+					<div class="item">
+						<div class="wrap_caption">
+						  <div class="caption_carousel">
+							<h1>TERRAZA</h1>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acondicionada para las mejores reuniones de amigos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+						  </div>						
+						</div>
+					</div>					
+					<div class="item ">
+						<div class="wrap_caption">
+						  <div class="caption_carousel">
+							<h1>COCKTAIL</h1>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Los mejores cocktails de Madrid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+						  </div>						
+						</div>
+					</div>	
+					<div class="item ">
+                        <div class="wrap_caption">
+                          <div class="caption_carousel">
+                            <h1>AFTERWORK</h1>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;El mejor local para descansar tras el trabajo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="wrap_caption">
+                          <div class="caption_carousel">
+                            <h1>ESPECTÁCULO</h1>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Todos los fines de semana espectáculos diferentes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                          </div>
+                        </div>
+                    </div>		
+				  </div>
+				</div>
+			</div>	
+		</div>			
+	</div>	
+</section>
+<!-- Final slider Section -->
+
+<!-- Comienzo concepto Section -->
+<section id="concepto_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>CONCEPTO</h1>
+				</div>			
+			</div>		
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="abt">
+					<p>Restaurente JMJ es un fantástico restaurante de cocina internacional ubicado en el exclusivo barrio de salamanca. Distribuido en una única planta y una estupenda terraza, destaca por su decoración urbana con toques rústicos, que dotan al local de un ambiente especial y acogedor.
+					<br><br>Disfruta de sus desayunos, estimula tus sentidos con nuestros mejores platos o disfruta de nuestro AfterWork en buena compañía.
+					<br><br>En Restaurente JMJ encontrarás clásicos de la gastronomía mundial, elaborados con productos siempre frescos, de calidad y un toque de personalidad.</p>
+				</div>
+			</div>			
+		</div>
+	</div>
+</section>
+<!-- Final concepto Section -->
+
+
+<!-- Comienzo servicios Section -->
+<section id="servicio_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>NUESTROS SERVICIOS</h1>
+					<h2>RESTAURENTE JMJ ES ESPECIALISTA EN 4 APARTADOS:</h2>
+				</div>			
+			</div>		
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<div class="service">						
+					<i class="fa fa-coffee"></i>
+					<h2>DESAYUNOS</h2>
+					<div class="service_hoverly">
+						<i class="fa fa-coffee"></i>
+						<h2>DESAYUNOS</h2>
+						<p>Café o zumo de naranja y dos tostadas - 2'50€<br>
+						Café con 5 churros o 3 porras - 2'75€</p>
+					</div>
+				</div>
+			</div>				
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<div class="service">						
+					<i class="fa fa-utensils"></i>
+					<h2>COMIDAS</h2>
+					<div class="service_hoverly">
+						<i class="fa fa-utensils"></i>
+						<h2>COMIDAS</h2>
+						<p>Menú de lunes a viernes - 11'50€<br>
+						Menú sabados,domingos y festivos - 13'50€</p>
+					</div>
+				</div>
+			</div>				
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<div class="service">						
+					<i class="fa fa-cocktail"></i>
+					<h2>AFTERWORK</h2>
+					<div class="service_hoverly">
+						<i class="fa fa-cocktail"></i>
+						<h2>AFTERWORK</h2>
+						<p>Precio medio de los platos, tambien vegetarianos - 15€<br>
+							Cócteles variados - 10€<p>
+					</div>
+				</div>
+			</div>				
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<div class="service">						
+					<i class="fa fa-hamburger"></i>
+					<h2>CENAS</h2>
+					<div class="service_hoverly">
+						<i class="fa fa-hamburger"></i>
+						<h2>CENAS</h2>
+						<p>Menú de lunes a viernes - 15'50€<br>
+						Menú sabados,domingos y festivos - 20'00€<br>
+						Incluye un espectáculo diferente cada noche.</p>
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>
+</section>
+<!-- Final servicios Section -->
+
+<!-- Comienzo Carta Section -->
+<section id="carta_sec">
+	<div class="title_sec carta_margin_bot">
+		<h1 class="carta_sec_title">CARTA</h1>
+		<h2>NUESTROS PLATOS PRINCIPALES SON:</h2>
+	</div>	
+	<hr>
+	<div id="carta_secciones">
+		<div class="hvr-underline-from-right hvr-bubble-bottom">ENTRANTES</div>
+		<div class="hvr-underline-from-right hvr-bubble-bottom">PASTAS</div>
+		<div class="hvr-underline-from-right hvr-bubble-bottom">CARNES</div>
+		<div class="hvr-underline-from-right hvr-bubble-bottom">PESCADOS</div>
+		<div class="hvr-underline-from-right hvr-bubble-bottom">POSTRES</div>
+	</div>
+	<hr>
+
+	<!-- Contenido -->
+	<div class="linea" id="contenido_entrante">
+		<div>
+		 	<h3>GUACAMOLE</h3>
+		 	<p>Receta tradicional Mexicana, preparado en la mesa y servido en molcajete de piedra volcánica, con lima, cilantro y cebolleta tierna. Acompañado de totopos caseros de maíz.</p>
+		 	<h3>PIPARRAS FRITAS </h3>
+		 	<p>Con aceite de oliva virgen, y sal maldón.</p>
+		</div>
+		<div>
+			<h3>ENSALADA DE BURRATA</h3>
+		 	<p>Con naranja, nueces pecan, aceitunas y espinacas.</p>
+		 	<h3>ENSALADILLA RUSA </h3>
+		 	<p>Con pollo ecológico, tirabeques y crujiente de panceta ibérica.</p>
+		</div>
+	</div>
+
+	<div class="linea" id="contenido_pasta">
+		<div>
+			<h3>RAVIOLIS</h3>
+			<p>Rellenos de ternera y setas, con una salsa de queso ( Parmesano, Pecorino, Provolone, Gorgonzola ).</p>
+			<h3>ESPAGUETIS</h3>
+			<p>A la carbonara de Italia, sin nata y con bacon o panceta.</p>
+		</div>
+		<div>
+			<h3>TORTELLINI CON SALSA PESTO</h3>	
+			<p>Tortellini con una salsa de Pesto, elaborada con queso parmesano, piñones, albahaca fresca y un diente de ajo.</p>
+			<h3>LASAGNAS</h3>
+			<p>Clásica, a la Bolognesa, Vegetariana</p>
+			</div>
+	</div>
+
+	<div class="linea" id="contenido_carne">
+		<div>
+			<h3>POLLO ASADO</h3>
+			<p>Al horno con zanahorias, judías verdes y patatas asadas.</p>
+			<h3>COSTILLAS DE CERDO</h3>
+			<p>Ahumadas en madera de Hycory, hechas a baja temperatura, con una salsa de barbacoa japonesa, panela y puerro. Acompañadas de croquetas de maíz y nata agria.</p>
+		</div>
+		<div>
+			<h3>HAMBURGUESAS</h3>
+			<p>Todas nuestras hamburguesas son elaborada diariamente con carne 100% de vaca rubia Gallega. Pesan 170grs.</p>
+			<h3>SOLOMILLO WELLINGTON</h3>
+			<p>Con puré de patata y ensalada de lechuga, tomate, zanahoria y cebolla.</p>
+		</div>
+	</div>
+
+	<div class="linea" id="contenido_pescado">
+		<div>
+			<h3>SALMÓN</h3>
+			<p>A la plancha, acompañado con pimientos, esparragos y dos rodajas de limón.</p>
+			<h3>BACALAO</h3>
+			<p>Ventresca de bacalao al Pil-Pil con quindilla y ajos laminados.</p>
+		</div>
+		<div>
+			<h3>MERLUZA</h3>
+			<p>Al horno, con cebolla, zanahorias, pimientos, perejil, ajo y limón.</p>
+			<h3>RODABALLO</h3>
+			<p>A la plancha con una salsa ligera de yogur natural, mayonesa, cebolleta, patatas y perejil.</p><br>
+		</div>
+	</div>
+
+	<div class="linea" id="contenido_postre">
+		<div>
+			<h3>TARTAS</h3>
+			<p>Chocolate, Queso, Manzana, Zanahoria y De la abuela.</p>
+			<h3>FLAN</h3>
+			<p>De huevo (casero).</p>
+		</div>
+		<div>
+			<h3>Helados</h3>
+			<p>Chocolate, Limón, Nata, Fresa y Vainilla.</p>
+			<h3>TIRAMISU</h3>
+			<p>El conocido postre italiano.</p><br>
+		</div>
+	</div>
+
+</section>
+<!-- Final Carta Section -->
+
+<!-- Comienzo equipo Section -->
+<section id="equipo_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>NUESTRO EQUIPO</h1>
+				</div>			
+			</div>		
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12">
+				<div class="all_team">
+					<div class="sngl_team">
+						<h3> Mario Cortés Lozano <span>GERENTE</span></h3>
+						<p>Gerente general. Encargado de supervisar las operaciones del restaurante.</p>				
+					</div>					
+					<div class="sngl_team">						
+						<h3> Jaime Indart Paniagua <span> GERENTE </span></h3>
+						<p>Asistente general. Encargado de supervisar las operaciones del restaurante en ausencia del gerente.</p>
+					</div>				
+					<div class="sngl_team">						
+						<h3> José Manuel López-Calle <span>   GERENTE   </span></h3>
+						<p>Chef ejecutivo. Coordina el trabajo, crea recetas, ajusta el menu y supervisa los ingredientes.</p>				
+					</div>	
+					<div class="sngl_team">						
+						<h3> Amadeo Mora <span>   TUTOR   </span></h3>
+						<p>Encargado de supervisar, orientar y coordinar a toda la plantilla.</p>				
+					</div>															
+				</div>			
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Final equipo Section -->
+
+<!-- Comienzo opinión Section -->
+<section id="opinion_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="all_tstm">
+				<div class="clnt_tstm">
+					<div class="sngl_tstm">
+						<i class="fa fa-quote-right"></i>
+						<h3>Opinión 1</h3>
+						<p>Es un restaurante bastante agradable, el personal es muy amable y formal. La comida es excelente y tienen una gran variedad de cócteles por si te apetece quedarte después de cenar. Muy recomendable, </p>
+						<h6>- Mateo Romero</h6>					
+					</div>
+				</div>						
+				<div class="clnt_tstm">
+					<div class="sngl_tstm">
+						<i class="fa fa-quote-right"></i>
+						<h3>Opinión 2</h3>
+						<p>El local es muy grande y está muy bien. Comimos 10 personas en la terraza y se estaba muy bien. Pedimos varios platos para compartir; ensaladilla, verduras a la parrilla, entrecot, huevos rotos y varios postres. Todo muy bueno y además dispone de una carta de cócteles amplia,</p>
+						<h6>- Javier Bellido</h6>					
+					</div>
+				</div>				
+				<div class="clnt_tstm">
+					<div class="sngl_tstm">
+						<i class="fa fa-quote-right"></i>
+						<h3>Opinión 3</h3>
+						<p>Me ha gustado venir aquí a cenar con amigos. Tienen una bonita terraza y una gran carta de vinos. La comida es española. Tapas y algunos platos principales. Tienen una buena selección de mariscos, platos de carne y vegetarianos,</p>
+						<h6>- Juan Sánchez</h6>					
+					</div>
+				</div>				
+				<div class="clnt_tstm">
+					<div class="sngl_tstm">
+						<i class="fa fa-quote-right"></i>
+						<h3>Opinión 4</h3>
+						<p>Acudí, previa reserva, tras haber encontrado la referencia en diversas webs con recomendaciones sobre terrazas madrileñas. El servicio excepcional, lo que uno espera en el entorno del Meliá, donde se integra el restaurante. Cena improvisada y rápida en un sitio agradable y tranquilo, muy tranquilo,</p>
+						<h6>- Hugo García</h6>					
+					</div>
+				</div>				
+				<div class="clnt_tstm">
+					<div class="sngl_tstm">
+						<i class="fa fa-quote-right"></i>
+						<h3>Opinión 5</h3>
+						<p>Estuve el domingo día 21 febrero cenando con una amiga. Pedimos una hamburguesa de la cual tomamos todo menos la carne ya que no estaba buena, la carne picaba... y no llevaba nada. El solomillo estaba rico pero sin más, lo acompañaba una patata con beicon que estaba un poco sosa,</p>
+						<h6>- Alejandro Marirrodriga</h6>					
+					</div>
+				</div>		
+				</div>
+			</div>	
+		</div>
+	</div>
+</section>
+<!-- Final opinión Section -->
+
+
+<!-- Comienzo noticia Section -->
+<section id="noticias_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>ÚLTIMAS NOTICIAS</h1>
+					<h2>ÚLTIMA ACTUALIZACIÓN 28/04/2020</h2>
+				</div>			
+			</div>		
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="lts_pst">						
+					<img src="img/noticias1.png" alt=""/>
+					<h2>REAPERTURA DEL LOCAL</h2>
+					<p>Debido a la excepcional situación del COVID-19, abriremos nuestro restaurante a partir del 4 de mayo y solo podremos dar comida para llevar a personas con cita previa. Hasta el 18 de mayo no se podrá comer en el local, que tendrá una ocupación máxima del 30%. Sentimos las molestias.</p>				
+				</div>
+			</div>			
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="lts_pst">						
+					<img src="img/noticias2.png" alt=""/>
+					<h2>CERRADO TEMPORALMENTE</h2>
+					<p>Debido al COVID-19 nos vemos obligados a cerrar el local temporalmente hasta nuevo aviso. Esperamos volver a abrir lo antes posible, mientras tanto permanezcan en sus casas y cuidense.</p>				
+				</div>
+			</div>		
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="lts_pst">						
+					<img src="img/noticias3.png" alt=""/>
+					<h2>RESERVA DEL LOCAL</h2>
+					<p>Ahora podrás reservar el local entero. Te damos la posibilidad de celebrar banquete de bodas, despedidas de soltero, fiestas de cumpleaños o simplemente reuniones de trabajo en la intimidad.</p>				
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Final notica Section -->
+
+<!-- Comienzo contacto Section -->
+<section id="contacto_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>INFORMACIÓN DE CONTACTO</h1>
+					<div id="formularios_contacto" class="row">
+						<!-- Select tipo de Formulario -->
+						<div class="form-group col-md-12" id="form_tipo_query">
+						  <select class="form-control" name="form_tipo" class="btn btn-primary" id="form_tipo">
+							<option value="Contacto">Normal</option>
+							<option value="Reserva">Reserva</option>
+							<option value="Evento">Evento</option>
+						  </select>
+						  <h2 id="formularios_contacto_h2">PUEDE CONTACTAR CON NOSOTROS A TRAVÉS DE</h2>
+						</div>
+					</div>
+				</div>			
+			</div>		
+			<div class="col-sm-6"> 
+				<div id="cnt_form">
+					<!-- Formulario Contacto -->
+					<form id="contact-form" class="contact" name="contacto" method="post" action="/">
+						<div class="form-group" id="contacto">
+							<input type="text" name="contacto[nombre]" class="form-control name-field" required="required" placeholder="Nombre" id="contacto_nombre">
+							</div>
+							<div class="form-group">
+								<input type="email" name="contacto[email]" class="form-control mail-field" required="required" placeholder="Correo Electrónico" id="contacto_email">
+							</div> 
+							<div class="form-group">
+								<textarea name="contacto[mensaje]" id="contacto_mensaje message" required="required" class="form-control" rows="4" placeholder="Mensaje"></textarea>
+							</div> 
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary" id="contacto_enviar" name="contacto[enviar]">Enviar</button>
+						</div>
+						{{ form_row(contactoForm._token) }}
+					</form>
+					
+					<!-- Formulario Reserva -->  
+					<form id="contact-form-reserva" class="contact" name="contacto" method="post" action="/">
+						<div class="form-group" id="contacto">
+							<input type="text" name="contacto_reserva[nombre]" class="form-control name-field" required="required" placeholder="Nombre" id="contacto_reserva_nombre">
+						</div>
+						<div class="form-group">
+						<select class="form-control" name="contacto_reserva[personas]" id="contacto_reserva_personas">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+						</div>
+						<div class="form-group">
+							<input class="form-control" type="date" value="01/01/2020" id="contacto_reserva_fecha" name="contacto_reserva[fecha]">
+						</div>
+						<div class="form-group">
+							<input type="email" name="contacto_reserva[email]" class="form-control mail-field" required="required" placeholder="Email" id="contacto_reserva_email">
+						</div> 
+						<div class="form-group">
+							<textarea name="contacto_reserva[mensaje]" id="contacto_reserva_mensaje" required="required" class="form-control" rows="4" placeholder="Especificar hora de llegada."></textarea>
+						</div> 
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary" id="contacto_reserva_enviar" name="contacto_reserva[enviar]">Enviar</button>
+						</div>
+						{{ form_row(contactoReserva._token) }}
+					</form>
+
+					<!-- Formulario Evento -->
+					<form id="contact-form-evento" class="contact" name="contacto" method="post" action="/">
+						<div class="form-group" id="contacto">
+							<input type="text" name="contacto_evento[nombre]" class="form-control name-field" required="required" placeholder="Nombre" id="contacto_evento_nombre">
+							</div>
+						<div class="form-group" id="contacto">
+							<input type="number" name="contacto_evento[numpersonas]" class="form-control name-field" required="required" placeholder="Número de Personas" id="contacto_evento_numpersonas">
+							</div>
+						<div class="form-group">
+							<input class="form-control" type="date" value="01/01/2020" id="contacto_evento_fecha" name="contacto_evento[fecha]">
+						</div>
+						<div class="form-group">
+							<input type="email" name="contacto_evento[email]" class="form-control mail-field" required="required" placeholder="Email" id="contacto_evento_email">
+						</div> 
+						<div class="form-group">
+							<textarea name="contacto_evento[mensaje]" id="contacto_evento_mensaje" required="required" class="form-control" rows="4" placeholder="Mensaje"></textarea>
+						</div> 
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary" id="contacto_evento_enviar" name="contacto_evento[enviar]">Enviar</button>
+						</div>
+						{{ form_row(contactoEvento._token) }}
+					</form>
+					
+					
+
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6">
+				<div class="cnt_info">
+					<ul>
+						<li><i class="fa fa-street-view"></i><p>Calle del Padre Claret, 8, 28002 Madrid</p></li>
+						<li><i class="fa fa-envelope"></i><p>restaurantejmj@gmail.com</p></li>
+						<li><i class="fa fa-phone"></i><p>+34 915 19 52 57</p></li>
+					</ul>
+				</div>
+			</div>			
+		</div>
+	</div>
+</section>
+<!-- Final contacto  Section -->
+
+<!-- Comienzo mapa Section -->
+<section id="ltd_map_sec">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="map">						
+			<h1>LOCALÍZANOS</h1><a href="#slidingDiv" class="show_hide" rel="#slidingDiv"><i class="fa fa-angle-up"></i></a>
+			<div id="slidingDiv">
+				<div class="map_area">
+					<div style="width:100%;height:350px;"><iframe  width="600" height="400" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.307085309799!2d-3.666308785236553!3d40.44633976176318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228d2f0d7df85%3A0x3a937702539f2525!2sCalle%20del%20Padre%20Claret%2C%208%2C%2028002%20Madrid!5e0!3m2!1ses!2ses!4v1585735354439!5m2!1ses!2ses"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+				</div>
+			</div>	
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+<!-- Final mapa  Section -->
+
+<!-- Comienzo footer Section -->
+<footer id="ft_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ft">						
+					<ul>
+						<li><a href="https://es-es.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="https://www.google.com/"><i class="fa fa-google"></i></a></li>
+						<li><a href="#contacto_sec"><i class="fa fa-envelope"></i></a></li>
+					</ul>					
+				</div>
+				<ul class="copy_right">
+					<li>&copy; Restaurante JMJ 2020</li>
+					<li>Desarrollado por Mario - Jaime - José</li>
+				</ul>					
+			</div>	
+		</div>
+	</div>
+</footer>
+<!-- Final footer Section -->
+
+<!-- Scripts -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/showHide.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/scrolling-nav.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="https://kit.fontawesome.com/c1ba5129c9.js" crossorigin="anonymous"></script>
+<script src="js/form_tipo.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+   // Click mostrar/cerrar para el mapa
+   $('.show_hide').showHide({			 
+		speed: 1000,  	
+		easing: '', 
+		changeText: 1, 
+		showText: 'Mostrar',
+		hideText: 'Cerrar' 		 
+	}); 
+
+});
+</script>
+
+<script>
+    jQuery(document).ready(function( $ ) {
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1000
+        });
+    });
+</script>
+
+<script>
+	// Esconder overflow hasta que no se cargue el body
+	$(document).ready(function(){
+	    $("body").css("overflow", "hidden");
+	});
+	// Mostrar overflow cuando todo esté cargado
+	$(window).load(function(){
+	    $("body").css("overflow", "visible");        
+	    var nice=$('html').niceScroll({
+		cursorborder:"5",
+		cursorcolor:"#00AFF0",
+		cursorwidth:"3px",
+		boxzoom:true, 
+		autohidemode:true
+		});
+	});
+</script>
+
+<!-- Carta.js -->
+<script>
+    var contenido_entrante = document.getElementById('contenido_entrante');
+    var contenido_pasta = document.getElementById('contenido_pasta');
+    var contenido_carne = document.getElementById('contenido_carne');
+    var contenido_pescado = document.getElementById('contenido_pescado');
+    var contenido_postre = document.getElementById('contenido_postre');
+  
+    contenido_pasta.style.display = "none";
+    contenido_carne.style.display = "none";
+    contenido_pescado.style.display = "none";
+    contenido_postre.style.display = "none";
+
+    var secciones = document.getElementById('carta_secciones');
+    var secciones_titulos = secciones.getElementsByTagName('div');
+
+    var i;
+    for (i = 0; i < secciones_titulos.length; i++) {
+
+        secciones_titulos[i].addEventListener('click', function(e) {
+
+            if (e.target.innerHTML == 'ENTRANTES') {
+                contenido_entrante.style.display = "flex";
+                contenido_pasta.style.display = "none";
+                contenido_carne.style.display = "none";
+                contenido_pescado.style.display = "none";
+                contenido_postre.style.display = "none";
+            }
+            if (e.target.innerHTML == 'PASTAS') {
+                contenido_entrante.style.display = "none";
+                contenido_pasta.style.display = "flex";
+                contenido_carne.style.display = "none";
+                contenido_pescado.style.display = "none";
+                contenido_postre.style.display = "none";
+            }
+            if (e.target.innerHTML == 'CARNES') {
+                contenido_entrante.style.display = "none";
+                contenido_pasta.style.display = "none";
+                contenido_carne.style.display = "flex";
+                contenido_pescado.style.display = "none";
+                contenido_postre.style.display = "none";
+            }
+            if (e.target.innerHTML == 'PESCADOS') {
+                contenido_entrante.style.display = "none";
+                contenido_pasta.style.display = "none";
+                contenido_carne.style.display = "none";
+                contenido_pescado.style.display = "flex";
+                contenido_postre.style.display = "none";
+            }
+            if (e.target.innerHTML == 'POSTRES') {
+                contenido_entrante.style.display = "none";
+                contenido_pasta.style.display = "none";
+                contenido_carne.style.display = "none";
+                contenido_pescado.style.display = "none";
+                contenido_postre.style.display = "flex";
+            }
+
+        });
+    }
+
+</script>
+<!-- Final Scripts -->
+
+</body>
+</html>

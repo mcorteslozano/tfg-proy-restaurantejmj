@@ -3,7 +3,7 @@
 {% block title %}Editar - Pedido{% endblock %}
 
 {% block body %}
-    <div id="form_pedido">
+    <div id="form_pedido_edit">
         {{ include('pedido/_form.html.twig', {'button_label': 'Actualizar'}) }}
         <button id="volver" class="btn" onclick="location.href='{{ path('pedido_index') }}'">Volver</button>
         </div>

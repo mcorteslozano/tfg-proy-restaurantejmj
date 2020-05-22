@@ -5,7 +5,6 @@ html {
     position: relative;
 }
 
-
 /*Estilo Body*/
 
 body {
@@ -20,7 +19,6 @@ body {
     background-size: cover;
 }
 
-
 /*Iconos CRUD*/
 
 .icono_editdelete {
@@ -31,7 +29,7 @@ body {
     padding: 0px !important;
 }
 
-.add_icon {
+.add_icono {
     border: none;
     text-decoration: none !important;
     width: 25px !important;
@@ -40,13 +38,11 @@ body {
     margin-left: 25px !important;
 }
 
-
 /*LOGO*/
 
 .logo_tamaño {
     width: 40px !important;
 }
-
 
 /*Estilo Botones*/
 
@@ -55,10 +51,9 @@ body {
     background-color: black !important;
 }
 
-
 /* FORMULARIO NUEVA LINEA DE PEDIDO INDEX PEDIDO */
 
-.form_linea {
+.nuevo_form_linea {
     position: relative;
     float: left;
     left: 25%;
@@ -70,23 +65,22 @@ body {
     background-color: rgba(237, 237, 237, 0.9);
 }
 
-.form_linea h6 {
+.nuevo_form_linea h6 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.form_linea button {
+.nuevo_form_linea button {
     margin-left: auto !important;
     margin-right: auto !important;
     display: block !important;
 }
 
-
 /* FORMULARIO NUEVO PEDIDO INDEX PEDIDO */
 
-.form_pedido {
+.nuevo_form_pedido {
     position: relative;
     float: right;
     right: 25%;
@@ -98,19 +92,18 @@ body {
     background-color: rgba(237, 237, 237, 0.9);
 }
 
-.form_pedido h6 {
+.nuevo_form_pedido h6 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.form_pedido button {
+.nuevo_form_pedido button {
     margin-left: auto !important;
     margin-right: auto !important;
     display: block !important;
 }
-
 
 /*DIV AVISO SCRIPT PEDIDO*/
 
@@ -118,10 +111,9 @@ body {
     font-size: 12px;
 }
 
+/*FORMULARIOS ARTICULO PROVEEDOR USUARIO NEW/EDIT*/
 
-/*FORMULARIOS ARTICULO NEW/EDIT*/
-
-#form_articulo {
+#form_articulo_new_edit, #form_proveedor_new_edit, #form_usuario_edit {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -130,21 +122,20 @@ body {
     margin-top: 2rem;
 }
 
-#form_articulo form {
+#form_articulo_new_edit form, #form_proveedor_new_edit form, #form_usuario_edit form {
     padding: 10px;
     border: 1px solid black;
     border-radius: 25px;
     background-color: rgba(237, 237, 237, 0.9);
 }
 
-#form_articulo div {
+#form_articulo_new_edit div, #form_proveedor_new_edit div, #form_usuario_edit div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0.2em;
 }
-
 
 /*TEXT AREA ARTICULO*/
 
@@ -152,61 +143,9 @@ body {
     resize: none;
 }
 
-
-/*FORMULARIOS PROVEEDOR NEW/EDIT*/
-
-#form_proveedor form {
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 25px;
-    background-color: rgba(237, 237, 237, 0.9);
-}
-
-#form_proveedor {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    margin-top: 2rem;
-}
-
-#form_proveedor div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0.2em;
-}
-
-
 /*FORMULARIOS USUARIO NEW/EDIT*/
 
-#form_usuario form {
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 25px;
-    background-color: rgba(237, 237, 237, 0.9);
-}
-
-#form_usuario {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    margin-top: 2rem;
-}
-
-#form_usuario div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0.2em;
-}
-
-#form_usuario #usuario_roles {
+#form_usuario_edit #usuario_roles {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -220,13 +159,11 @@ body {
     font-size: 11px;
 }
 
-
 /*HOVER TABLAS*/
 
 .hover_fila:hover {
     background-color: rgba(255, 242, 143, 0.5);
 }
-
 
 /*CELDAS EDIT/DELETE TABLAS*/
 
@@ -234,7 +171,6 @@ body {
 .celda_delete {
     width: 1% !important;
 }
-
 
 /*CELDAS Articulo*/
 
@@ -246,7 +182,6 @@ body {
 .celda_articulo_nombre {
     width: 14% !important;
 }
-
 
 /*Navbar Usuario*/
 
@@ -288,18 +223,14 @@ body {
     margin-top: 1.5%;
 }
 
-
 /*SHOW USUARIO*/
 
-.contenedor_usuario {
+.mostrar_usuario {
     width: 40%;
     padding: 20px;
     border: 1px solid black;
     border-radius: 25px;
     background-color: rgba(237, 237, 237, 0.9);
-}
-
-.contenedor_usuario {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -308,14 +239,13 @@ body {
     margin-top: 2rem;
 }
 
-.contenedor_usuario #botones_editar {
+.mostrar_usuario #botones_editar {
     margin-top: 20px;
 }
 
-
 /*FORMULARIO REGISTRO*/
 
-#form_register {
+#form_registro {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -324,7 +254,7 @@ body {
     margin-top: 2rem;
 }
 
-#form_register div {
+#form_registro div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -332,7 +262,7 @@ body {
     margin: 0.2em;
 }
 
-#form_register #usuario_roles {
+#form_registro #usuario_roles {
     flex-direction: row;
 }
 
@@ -340,7 +270,7 @@ body {
     margin: 0em 0.5em;
 }
 
-form #form_register {
+form #form_registro {
     width: 70%;
     padding: 10px;
     border: 1px solid black;
@@ -348,10 +278,9 @@ form #form_register {
     background-color: rgba(237, 237, 237, 0.9);
 }
 
+/*FORMULARIOS EDIT LINEA | PEDIDO*/
 
-/*Formulario Edit Pedido*/
-
-#form_pedido {
+#form_pedido_edit, #form_linea_edit {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -360,7 +289,7 @@ form #form_register {
     margin-top: 2rem;
 }
 
-#form_pedido div {
+#form_pedido_edit div, #form_linea_edit div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -368,42 +297,13 @@ form #form_register {
     margin: 0.2em;
 }
 
-#form_pedido form {
+#form_pedido_edit form, #form_linea_edit form {
     width: 40%;
     padding: 10px;
     border: 1px solid black;
     border-radius: 25px;
     background-color: rgba(237, 237, 237, 0.9);
 }
-
-
-/*Formulario Edit Linea Pedido*/
-
-#form_linea {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    margin-top: 2rem;
-}
-
-#form_linea div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0.2em;
-}
-
-#form_linea form {
-    width: 40%;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 25px;
-    background-color: rgba(237, 237, 237, 0.9);
-}
-
 
 /*BOTONES FORMULARIOS*/
 

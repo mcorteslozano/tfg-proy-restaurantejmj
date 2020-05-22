@@ -1,0 +1,19 @@
+
+    {{ form_start(form) }}
+
+        {{ form_row(form.nombre) }}
+        {{ form_row(form.nombreUsuario) }}
+        <div id="form_usuario_column">
+            <label for="usuario_contraseña">Contraseña</label>
+            {{ form_widget(form.password, {'value' : usuario.password }) }}
+            
+        </div>
+        <div id="usuario_password_editar"><input type="checkbox" id="editar">Editar contraseña</div>
+        {{ form_row(form.telefono) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.foto) }}
+        {{ form_row(form.roles) }}
+        
+        <div id="botones_editar">
+            <button id="actualizar_usuario" class="btn">{{ button_label|default('Guardar Cambios') }}</button>
+    {{ form_end(form) }}

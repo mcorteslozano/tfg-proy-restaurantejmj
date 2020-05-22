@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestiona JMJ{% endblock %}
+
+{% block body %}
+<div id="form_usuario">	
+    {{ include('usuario/_form.html.twig', {'button_label': 'Actualizar'}) }}
+    <button id="volver" class="btn" onclick="location.href='{{ path('usuario_delete', {'id': usuario.id}) }}'">Volver</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById("usuario_password").style.backgroundColor = "#D8D1D1";
+    document.getElementById("usuario_password").readOnly = true;
+
+    document.getElementById('editar').addEventListener('click', function () {
+        
+        if (document.getElementById('editar').checked) {
+            document.getElementById("usuario_password").style.backgroundColor = "white";
+            document.getElementById("usuario_password").readOnly = false;
+        } else {
+            document.getElementById("usuario_password").style.backgroundColor = "#D8D1D1";
+            document.getElementById("usuario_password").readOnly = true;
+        }
+    })
+</script>
+
+
+{% endblock %}
+

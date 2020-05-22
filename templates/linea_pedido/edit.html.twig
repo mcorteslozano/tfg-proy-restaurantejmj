@@ -3,7 +3,7 @@
 {% block title %}Editar - Línea de Pedido{% endblock %}
 
 {% block body %}
-    <div id="form_linea">
+    <div id="form_linea_edit">
         {{ include('linea_pedido/_form.html.twig', {'button_label': 'Actualizar'}) }}
         <button id="volver" class="btn" onclick="location.href='{{ path('pedido_index') }}'">Volver</button>
         </div>
