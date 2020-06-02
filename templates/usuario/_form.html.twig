@@ -5,10 +5,10 @@
         {{ form_row(form.nombreUsuario) }}
         <div id="form_usuario_column">
             <label for="usuario_contraseña">Contraseña</label>
-            {{ form_widget(form.password, {'value' : usuario.password }) }}
+            {{ form_widget(form.password) }}
             
         </div>
-        <div id="usuario_password_editar"><input type="checkbox" id="editar">Editar contraseña</div>
+        <!--<div id="usuario_password_editar"><input type="checkbox" id="editar">Editar contraseña</div>-->
         {{ form_row(form.telefono) }}
         {{ form_row(form.email) }}
         {{ form_row(form.foto) }}
