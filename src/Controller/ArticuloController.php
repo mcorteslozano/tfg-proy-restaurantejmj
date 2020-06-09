@@ -35,6 +35,7 @@ class ArticuloController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            echo "ARTÍCULO";
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($articulo);
             $entityManager->flush();

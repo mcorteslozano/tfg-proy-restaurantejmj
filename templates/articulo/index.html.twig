@@ -35,7 +35,7 @@
                 <td class="celda_articulo_descripcion">{{ articulo.descripcion }}</td>
                 <td class="celda_articulo_precio">{{ articulo.precio }}€</td>
                 <td class="celda_articulo_existencias">{{ articulo.existencias }}</td>
-                <td class="celda_edit"><input type="image" class="icono_editdelete" src="/img/icono-editar.svg" onclick="window.open('{{ path('articulo_edit', {'id': articulo.id}) }}','', ',height=600,width=600,left=500,top=60')"></td>
+                <td class="celda_edit"><input type="image" class="icono_editdelete" src="/img/icono-editar.svg" onclick="{{ path('articulo_edit', {'id': articulo.id}) }}"></td>
                 <td class="celda_delete">{{ include('articulo/_delete_form.html.twig') }}</td>
             </tr>
         {% else %}
@@ -47,8 +47,11 @@
     </table>
 
 
-<input type="image" class="add_icono" src="/img/plus-circle-solid.svg" onclick="window.open('{{ path('articulo_new') }}','', ',height=600,width=600,left=500,top=60')">
+<input type="image" class="add_icono" src="/img/plus-circle-solid.svg" onclick="window.location.href='{{ path('articulo_new') }}'">
     
+
+
+
 
 {% endblock %}
 

@@ -6,7 +6,7 @@
  
     <div id="form_proveedor_new_edit">
     {{ include('proveedor/_form.html.twig') }}
-    <button id="volver" class="btn" onclick="window.close()">Volver</button>
+    <button id="volver" class="btn" onclick="window.location.href='{{ path('proveedor_index') }}'">Volver</button>
 
 {% endblock %}
 
